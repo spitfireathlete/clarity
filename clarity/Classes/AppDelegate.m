@@ -23,7 +23,6 @@
  */
 
 #import "AppDelegate.h"
-#import "InitialViewController.h"
 #import "RootViewController.h"
 #import "SFAccountManager.h"
 #import "SFAuthenticationManager.h"
@@ -98,13 +97,15 @@ static NSString * const OAuthRedirectURI        = @"testsfdc:///mobilesdk/detect
         
         // Blocks to execute once authentication has completed.  You could define these at the different boundaries where
         // authentication is initiated, if you have specific logic for each case.
-        __weak AppDelegate *weakSelf = self;
-        self.initialLoginSuccessBlock = ^(SFOAuthInfo *info) {
-            [weakSelf setupRootViewController];
-        };
-        self.initialLoginFailureBlock = ^(SFOAuthInfo *info, NSError *error) {
-            [[SFAuthenticationManager sharedManager] logout];
-        };
+        
+        // Erin turned this off for storyboarding
+//        __weak AppDelegate *weakSelf = self;
+//        self.initialLoginSuccessBlock = ^(SFOAuthInfo *info) {
+//            [weakSelf setupRootViewController];
+//        };
+//        self.initialLoginFailureBlock = ^(SFOAuthInfo *info, NSError *error) {
+//            [[SFAuthenticationManager sharedManager] logout];
+//        };
     }
     
     return self;
@@ -120,8 +121,9 @@ static NSString * const OAuthRedirectURI        = @"testsfdc:///mobilesdk/detect
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    [self initializeAppViewState];
+    // Erin turned this off for storyboarding
+    //    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    //    [self initializeAppViewState];
     
     //
     // If you wish to register for push notifications, uncomment the line below.  Note that,
@@ -131,7 +133,9 @@ static NSString * const OAuthRedirectURI        = @"testsfdc:///mobilesdk/detect
     //[[SFPushNotificationManager sharedInstance] registerForRemoteNotifications];
     //
     
-    [[SFAuthenticationManager sharedManager] loginWithCompletion:self.initialLoginSuccessBlock failure:self.initialLoginFailureBlock];
+
+    // Erin turned this off for storyboarding
+    //    [[SFAuthenticationManager sharedManager] loginWithCompletion:self.initialLoginSuccessBlock failure:self.initialLoginFailureBlock];
     
     return YES;
 }
@@ -157,29 +161,26 @@ static NSString * const OAuthRedirectURI        = @"testsfdc:///mobilesdk/detect
 
 - (void)initializeAppViewState
 {
-    self.window.rootViewController = [[InitialViewController alloc] initWithNibName:nil bundle:nil];
+//    self.window.rootViewController = [[InitialViewController alloc] initWithNibName:nil bundle:nil];
     [self.window makeKeyAndVisible];
 }
 
-- (void)setupRootViewController
-{
-    RootViewController *rootVC = [[RootViewController alloc] initWithNibName:nil bundle:nil];
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:rootVC];
-    self.window.rootViewController = navVC;
+- (void)setupRootViewController {
+//    RootViewController *rootVC = [[RootViewController alloc] initWithNibName:nil bundle:nil];
+//    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:rootVC];
+//    self.window.rootViewController = navVC;
 }
 
-- (void)logoutInitiated:(NSNotification *)notification
-{
-    [self log:SFLogLevelDebug msg:@"Logout notification received.  Resetting app."];
-    [self initializeAppViewState];
-    [[SFAuthenticationManager sharedManager] loginWithCompletion:self.initialLoginSuccessBlock failure:self.initialLoginFailureBlock];
+- (void)logoutInitiated:(NSNotification *)notification {
+//    [self log:SFLogLevelDebug msg:@"Logout notification received.  Resetting app."];
+//    [self initializeAppViewState];
+//    [[SFAuthenticationManager sharedManager] loginWithCompletion:self.initialLoginSuccessBlock failure:self.initialLoginFailureBlock];
 }
 
-- (void)loginHostChanged:(NSNotification *)notification
-{
-    [self log:SFLogLevelDebug msg:@"Login host changed notification received.  Resetting app."];
-    [self initializeAppViewState];
-    [[SFAuthenticationManager sharedManager] loginWithCompletion:self.initialLoginSuccessBlock failure:self.initialLoginFailureBlock];
+- (void)loginHostChanged:(NSNotification *)notification {
+//    [self log:SFLogLevelDebug msg:@"Login host changed notification received.  Resetting app."];
+//    [self initializeAppViewState];
+//    [[SFAuthenticationManager sharedManager] loginWithCompletion:self.initialLoginSuccessBlock failure:self.initialLoginFailureBlock];
 }
 
 @end

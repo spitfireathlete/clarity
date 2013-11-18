@@ -17,8 +17,6 @@
 		824A9DE51724E16400C9BD79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 824A9DE41724E16400C9BD79 /* main.m */; };
 		824A9E331724E2A900C9BD79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 824A9E321724E2A900C9BD79 /* AppDelegate.m */; };
 		824A9E361724E45100C9BD79 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 824A9E351724E45100C9BD79 /* RootViewController.m */; };
-		824A9E3A1724E58200C9BD79 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 824A9E381724E58200C9BD79 /* InitialViewController.m */; };
-		824A9E3B1724E58200C9BD79 /* InitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 824A9E391724E58200C9BD79 /* InitialViewController.xib */; };
 		824A9E3D1724E9F400C9BD79 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 824A9E3C1724E9F400C9BD79 /* readme.txt */; };
 		824A9E3F1724EC6300C9BD79 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 824A9E3E1724EC6300C9BD79 /* Settings.bundle */; };
 		824A9E411724ECC600C9BD79 /* SalesforceSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 824A9E401724ECC600C9BD79 /* SalesforceSDKResources.bundle */; };
@@ -26,13 +24,6 @@
 		824A9E601724F02D00C9BD79 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 824A9E5C1724F02D00C9BD79 /* icon-72@2x.png */; };
 		824A9E611724F02D00C9BD79 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 824A9E5D1724F02D00C9BD79 /* icon.png */; };
 		824A9E621724F02D00C9BD79 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 824A9E5E1724F02D00C9BD79 /* icon@2x.png */; };
-		824A9E6A1724F03D00C9BD79 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 824A9E631724F03D00C9BD79 /* Default-568h@2x.png */; };
-		824A9E6B1724F03D00C9BD79 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 824A9E641724F03D00C9BD79 /* Default-Landscape@2x~ipad.png */; };
-		824A9E6C1724F03D00C9BD79 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 824A9E651724F03D00C9BD79 /* Default-Landscape~ipad.png */; };
-		824A9E6D1724F03D00C9BD79 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 824A9E661724F03D00C9BD79 /* Default-Portrait@2x~ipad.png */; };
-		824A9E6E1724F03D00C9BD79 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 824A9E671724F03D00C9BD79 /* Default-Portrait~ipad.png */; };
-		824A9E6F1724F03D00C9BD79 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 824A9E681724F03D00C9BD79 /* Default.png */; };
-		824A9E701724F03D00C9BD79 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 824A9E691724F03D00C9BD79 /* Default@2x.png */; };
 		824A9FDD1725079100C9BD79 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 824A9F321725079000C9BD79 /* libcrypto.a */; };
 		824A9FDE1725079100C9BD79 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 824A9F331725079000C9BD79 /* libssl.a */; };
 		824A9FDF1725079100C9BD79 /* openssl_license.txt in Resources */ = {isa = PBXBuildFile; fileRef = 824A9F341725079000C9BD79 /* openssl_license.txt */; };
@@ -51,6 +42,13 @@
 		82BBB59F1793941D00374DD8 /* libSalesforceNativeSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BBB59E1793941D00374DD8 /* libSalesforceNativeSDK.a */; };
 		82BBB5A71793944400374DD8 /* libSalesforceOAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BBB5A61793944400374DD8 /* libSalesforceOAuth.a */; };
 		82BBB5C01793946800374DD8 /* libSalesforceSDKCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BBB5BF1793946800374DD8 /* libSalesforceSDKCore.a */; };
+		EA6F00511839BBC700336E21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6F00501839BBC700336E21 /* Main.storyboard */; };
+		EA6F00541839BDE500336E21 /* SFBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F00531839BDE500336E21 /* SFBackground.png */; };
+		EA6F00561839BF2000336E21 /* SFBackground_DarkGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F00551839BF2000336E21 /* SFBackground_DarkGradient.png */; };
+		EA6F005A1839C24700336E21 /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F00591839C24700336E21 /* FeedTableViewController.m */; };
+		EA6F005C1839C78E00336E21 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F005B1839C78E00336E21 /* Default-568h@2x.png */; };
+		EA6F0067183AAB9100336E21 /* menu_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F0065183AAB9100336E21 /* menu_icon.png */; };
+		EA6F0068183AAB9100336E21 /* plus_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F0066183AAB9100336E21 /* plus_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,9 +78,6 @@
 		824A9E321724E2A900C9BD79 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		824A9E341724E45000C9BD79 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		824A9E351724E45100C9BD79 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		824A9E371724E58100C9BD79 /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
-		824A9E381724E58200C9BD79 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
-		824A9E391724E58200C9BD79 /* InitialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InitialViewController.xib; sourceTree = "<group>"; };
 		824A9E3C1724E9F400C9BD79 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		824A9E3E1724EC6300C9BD79 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		824A9E401724ECC600C9BD79 /* SalesforceSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SalesforceSDKResources.bundle; sourceTree = "<group>"; };
@@ -90,13 +85,6 @@
 		824A9E5C1724F02D00C9BD79 /* icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72@2x.png"; sourceTree = "<group>"; };
 		824A9E5D1724F02D00C9BD79 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		824A9E5E1724F02D00C9BD79 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
-		824A9E631724F03D00C9BD79 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		824A9E641724F03D00C9BD79 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
-		824A9E651724F03D00C9BD79 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
-		824A9E661724F03D00C9BD79 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
-		824A9E671724F03D00C9BD79 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
-		824A9E681724F03D00C9BD79 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		824A9E691724F03D00C9BD79 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		824A9F321725079000C9BD79 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		824A9F331725079000C9BD79 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		824A9F341725079000C9BD79 /* openssl_license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = openssl_license.txt; sourceTree = "<group>"; };
@@ -178,6 +166,14 @@
 		82BBB5BD1793946800374DD8 /* SFSoupIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFSoupIndex.h; sourceTree = "<group>"; };
 		82BBB5BE1793946800374DD8 /* SFStoreCursor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFStoreCursor.h; sourceTree = "<group>"; };
 		82BBB5BF1793946800374DD8 /* libSalesforceSDKCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSalesforceSDKCore.a; sourceTree = "<group>"; };
+		EA6F00501839BBC700336E21 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EA6F00531839BDE500336E21 /* SFBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SFBackground.png; sourceTree = "<group>"; };
+		EA6F00551839BF2000336E21 /* SFBackground_DarkGradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SFBackground_DarkGradient.png; sourceTree = "<group>"; };
+		EA6F00581839C24700336E21 /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
+		EA6F00591839C24700336E21 /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
+		EA6F005B1839C78E00336E21 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		EA6F0065183AAB9100336E21 /* menu_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_icon.png; sourceTree = "<group>"; };
+		EA6F0066183AAB9100336E21 /* plus_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,7 +313,7 @@
 				824A9E421724EF9800C9BD79 /* Resources */,
 				824A9DDF1724E16400C9BD79 /* Supporting Files */,
 			);
-			path = "clarity";
+			path = clarity;
 			sourceTree = "<group>";
 		};
 		824A9DDF1724E16400C9BD79 /* Supporting Files */ = {
@@ -334,11 +330,10 @@
 		824A9E301724E2A900C9BD79 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EA6F00571839C22B00336E21 /* View Controllers */,
 				824A9E311724E2A900C9BD79 /* AppDelegate.h */,
 				824A9E321724E2A900C9BD79 /* AppDelegate.m */,
-				824A9E371724E58100C9BD79 /* InitialViewController.h */,
-				824A9E381724E58200C9BD79 /* InitialViewController.m */,
-				824A9E391724E58200C9BD79 /* InitialViewController.xib */,
+				EA6F00501839BBC700336E21 /* Main.storyboard */,
 				824A9E341724E45000C9BD79 /* RootViewController.h */,
 				824A9E351724E45100C9BD79 /* RootViewController.m */,
 			);
@@ -348,8 +343,8 @@
 		824A9E421724EF9800C9BD79 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EA6F00521839BDD700336E21 /* Images */,
 				824A9E591724F01500C9BD79 /* icons */,
-				824A9E5A1724F01D00C9BD79 /* splash */,
 				824A9E401724ECC600C9BD79 /* SalesforceSDKResources.bundle */,
 				824A9E3E1724EC6300C9BD79 /* Settings.bundle */,
 			);
@@ -365,20 +360,6 @@
 				824A9E5E1724F02D00C9BD79 /* icon@2x.png */,
 			);
 			name = icons;
-			sourceTree = "<group>";
-		};
-		824A9E5A1724F01D00C9BD79 /* splash */ = {
-			isa = PBXGroup;
-			children = (
-				824A9E631724F03D00C9BD79 /* Default-568h@2x.png */,
-				824A9E641724F03D00C9BD79 /* Default-Landscape@2x~ipad.png */,
-				824A9E651724F03D00C9BD79 /* Default-Landscape~ipad.png */,
-				824A9E661724F03D00C9BD79 /* Default-Portrait@2x~ipad.png */,
-				824A9E671724F03D00C9BD79 /* Default-Portrait~ipad.png */,
-				824A9E681724F03D00C9BD79 /* Default.png */,
-				824A9E691724F03D00C9BD79 /* Default@2x.png */,
-			);
-			name = splash;
 			sourceTree = "<group>";
 		};
 		824A9F301725079000C9BD79 /* Dependencies */ = {
@@ -575,6 +556,27 @@
 			path = SalesforceSDKCore;
 			sourceTree = "<group>";
 		};
+		EA6F00521839BDD700336E21 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EA6F0065183AAB9100336E21 /* menu_icon.png */,
+				EA6F0066183AAB9100336E21 /* plus_icon.png */,
+				EA6F00551839BF2000336E21 /* SFBackground_DarkGradient.png */,
+				EA6F00531839BDE500336E21 /* SFBackground.png */,
+				EA6F005B1839C78E00336E21 /* Default-568h@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		EA6F00571839C22B00336E21 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA6F00581839C24700336E21 /* FeedTableViewController.h */,
+				EA6F00591839C24700336E21 /* FeedTableViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -590,8 +592,8 @@
 			);
 			dependencies = (
 			);
-			name = "clarity";
-			productName = "clarity";
+			name = clarity;
+			productName = clarity;
 			productReference = 824A9DD51724E16400C9BD79 /* clarity.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -627,23 +629,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				824A9DE31724E16400C9BD79 /* InfoPlist.strings in Resources */,
-				824A9E3B1724E58200C9BD79 /* InitialViewController.xib in Resources */,
 				824A9E3D1724E9F400C9BD79 /* readme.txt in Resources */,
 				824A9E3F1724EC6300C9BD79 /* Settings.bundle in Resources */,
+				EA6F00541839BDE500336E21 /* SFBackground.png in Resources */,
 				824A9E411724ECC600C9BD79 /* SalesforceSDKResources.bundle in Resources */,
+				EA6F0067183AAB9100336E21 /* menu_icon.png in Resources */,
+				EA6F005C1839C78E00336E21 /* Default-568h@2x.png in Resources */,
 				824A9E5F1724F02D00C9BD79 /* icon-72.png in Resources */,
 				824A9E601724F02D00C9BD79 /* icon-72@2x.png in Resources */,
 				824A9E611724F02D00C9BD79 /* icon.png in Resources */,
 				824A9E621724F02D00C9BD79 /* icon@2x.png in Resources */,
-				824A9E6A1724F03D00C9BD79 /* Default-568h@2x.png in Resources */,
-				824A9E6B1724F03D00C9BD79 /* Default-Landscape@2x~ipad.png in Resources */,
-				824A9E6C1724F03D00C9BD79 /* Default-Landscape~ipad.png in Resources */,
-				824A9E6D1724F03D00C9BD79 /* Default-Portrait@2x~ipad.png in Resources */,
-				824A9E6E1724F03D00C9BD79 /* Default-Portrait~ipad.png in Resources */,
-				824A9E6F1724F03D00C9BD79 /* Default.png in Resources */,
-				824A9E701724F03D00C9BD79 /* Default@2x.png in Resources */,
 				824A9FDF1725079100C9BD79 /* openssl_license.txt in Resources */,
+				EA6F0068183AAB9100336E21 /* plus_icon.png in Resources */,
+				EA6F00511839BBC700336E21 /* Main.storyboard in Resources */,
 				824A9FE61725079100C9BD79 /* LICENSE in Resources */,
+				EA6F00561839BF2000336E21 /* SFBackground_DarkGradient.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,10 +654,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6F005A1839C24700336E21 /* FeedTableViewController.m in Sources */,
 				824A9DE51724E16400C9BD79 /* main.m in Sources */,
 				824A9E331724E2A900C9BD79 /* AppDelegate.m in Sources */,
 				824A9E361724E45100C9BD79 /* RootViewController.m in Sources */,
-				824A9E3A1724E58200C9BD79 /* InitialViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,6 +746,7 @@
 					"$(SRCROOT)/clarity/Dependencies/SalesforceCommonUtils/Headers",
 				);
 				INFOPLIST_FILE = "clarity/clarity-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/clarity/Dependencies/openssl\"",
@@ -779,6 +780,7 @@
 					"$(SRCROOT)/clarity/Dependencies/SalesforceCommonUtils/Headers",
 				);
 				INFOPLIST_FILE = "clarity/clarity-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/clarity/Dependencies/openssl\"",
