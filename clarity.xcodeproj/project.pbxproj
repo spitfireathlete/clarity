@@ -59,6 +59,7 @@
 		EA6F007D183AC27600336E21 /* home_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F0079183AC27600336E21 /* home_icon.png */; };
 		EA6F007E183AC27600336E21 /* logout_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F007A183AC27600336E21 /* logout_icon.png */; };
 		EA6F007F183AC27600336E21 /* sync_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F007B183AC27600336E21 /* sync_icon.png */; };
+		EA6F0081183AC69D00336E21 /* light_blurry_background.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F0080183AC69D00336E21 /* light_blurry_background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -198,6 +199,7 @@
 		EA6F0079183AC27600336E21 /* home_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_icon.png; sourceTree = "<group>"; };
 		EA6F007A183AC27600336E21 /* logout_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout_icon.png; sourceTree = "<group>"; };
 		EA6F007B183AC27600336E21 /* sync_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sync_icon.png; sourceTree = "<group>"; };
+		EA6F0080183AC69D00336E21 /* light_blurry_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light_blurry_background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -587,6 +589,7 @@
 		EA6F00521839BDD700336E21 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EA6F0080183AC69D00336E21 /* light_blurry_background.png */,
 				EA6F0078183AC27600336E21 /* globe_icon.png */,
 				EA6F0079183AC27600336E21 /* home_icon.png */,
 				EA6F007A183AC27600336E21 /* logout_icon.png */,
@@ -705,6 +708,7 @@
 				EA6F007E183AC27600336E21 /* logout_icon.png in Resources */,
 				EA6F00511839BBC700336E21 /* Main.storyboard in Resources */,
 				824A9FE61725079100C9BD79 /* LICENSE in Resources */,
+				EA6F0081183AC69D00336E21 /* light_blurry_background.png in Resources */,
 				EA6F00561839BF2000336E21 /* SFBackground_DarkGradient.png in Resources */,
 				EA6F007C183AC27600336E21 /* globe_icon.png in Resources */,
 			);

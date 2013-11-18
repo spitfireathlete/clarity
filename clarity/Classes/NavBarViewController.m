@@ -21,6 +21,8 @@
     
     // Custom Tableview Cells
     [self.tableView registerNib:[UINib nibWithNibName:@"NavBarHeaderCell" bundle:Nil] forCellReuseIdentifier:@"headercell"];
+    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"light_blurry_background.png"]];
+    [self.tableView setBackgroundView:backgroundView];
     
 }
 
@@ -62,6 +64,7 @@
     NSString *iconName = [iconNames objectAtIndex:indexPath.row - 1];
     navcell.textLabel.text = [NSString stringWithFormat:@"%@", rowTitle];
     navcell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@", iconName]];
+    navcell.backgroundColor = [UIColor clearColor];
     return navcell;
 
 }
@@ -75,6 +78,11 @@
     }
     
     return 70;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - Navigation
