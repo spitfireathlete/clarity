@@ -54,7 +54,7 @@
     }
     
     NSArray *rowTitles = [[NSArray alloc] initWithObjects:@"Feed", @"Dashboard", @"Sync", @"Logout", nil];
-    NSArray *iconNames = [[NSArray alloc] initWithObjects:@"feed_icon.png", @"dashboard_icon.png", @"sync_icon.png", @"logout_icon.png", nil];
+    NSArray *iconNames = [[NSArray alloc] initWithObjects:@"globe_icon.png", @"home_icon.png", @"sync_icon.png", @"logout_icon.png", nil];
     
 
     UITableViewCell *navcell = [tableView dequeueReusableCellWithIdentifier:@"navcell" forIndexPath:indexPath];
