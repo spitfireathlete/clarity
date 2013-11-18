@@ -51,6 +51,10 @@
 		EA6F0067183AAB9100336E21 /* menu_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F0065183AAB9100336E21 /* menu_icon.png */; };
 		EA6F0068183AAB9100336E21 /* plus_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F0066183AAB9100336E21 /* plus_icon.png */; };
 		EA6F006C183AAE6D00336E21 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F006B183AAE6D00336E21 /* SWRevealViewController.m */; };
+		EA6F006F183AAEC000336E21 /* NavBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F006E183AAEC000336E21 /* NavBarViewController.m */; };
+		EA6F0073183AAF8A00336E21 /* NavBarHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F0072183AAF8A00336E21 /* NavBarHeaderCell.m */; };
+		EA6F0075183AAFB100336E21 /* NavBarHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6F0074183AAFB100336E21 /* NavBarHeaderCell.xib */; };
+		EA6F0077183AB03700336E21 /* Nidhi_Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F0076183AB03700336E21 /* Nidhi_Circle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -180,6 +184,12 @@
 		EA6F0066183AAB9100336E21 /* plus_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus_icon.png; sourceTree = "<group>"; };
 		EA6F006A183AAE6D00336E21 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		EA6F006B183AAE6D00336E21 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		EA6F006D183AAEC000336E21 /* NavBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavBarViewController.h; sourceTree = "<group>"; };
+		EA6F006E183AAEC000336E21 /* NavBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavBarViewController.m; sourceTree = "<group>"; };
+		EA6F0071183AAF8A00336E21 /* NavBarHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavBarHeaderCell.h; sourceTree = "<group>"; };
+		EA6F0072183AAF8A00336E21 /* NavBarHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavBarHeaderCell.m; sourceTree = "<group>"; };
+		EA6F0074183AAFB100336E21 /* NavBarHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavBarHeaderCell.xib; sourceTree = "<group>"; };
+		EA6F0076183AB03700336E21 /* Nidhi_Circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nidhi_Circle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -569,6 +579,7 @@
 		EA6F00521839BDD700336E21 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EA6F0076183AB03700336E21 /* Nidhi_Circle.png */,
 				EA6F0065183AAB9100336E21 /* menu_icon.png */,
 				EA6F0066183AAB9100336E21 /* plus_icon.png */,
 				EA6F00551839BF2000336E21 /* SFBackground_DarkGradient.png */,
@@ -583,6 +594,9 @@
 			children = (
 				EA6F00581839C24700336E21 /* FeedTableViewController.h */,
 				EA6F00591839C24700336E21 /* FeedTableViewController.m */,
+				EA6F006D183AAEC000336E21 /* NavBarViewController.h */,
+				EA6F006E183AAEC000336E21 /* NavBarViewController.m */,
+				EA6F0070183AAF3600336E21 /* Custom NavBar Cells */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -594,6 +608,16 @@
 				EA6F006B183AAE6D00336E21 /* SWRevealViewController.m */,
 			);
 			name = SWRevealController;
+			sourceTree = "<group>";
+		};
+		EA6F0070183AAF3600336E21 /* Custom NavBar Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EA6F0071183AAF8A00336E21 /* NavBarHeaderCell.h */,
+				EA6F0072183AAF8A00336E21 /* NavBarHeaderCell.m */,
+				EA6F0074183AAFB100336E21 /* NavBarHeaderCell.xib */,
+			);
+			name = "Custom NavBar Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -661,6 +685,8 @@
 				824A9E611724F02D00C9BD79 /* icon.png in Resources */,
 				824A9E621724F02D00C9BD79 /* icon@2x.png in Resources */,
 				824A9FDF1725079100C9BD79 /* openssl_license.txt in Resources */,
+				EA6F0077183AB03700336E21 /* Nidhi_Circle.png in Resources */,
+				EA6F0075183AAFB100336E21 /* NavBarHeaderCell.xib in Resources */,
 				EA6F0068183AAB9100336E21 /* plus_icon.png in Resources */,
 				EA6F00511839BBC700336E21 /* Main.storyboard in Resources */,
 				824A9FE61725079100C9BD79 /* LICENSE in Resources */,
@@ -709,7 +735,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA6F005A1839C24700336E21 /* FeedTableViewController.m in Sources */,
+				EA6F0073183AAF8A00336E21 /* NavBarHeaderCell.m in Sources */,
 				824A9DE51724E16400C9BD79 /* main.m in Sources */,
+				EA6F006F183AAEC000336E21 /* NavBarViewController.m in Sources */,
 				EA6F006C183AAE6D00336E21 /* SWRevealViewController.m in Sources */,
 				824A9E331724E2A900C9BD79 /* AppDelegate.m in Sources */,
 				824A9E361724E45100C9BD79 /* RootViewController.m in Sources */,
