@@ -1055,6 +1055,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "clarity/clarity-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
 					"$(SRCROOT)/clarity/Dependencies/SalesforceOAuth/Headers",
 					"$(SRCROOT)/clarity/Dependencies/SalesforceNetworkSDK/Headers",
 					"$(SRCROOT)/clarity/Dependencies/SalesforceNativeSDK/Headers",
@@ -1090,6 +1091,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "clarity/clarity-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
 					"$(SRCROOT)/clarity/Dependencies/SalesforceOAuth/Headers",
 					"$(SRCROOT)/clarity/Dependencies/SalesforceNetworkSDK/Headers",
 					"$(SRCROOT)/clarity/Dependencies/SalesforceNativeSDK/Headers",
