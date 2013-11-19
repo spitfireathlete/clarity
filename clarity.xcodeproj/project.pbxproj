@@ -85,7 +85,9 @@
 		EA6F00BC183B185400336E21 /* down_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F00BB183B185400336E21 /* down_arrow.png */; };
 		EA6F00BF183B1D1600336E21 /* ProjectViewHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F00BE183B1D1600336E21 /* ProjectViewHeaderCell.m */; };
 		EA6F00C1183B1D2A00336E21 /* ProjectViewHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6F00C0183B1D2A00336E21 /* ProjectViewHeaderCell.xib */; };
-		EAFC13BC183B3EAE00210407 /* ProjectDetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC13BB183B3EAE00210407 /* ProjectDetailsCell.m */; };
+		EAFC13C1183B403200210407 /* DetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC13C0183B403200210407 /* DetailViewCell.m */; };
+		EAFC13C3183B404000210407 /* DetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFC13C2183B404000210407 /* DetailViewCell.xib */; };
+		EAFC13C5183B495E00210407 /* SF_small_header.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFC13C4183B495E00210407 /* SF_small_header.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -260,8 +262,10 @@
 		EA6F00BD183B1D1600336E21 /* ProjectViewHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectViewHeaderCell.h; sourceTree = "<group>"; };
 		EA6F00BE183B1D1600336E21 /* ProjectViewHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectViewHeaderCell.m; sourceTree = "<group>"; };
 		EA6F00C0183B1D2A00336E21 /* ProjectViewHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectViewHeaderCell.xib; sourceTree = "<group>"; };
-		EAFC13BA183B3EAE00210407 /* ProjectDetailsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectDetailsCell.h; sourceTree = "<group>"; };
-		EAFC13BB183B3EAE00210407 /* ProjectDetailsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectDetailsCell.m; sourceTree = "<group>"; };
+		EAFC13BF183B403200210407 /* DetailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewCell.h; sourceTree = "<group>"; };
+		EAFC13C0183B403200210407 /* DetailViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewCell.m; sourceTree = "<group>"; };
+		EAFC13C2183B404000210407 /* DetailViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewCell.xib; sourceTree = "<group>"; };
+		EAFC13C4183B495E00210407 /* SF_small_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SF_small_header.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -652,6 +656,7 @@
 			isa = PBXGroup;
 			children = (
 				EA6F00BB183B185400336E21 /* down_arrow.png */,
+				EAFC13C4183B495E00210407 /* SF_small_header.png */,
 				EA6F00B9183B185000336E21 /* up_arrow.png */,
 				EA6F00AF183B01BC00336E21 /* gray_plus_icon.png */,
 				EA6F009A183AF0CD00336E21 /* blue_checkmark.png */,
@@ -724,8 +729,9 @@
 				EA6F00BD183B1D1600336E21 /* ProjectViewHeaderCell.h */,
 				EA6F00BE183B1D1600336E21 /* ProjectViewHeaderCell.m */,
 				EA6F00C0183B1D2A00336E21 /* ProjectViewHeaderCell.xib */,
-				EAFC13BA183B3EAE00210407 /* ProjectDetailsCell.h */,
-				EAFC13BB183B3EAE00210407 /* ProjectDetailsCell.m */,
+				EAFC13BF183B403200210407 /* DetailViewCell.h */,
+				EAFC13C0183B403200210407 /* DetailViewCell.m */,
+				EAFC13C2183B404000210407 /* DetailViewCell.xib */,
 				EA6F00B4183B168600336E21 /* IdeaCell.h */,
 				EA6F00B5183B168600336E21 /* IdeaCell.m */,
 				EA6F00B7183B169700336E21 /* IdeaCell.xib */,
@@ -818,7 +824,9 @@
 				EA6F00C1183B1D2A00336E21 /* ProjectViewHeaderCell.xib in Resources */,
 				EA6F0091183AEE9700336E21 /* tiny_heart_icon.png in Resources */,
 				EA6F007E183AC27600336E21 /* logout_icon.png in Resources */,
+				EAFC13C5183B495E00210407 /* SF_small_header.png in Resources */,
 				EA6F00511839BBC700336E21 /* Main.storyboard in Resources */,
+				EAFC13C3183B404000210407 /* DetailViewCell.xib in Resources */,
 				824A9FE61725079100C9BD79 /* LICENSE in Resources */,
 				EA6F0081183AC69D00336E21 /* light_blurry_background.png in Resources */,
 				EA6F0084183AC81600336E21 /* light_blurry_sf.png in Resources */,
@@ -878,10 +886,10 @@
 				EA6F00B6183B168600336E21 /* IdeaCell.m in Sources */,
 				EA6F006F183AAEC000336E21 /* NavBarViewController.m in Sources */,
 				EA6F006C183AAE6D00336E21 /* SWRevealViewController.m in Sources */,
+				EAFC13C1183B403200210407 /* DetailViewCell.m in Sources */,
 				EA6F00A2183AF55400336E21 /* AccountNameCell.m in Sources */,
 				EA6F00A7183AFB3B00336E21 /* ProjectDetailCell.m in Sources */,
 				824A9E331724E2A900C9BD79 /* AppDelegate.m in Sources */,
-				EAFC13BC183B3EAE00210407 /* ProjectDetailsCell.m in Sources */,
 				EA6F00BF183B1D1600336E21 /* ProjectViewHeaderCell.m in Sources */,
 				824A9E361724E45100C9BD79 /* RootViewController.m in Sources */,
 				EA6F0097183AF00500336E21 /* ProjectCreationHeaderCell.m in Sources */,

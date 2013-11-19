@@ -10,8 +10,4 @@
 
 @interface ProjectViewController : UITableViewController
 
-@property (strong, nonatomic) IBOutlet UILabel *projectQuestion;
-@property (strong, nonatomic) IBOutlet UILabel *projectDetails;
-@property (strong, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
-
 @end

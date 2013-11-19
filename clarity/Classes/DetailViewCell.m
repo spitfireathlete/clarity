@@ -1,14 +1,15 @@
 //
-//  IdeaCell.m
-//  clarity
+//  DetailViewCell.m
+//  
 //
 //  Created by Erin Parker on 11/18/13.
-//  Copyright (c) 2013 Spitfire Athlete - Hackathons. All rights reserved.
+//
 //
 
-#import "IdeaCell.h"
+#import "DetailViewCell.h"
 
-@implementation IdeaCell
+@implementation DetailViewCell
+
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -17,6 +18,7 @@
     {
         UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"light_blurry_background.png"]];
         [self setBackgroundView:backgroundView];
+
     }
     
     return self;
@@ -27,18 +29,5 @@
     
 }
 
-- (void)setFrame:(CGRect)frame {
-    frame.origin.y += 5;
-    frame.size.height -= 2 * 5;
-    [super setFrame:frame];
-}
 
-- (IBAction)comment:(id)sender {
-}
-
-- (IBAction)upVote:(id)sender {
-}
-
-- (IBAction)downVote:(id)sender {
-}
 @end
