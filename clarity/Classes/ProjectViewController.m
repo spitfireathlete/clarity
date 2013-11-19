@@ -29,6 +29,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"IdeaCell" bundle:nil] forCellReuseIdentifier:@"ideaCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"ProjectViewHeaderCell" bundle:nil] forCellReuseIdentifier:@"projectViewHeaderCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"DetailViewCell" bundle:nil] forCellReuseIdentifier:@"detailViewCell"];
+    
 }
 
 #pragma mark - Table view data source
@@ -57,8 +58,20 @@
     if ([indexPath isEqual:detailsRow]) {
         DetailViewCell *detailCell = (DetailViewCell *)[tableView dequeueReusableCellWithIdentifier:@"detailViewCell"];
         detailCell.detailText.text = @"We're trying to get our Powerlifting shoe to really take off, but so far Adidas has been killing the market. What other marketing stunts can we pull off to dominate?";
+        
+        // UI Segmented Control
+        [detailCell.segmentedControl addTarget:self action:@selector(indexDidChangeForSegmentedControl:) forControlEvents:UIControlEventValueChanged];
+        
+        switch (detailCell.segmentedControl.selectedSegmentIndex) {
+            case 0:
+                NSLog(@"Ideas");
+            case 1:
+                NSLog(@"Collaborators");
+        }
+
         return detailCell;
     }
+    
     
     NSIndexPath *ideaRow = [NSIndexPath indexPathForRow:2 inSection:0];
     if ([indexPath isEqual:ideaRow]) {
@@ -91,6 +104,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+-(void)indexDidChangeForSegmentedControl: (UISegmentedControl *)selectedSegmentIndex {
+    
+    [self.tableView reloadData];
 }
 
 /*
