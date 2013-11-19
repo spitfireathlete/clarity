@@ -36,7 +36,6 @@
     
     [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
     
-    // SWReveal
     // SWRevealViewController
     [_menu setTarget: self.revealViewController];
     [_menu setAction: @selector(revealToggle:)];

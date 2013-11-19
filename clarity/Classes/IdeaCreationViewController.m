@@ -28,6 +28,7 @@
 }
 
 - (IBAction)cancelIdea:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)saveIdea:(id)sender {

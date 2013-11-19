@@ -10,6 +10,7 @@
 #import "ProjectViewHeaderCell.h"
 #import "DetailViewCell.h"
 #import "IdeaCell.h"
+#import "SWRevealViewController.h"
 
 @interface ProjectViewController ()
 
@@ -29,6 +30,13 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"IdeaCell" bundle:nil] forCellReuseIdentifier:@"ideaCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"ProjectViewHeaderCell" bundle:nil] forCellReuseIdentifier:@"projectViewHeaderCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"DetailViewCell" bundle:nil] forCellReuseIdentifier:@"detailViewCell"];
+    
+    
+    // SWRevealViewController
+    [_menu setTarget: self.revealViewController];
+    [_menu setAction: @selector(revealToggle:)];
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+
     
 }
 
