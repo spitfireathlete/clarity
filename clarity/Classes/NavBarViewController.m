@@ -8,6 +8,7 @@
 
 #import "NavBarViewController.h"
 #import "NavBarHeaderCell.h"
+#import "SWRevealViewController.h"
 
 @interface NavBarViewController ()
 
@@ -86,9 +87,18 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue isKindOfClass: [SWRevealViewControllerSegue class]]) {
+        
+        SWRevealViewControllerSegue* rvcs = (SWRevealViewControllerSegue*) segue;
+        
+        SWRevealViewController* rvc = self.revealViewController;
+        
+        rvcs.performBlock = ^(SWRevealViewControllerSegue* rvc_segue, UIViewController* svc, UIViewController* dvc) {
+            
+            UINavigationController* nc = [[UINavigationController alloc] initWithRootViewController:dvc];
+            [rvc setFrontViewController:nc animated:YES];
+        };
+    }
 }
-
 
 @end

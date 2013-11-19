@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8uN-FE-QQQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="eB4-Sr-SWH">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
@@ -57,6 +57,9 @@
                                 <state key="normal" title="Login with Salesforce">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ArZ-hS-w5o" kind="modal" id="r57-EU-h6E"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -65,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HAB-lT-r1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1071" y="260"/>
+            <point key="canvasLocation" x="951" y="260"/>
         </scene>
         <!--Nav Bar View Controller-->
         <scene sceneID="chZ-R1-IIe">
@@ -110,7 +113,21 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JB7-x8-5GU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1491" y="258"/>
+            <point key="canvasLocation" x="1345" y="269"/>
+        </scene>
+        <!--Reveal View Controller-->
+        <scene sceneID="qLa-DI-epy">
+            <objects>
+                <viewController storyboardIdentifier="SWRevealViewController" id="ArZ-hS-w5o" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bgn-OP-vYz"/>
+                    <connections>
+                        <segue destination="V2A-VY-vmP" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegue" id="faC-Vb-XeO"/>
+                        <segue destination="rhN-wh-Mri" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegue" id="vOO-C3-qIn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lhl-s0-CF7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1891" y="171"/>
         </scene>
         <!--Feed Table View Controller-->
         <scene sceneID="3PP-4u-7sP">
@@ -146,7 +163,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="gx8-CP-StD">
-                        <barButtonItem key="leftBarButtonItem" image="menu_icon.png" id="VFm-xP-e2q">
+                        <barButtonItem key="leftBarButtonItem" image="menu_icon.png" style="done" id="VFm-xP-e2q">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="plus_icon.png" id="i5m-xP-Dzq">
@@ -154,10 +171,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="menuButton" destination="VFm-xP-e2q" id="Cc4-x0-wX6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xnw-VI-cYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2339" y="260"/>
+            <point key="canvasLocation" x="2554" y="260"/>
         </scene>
         <!--Dashboard View Controller-->
         <scene sceneID="rrX-jn-0iM">
@@ -193,7 +213,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4GI-6b-ASi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2828" y="327"/>
+            <point key="canvasLocation" x="2994" y="325"/>
         </scene>
         <!--Idea Creation View Controller-->
         <scene sceneID="cwY-bg-ASi">
@@ -263,7 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Fd-Bk-fdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2829" y="-330"/>
+            <point key="canvasLocation" x="2994" y="-344"/>
         </scene>
         <!--Project Creation View Controller-->
         <scene sceneID="tdp-C7-3YO">
@@ -420,27 +440,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZI-Xg-hYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1972" y="260"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Xtu-EI-9y1">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="hdc-Qo-EqI" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UEM-ID-LGd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="eB4-Sr-SWH" kind="relationship" relationship="rootViewController" id="3ho-2i-K2c"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pYO-Ro-5GD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="727" y="260"/>
+            <point key="canvasLocation" x="2161" y="269"/>
         </scene>
     </scenes>
     <resources>
@@ -448,6 +448,7 @@
         <image name="blue_checkmark.png" width="75" height="75"/>
         <image name="gray_xmark.png" width="70" height="71"/>
         <image name="menu_icon.png" width="20" height="20"/>
+        <image name="plus_icon.png" width="20" height="20"/>
         <image name="plus_icon.png" width="20" height="20"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

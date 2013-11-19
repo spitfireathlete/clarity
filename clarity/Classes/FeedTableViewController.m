@@ -8,6 +8,7 @@
 
 #import "FeedTableViewController.h"
 #import "FeedCell.h"
+#import "SWRevealViewController.h"
 
 @interface FeedTableViewController ()
 
@@ -36,7 +37,12 @@
     
     // Custom Tableview Cells
     [self.tableView registerNib:[UINib nibWithNibName:@"FeedCell" bundle:Nil] forCellReuseIdentifier:@"feedcell"];
-
+    
+    // SWRevealViewController
+    [_menuButton setTarget: self.revealViewController];
+    [_menuButton setAction: @selector(revealToggle:)];
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
 }
 
 
@@ -77,16 +83,20 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue isKindOfClass: [SWRevealViewControllerSegue class]]) {
+        
+        SWRevealViewControllerSegue* rvcs = (SWRevealViewControllerSegue*) segue;
+        
+        SWRevealViewController* rvc = self.revealViewController;
+        
+        rvcs.performBlock = ^(SWRevealViewControllerSegue* rvc_segue, UIViewController* svc, UIViewController* dvc) {
+            
+            UINavigationController* nc = [[UINavigationController alloc] initWithRootViewController:dvc];
+            [rvc setFrontViewController:nc animated:YES];
+        };
+    }
 }
-
- */
 
 @end
