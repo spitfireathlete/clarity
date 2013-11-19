@@ -27,6 +27,8 @@
 
 #import "SFRestAPI.h"
 #import "SFRestRequest.h"
+#import "SFAccountManager.h"
+#import "SFIdentityData.h"
 
 @implementation RootViewController
 
@@ -55,19 +57,32 @@
     self.title = @"Mobile SDK Sample App";
     
     //Here we use a query that should work on either Force.com or Database.com
-    SFRestRequest *request = [[SFRestAPI sharedInstance] requestForQuery:@"SELECT Name FROM User LIMIT 10"];    
+//    SFRestRequest *request = [[SFRestAPI sharedInstance] requestForQuery:@"SELECT Name FROM User LIMIT 10"];
+//    NSLog(@"%@", request);
+//    [[SFRestAPI sharedInstance] send:request delegate:self];
+    [self describeAccount];
+}
+
+- (void)describeAccount {
+   // SFRestRequest *request = [[SFRestAPI sharedInstance] requestForDescribeWithObjectType:@"Account"];
+    //SFRestRequest *request = [[SFRestAPI sharedInstance] requestForDescribeWithObjectType:@"Account"];
+    SFRestRequest *request = [[SFRestAPI sharedInstance] requestForQuery:@"SELECT Id, Name, Type FROM Account LIMIT 10"];
     [[SFRestAPI sharedInstance] send:request delegate:self];
 }
 
 #pragma mark - SFRestAPIDelegate
 
 - (void)request:(SFRestRequest *)request didLoadResponse:(id)jsonResponse {
+    NSLog(@"%@", jsonResponse);
     NSArray *records = [jsonResponse objectForKey:@"records"];
     NSLog(@"request:didLoadResponse: #records: %d", records.count);
     self.dataRows = records;
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.tableView reloadData];
     });
+    SFIdentityData *idData =[ [SFAccountManager sharedInstance] idData];
+    NSLog(@"%@, %@ %@", idData.email, idData.firstName, idData.lastName);
+    
 }
 
 
