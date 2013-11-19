@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:DashboardProjectCell.xib">
+   </FileRef>
+   <FileRef
       location = "group:clarity.xcodeproj">
    </FileRef>
    <FileRef

@@ -96,6 +96,10 @@
 		EAFC13C5183B495E00210407 /* SF_small_header.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFC13C4183B495E00210407 /* SF_small_header.png */; };
 		EAFC13C8183B53E200210407 /* IdeaCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC13C7183B53E200210407 /* IdeaCreationViewController.m */; };
 		EAFC13CB183B604800210407 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC13CA183B604800210407 /* DashboardViewController.m */; };
+		EAFC13CE183B624200210407 /* DashboardHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC13CD183B624200210407 /* DashboardHeaderCell.m */; };
+		EAFC13D0183B624C00210407 /* DashboardHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFC13CF183B624C00210407 /* DashboardHeaderCell.xib */; };
+		EAFC13D3183B66A900210407 /* DashboardProjectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC13D2183B66A900210407 /* DashboardProjectCell.m */; };
+		EAFC13D5183B66BF00210407 /* DashboardProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFC13D4183B66BF00210407 /* DashboardProjectCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -292,6 +296,12 @@
 		EAFC13C7183B53E200210407 /* IdeaCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdeaCreationViewController.m; sourceTree = "<group>"; };
 		EAFC13C9183B604800210407 /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
 		EAFC13CA183B604800210407 /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
+		EAFC13CC183B624200210407 /* DashboardHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardHeaderCell.h; sourceTree = "<group>"; };
+		EAFC13CD183B624200210407 /* DashboardHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardHeaderCell.m; sourceTree = "<group>"; };
+		EAFC13CF183B624C00210407 /* DashboardHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardHeaderCell.xib; sourceTree = "<group>"; };
+		EAFC13D1183B66A900210407 /* DashboardProjectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardProjectCell.h; sourceTree = "<group>"; };
+		EAFC13D2183B66A900210407 /* DashboardProjectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardProjectCell.m; sourceTree = "<group>"; };
+		EAFC13D4183B66BF00210407 /* DashboardProjectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardProjectCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -787,6 +797,12 @@
 				EA6F00B4183B168600336E21 /* IdeaCell.h */,
 				EA6F00B5183B168600336E21 /* IdeaCell.m */,
 				EA6F00B7183B169700336E21 /* IdeaCell.xib */,
+				EAFC13CC183B624200210407 /* DashboardHeaderCell.h */,
+				EAFC13CD183B624200210407 /* DashboardHeaderCell.m */,
+				EAFC13CF183B624C00210407 /* DashboardHeaderCell.xib */,
+				EAFC13D1183B66A900210407 /* DashboardProjectCell.h */,
+				EAFC13D2183B66A900210407 /* DashboardProjectCell.m */,
+				EAFC13D4183B66BF00210407 /* DashboardProjectCell.xib */,
 			);
 			name = "Custom Tableview Cells";
 			sourceTree = "<group>";
@@ -863,11 +879,13 @@
 				EA6F009F183AF1F000336E21 /* write_icon.png in Resources */,
 				824A9E601724F02D00C9BD79 /* icon-72@2x.png in Resources */,
 				824A9E611724F02D00C9BD79 /* icon.png in Resources */,
+				EAFC13D0183B624C00210407 /* DashboardHeaderCell.xib in Resources */,
 				824A9E621724F02D00C9BD79 /* icon@2x.png in Resources */,
 				824A9FDF1725079100C9BD79 /* openssl_license.txt in Resources */,
 				EA6F0077183AB03700336E21 /* Nidhi_Circle.png in Resources */,
 				EA6F00A4183AF5BF00336E21 /* AccountNameCell.xib in Resources */,
 				EA6F00A9183AFB4E00336E21 /* ProjectDetailCell.xib in Resources */,
+				EAFC13D5183B66BF00210407 /* DashboardProjectCell.xib in Resources */,
 				EA6F007F183AC27600336E21 /* sync_icon.png in Resources */,
 				EA6F007D183AC27600336E21 /* home_icon.png in Resources */,
 				EA6F0075183AAFB100336E21 /* NavBarHeaderCell.xib in Resources */,
@@ -932,6 +950,7 @@
 				EA6F005A1839C24700336E21 /* FeedTableViewController.m in Sources */,
 				EAFC13CB183B604800210407 /* DashboardViewController.m in Sources */,
 				EA6F0087183AC84B00336E21 /* FeedCell.m in Sources */,
+				EAFC13D3183B66A900210407 /* DashboardProjectCell.m in Sources */,
 				EA6F0094183AEF3F00336E21 /* ProjectCreationViewController.m in Sources */,
 				EA6F0073183AAF8A00336E21 /* NavBarHeaderCell.m in Sources */,
 				02BA29ED183B45AD005BDE95 /* Collaborator.m in Sources */,
@@ -953,6 +972,7 @@
 				02BA29E4183B4339005BDE95 /* Project.m in Sources */,
 				02BA29E7183B4344005BDE95 /* Idea.m in Sources */,
 				02BA29EA183B4351005BDE95 /* Comment.m in Sources */,
+				EAFC13CE183B624200210407 /* DashboardHeaderCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
