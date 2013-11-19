@@ -73,6 +73,8 @@
 		EA6F009F183AF1F000336E21 /* write_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F009E183AF1F000336E21 /* write_icon.png */; };
 		EA6F00A2183AF55400336E21 /* AccountNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F00A1183AF55400336E21 /* AccountNameCell.m */; };
 		EA6F00A4183AF5BF00336E21 /* AccountNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6F00A3183AF5BF00336E21 /* AccountNameCell.xib */; };
+		EA6F00A7183AFB3B00336E21 /* ProjectDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F00A6183AFB3B00336E21 /* ProjectDetailCell.m */; };
+		EA6F00A9183AFB4E00336E21 /* ProjectDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6F00A8183AFB4E00336E21 /* ProjectDetailCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -230,6 +232,9 @@
 		EA6F00A0183AF55400336E21 /* AccountNameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountNameCell.h; sourceTree = "<group>"; };
 		EA6F00A1183AF55400336E21 /* AccountNameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountNameCell.m; sourceTree = "<group>"; };
 		EA6F00A3183AF5BF00336E21 /* AccountNameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountNameCell.xib; sourceTree = "<group>"; };
+		EA6F00A5183AFB3B00336E21 /* ProjectDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectDetailCell.h; sourceTree = "<group>"; };
+		EA6F00A6183AFB3B00336E21 /* ProjectDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectDetailCell.m; sourceTree = "<group>"; };
+		EA6F00A8183AFB4E00336E21 /* ProjectDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectDetailCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -678,6 +683,9 @@
 				EA6F00A0183AF55400336E21 /* AccountNameCell.h */,
 				EA6F00A1183AF55400336E21 /* AccountNameCell.m */,
 				EA6F00A3183AF5BF00336E21 /* AccountNameCell.xib */,
+				EA6F00A5183AFB3B00336E21 /* ProjectDetailCell.h */,
+				EA6F00A6183AFB3B00336E21 /* ProjectDetailCell.m */,
+				EA6F00A8183AFB4E00336E21 /* ProjectDetailCell.xib */,
 			);
 			name = "Custom Tableview Cells";
 			sourceTree = "<group>";
@@ -754,6 +762,7 @@
 				824A9FDF1725079100C9BD79 /* openssl_license.txt in Resources */,
 				EA6F0077183AB03700336E21 /* Nidhi_Circle.png in Resources */,
 				EA6F00A4183AF5BF00336E21 /* AccountNameCell.xib in Resources */,
+				EA6F00A9183AFB4E00336E21 /* ProjectDetailCell.xib in Resources */,
 				EA6F007F183AC27600336E21 /* sync_icon.png in Resources */,
 				EA6F007D183AC27600336E21 /* home_icon.png in Resources */,
 				EA6F0075183AAFB100336E21 /* NavBarHeaderCell.xib in Resources */,
@@ -818,6 +827,7 @@
 				EA6F006F183AAEC000336E21 /* NavBarViewController.m in Sources */,
 				EA6F006C183AAE6D00336E21 /* SWRevealViewController.m in Sources */,
 				EA6F00A2183AF55400336E21 /* AccountNameCell.m in Sources */,
+				EA6F00A7183AFB3B00336E21 /* ProjectDetailCell.m in Sources */,
 				824A9E331724E2A900C9BD79 /* AppDelegate.m in Sources */,
 				824A9E361724E45100C9BD79 /* RootViewController.m in Sources */,
 				EA6F0097183AF00500336E21 /* ProjectCreationHeaderCell.m in Sources */,

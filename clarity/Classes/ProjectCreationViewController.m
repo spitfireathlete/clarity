@@ -9,6 +9,7 @@
 #import "ProjectCreationViewController.h"
 #import "ProjectCreationHeaderCell.h"
 #import "AccountNameCell.h"
+#import "ProjectDetailCell.h"
 
 @interface ProjectCreationViewController ()
 
@@ -24,6 +25,7 @@
     // Custom Tableview Cells
     [self.tableView registerNib:[UINib nibWithNibName:@"ProjectCreationHeaderCell" bundle:nil] forCellReuseIdentifier:@"projectCreationHeaderCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"AccountNameCell" bundle:nil] forCellReuseIdentifier:@"accountNameCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"ProjectDetailCell" bundle:nil] forCellReuseIdentifier:@"projectDetailCell"];
 }
 
 
@@ -36,7 +38,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -49,13 +51,15 @@
     return cell;
     }
     
-//    NSIndexPath *accountNameRow = [NSIndexPath indexPathForRow:1 inSection:0];
-//    if ([indexPath isEqual:accountNameRow]) {
+    NSIndexPath *accountNameRow = [NSIndexPath indexPathForRow:1 inSection:0];
+    if ([indexPath isEqual:accountNameRow]) {
         AccountNameCell *cell = (AccountNameCell *)[tableView dequeueReusableCellWithIdentifier:@"accountNameCell"];
-        cell.backgroundColor = [UIColor redColor];
         return cell;
-//    }
+    }
     
+    ProjectDetailCell *cell = (ProjectDetailCell *)[tableView dequeueReusableCellWithIdentifier:@"projectDetailCell"];
+    return cell;
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
