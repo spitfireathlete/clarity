@@ -10,6 +10,7 @@
 #import "ProjectCreationHeaderCell.h"
 #import "AccountNameCell.h"
 #import "ProjectDetailCell.h"
+#import "AddCollaboratorsCell.h"
 
 @interface ProjectCreationViewController ()
 
@@ -26,6 +27,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"ProjectCreationHeaderCell" bundle:nil] forCellReuseIdentifier:@"projectCreationHeaderCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"AccountNameCell" bundle:nil] forCellReuseIdentifier:@"accountNameCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"ProjectDetailCell" bundle:nil] forCellReuseIdentifier:@"projectDetailCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"AddCollaboratorsCell" bundle:nil] forCellReuseIdentifier:@"addCollaboratorsCell"];
 }
 
 
@@ -38,17 +40,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSIndexPath *headerRow = [NSIndexPath indexPathForRow:0 inSection:0];
     if ([indexPath isEqual:headerRow]) {
-    ProjectCreationHeaderCell *cell = (ProjectCreationHeaderCell *)[tableView dequeueReusableCellWithIdentifier:@"projectCreationHeaderCell"];
-    cell.backgroundColor = [UIColor clearColor];
-    
-    return cell;
+        ProjectCreationHeaderCell *cell = (ProjectCreationHeaderCell *)[tableView dequeueReusableCellWithIdentifier:@"projectCreationHeaderCell"];
+        cell.backgroundColor = [UIColor clearColor];
+        return cell;
     }
     
     NSIndexPath *accountNameRow = [NSIndexPath indexPathForRow:1 inSection:0];
@@ -57,8 +58,15 @@
         return cell;
     }
     
-    ProjectDetailCell *cell = (ProjectDetailCell *)[tableView dequeueReusableCellWithIdentifier:@"projectDetailCell"];
+    NSIndexPath *projectDetailRow = [NSIndexPath indexPathForRow:2 inSection:0];
+    if ([indexPath isEqual:projectDetailRow]) {
+        ProjectDetailCell *cell = (ProjectDetailCell *)[tableView dequeueReusableCellWithIdentifier:@"projectDetailCell"];
+        return cell;
+    }
+    
+    AddCollaboratorsCell *cell = (AddCollaboratorsCell *)[tableView dequeueReusableCellWithIdentifier:@"addCollaboratorsCell"];
     return cell;
+    
 
 }
 
