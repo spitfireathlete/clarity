@@ -34,7 +34,7 @@
                         </segments>
                         <color key="tintColor" red="0.31764705879999999" green="0.76862745099999996" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                     </segmentedControl>
-                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KSs-l6-dMO">
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KSs-l6-dMO">
                         <rect key="frame" x="259" y="7" width="51" height="31"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="onTintColor" red="0.31764705879999999" green="0.76862745099999996" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>

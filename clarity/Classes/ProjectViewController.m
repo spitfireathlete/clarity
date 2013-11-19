@@ -36,7 +36,6 @@
     [_menu setTarget: self.revealViewController];
     [_menu setAction: @selector(revealToggle:)];
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-
     
 }
 
@@ -76,6 +75,9 @@
             case 1:
                 NSLog(@"Collaborators");
         }
+        
+        // Switch
+        [detailCell.publicSwitch addTarget:self action:@selector(switchDidChange:) forControlEvents:UIControlEventValueChanged];
 
         return detailCell;
     }
@@ -117,6 +119,14 @@
 -(void)indexDidChangeForSegmentedControl: (UISegmentedControl *)selectedSegmentIndex {
     
     [self.tableView reloadData];
+}
+
+- (void)switchDidChange: (UISwitch *)mySwitch {
+    if (mySwitch.on) {
+        NSLog(@"%hhd", mySwitch.on);
+    } else {
+        NSLog(@"Off");
+    }
 }
 
 /*
