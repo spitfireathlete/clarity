@@ -11,6 +11,7 @@
 #import "AccountNameCell.h"
 #import "ProjectDetailCell.h"
 #import "AddCollaboratorsCell.h"
+#import "SWRevealViewController.h"  
 
 @interface ProjectCreationViewController ()
 
@@ -34,6 +35,12 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"AddCollaboratorsCell" bundle:nil] forCellReuseIdentifier:@"addCollaboratorsCell"];
     
     [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
+    
+    // SWReveal
+    // SWRevealViewController
+    [_menu setTarget: self.revealViewController];
+    [_menu setAction: @selector(revealToggle:)];
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 }
 
 

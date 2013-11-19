@@ -9,6 +9,7 @@
 #import "DashboardViewController.h"
 #import "DashboardHeaderCell.h"
 #import "DashboardProjectCell.h"
+#import "SWRevealViewController.h"
 
 @interface DashboardViewController ()
 
@@ -28,6 +29,12 @@
     // Custom Tableview Cells
     [self.tableView registerNib:[UINib nibWithNibName:@"DashboardHeaderCell" bundle:nil] forCellReuseIdentifier:@"dashboardHeaderCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"DashboardProjectCell" bundle:nil] forCellReuseIdentifier:@"dashboardProjectCell"];
+    
+    // SWReveal Menu
+    // SWRevealViewController
+    [_menu setTarget: self.revealViewController];
+    [_menu setAction: @selector(revealToggle:)];
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 }
 
 
