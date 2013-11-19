@@ -278,7 +278,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4GI-6b-ASi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3390" y="269"/>
+            <point key="canvasLocation" x="3348" y="269"/>
         </scene>
         <!--Idea Creation View Controller-->
         <scene sceneID="cwY-bg-ASi">
@@ -437,7 +437,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="projectViewHeaderCell" rowHeight="72" id="gN9-OR-C5k">
-                                <rect key="frame" x="0.0" y="22" width="320" height="72"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gN9-OR-C5k" id="CuV-ne-A53">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
@@ -445,7 +445,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="detailViewCell" rowHeight="73" id="97z-0W-o8m" customClass="DetailViewCell">
-                                <rect key="frame" x="0.0" y="94" width="320" height="73"/>
+                                <rect key="frame" x="0.0" y="158" width="320" height="73"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="97z-0W-o8m" id="3Lr-lr-Gzn">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
@@ -453,7 +453,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ideaCell" rowHeight="98" id="hQp-EF-sbY" customClass="IdeaCell">
-                                <rect key="frame" x="0.0" y="167" width="320" height="98"/>
+                                <rect key="frame" x="0.0" y="231" width="320" height="98"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hQp-EF-sbY" id="2UF-B4-GkX">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
@@ -461,7 +461,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="57" id="bnv-uF-q2X">
-                                <rect key="frame" x="0.0" y="265" width="320" height="57"/>
+                                <rect key="frame" x="0.0" y="329" width="320" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bnv-uF-q2X" id="JIO-n3-riS">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
@@ -582,10 +582,6 @@
         <image name="blue_checkmark.png" width="75" height="75"/>
         <image name="gray_xmark.png" width="70" height="71"/>
         <image name="menu_icon.png" width="20" height="20"/>
-        <image name="menu_icon.png" width="20" height="20"/>
-        <image name="menu_icon.png" width="20" height="20"/>
-        <image name="menu_icon.png" width="20" height="20"/>
-        <image name="plus_icon.png" width="20" height="20"/>
         <image name="plus_icon.png" width="20" height="20"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -596,7 +592,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Zd6-gr-ond"/>
         <segue reference="85F-yF-GUj"/>
-        <segue reference="gdl-22-4dN"/>
         <segue reference="S29-7c-v6h"/>
+        <segue reference="t95-wg-gZn"/>
     </inferredMetricsTieBreakers>
 </document>

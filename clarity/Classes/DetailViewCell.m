@@ -30,4 +30,6 @@
 }
 
 
+- (IBAction)switch:(id)sender {
+}
 @end

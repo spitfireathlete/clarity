@@ -11,4 +11,7 @@
 @interface DetailViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *detailText;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+@property (strong, nonatomic) IBOutlet UISwitch *publicSwitch;
+
+
 @end
