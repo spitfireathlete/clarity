@@ -5,39 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-<<<<<<< HEAD
-	<string>8383B72E-9D9D-456B-B4FA-9AFA2CEE6065</string>
-=======
-	<string>0678CF78-3742-441D-899F-6503D73F4F97</string>
->>>>>>> ad3f8b0... rest objects and parse from dictionaries
+	<string>150D2191-4ED0-4DB9-93F0-21CA5A90A27C</string>
 	<key>IDESourceControlProjectName</key>
 	<string>clarity</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-<<<<<<< HEAD
-		<key>B0EB783D-3DEE-4569-A3D7-7C9CC0EDCF44</key>
-		<string>ssh://work.github.com/spitfireathlete/clarity.git</string>
-=======
-		<key>D285CE65-5E56-4B14-9E1B-6597ADE7BE1B</key>
+		<key>B03E4E82-B6DA-4C90-AA39-EE750C77FAFA</key>
 		<string>https://github.com/spitfireathlete/clarity.git</string>
->>>>>>> ad3f8b0... rest objects and parse from dictionaries
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>clarity.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-<<<<<<< HEAD
-		<key>B0EB783D-3DEE-4569-A3D7-7C9CC0EDCF44</key>
-		<string>..</string>
-	</dict>
-	<key>IDESourceControlProjectURL</key>
-	<string>ssh://work.github.com/spitfireathlete/clarity.git</string>
-	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
-	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>B0EB783D-3DEE-4569-A3D7-7C9CC0EDCF44</string>
-=======
-		<key>D285CE65-5E56-4B14-9E1B-6597ADE7BE1B</key>
+		<key>B03E4E82-B6DA-4C90-AA39-EE750C77FAFA</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -45,19 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D285CE65-5E56-4B14-9E1B-6597ADE7BE1B</string>
->>>>>>> ad3f8b0... rest objects and parse from dictionaries
+	<string>B03E4E82-B6DA-4C90-AA39-EE750C77FAFA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-<<<<<<< HEAD
-			<string>B0EB783D-3DEE-4569-A3D7-7C9CC0EDCF44</string>
-=======
-			<string>D285CE65-5E56-4B14-9E1B-6597ADE7BE1B</string>
->>>>>>> ad3f8b0... rest objects and parse from dictionaries
+			<string>B03E4E82-B6DA-4C90-AA39-EE750C77FAFA</string>
 			<key>IDESourceControlWCCName</key>
 			<string>clarity</string>
 		</dict>
