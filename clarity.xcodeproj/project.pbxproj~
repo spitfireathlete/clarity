@@ -23,6 +23,7 @@
 		824A9DE31724E16400C9BD79 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 824A9DE11724E16400C9BD79 /* InfoPlist.strings */; };
 		824A9DE51724E16400C9BD79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 824A9DE41724E16400C9BD79 /* main.m */; };
 		824A9E331724E2A900C9BD79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 824A9E321724E2A900C9BD79 /* AppDelegate.m */; };
+		824A9E361724E45100C9BD79 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 824A9E351724E45100C9BD79 /* RootViewController.m */; };
 		824A9E3D1724E9F400C9BD79 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 824A9E3C1724E9F400C9BD79 /* readme.txt */; };
 		824A9E3F1724EC6300C9BD79 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 824A9E3E1724EC6300C9BD79 /* Settings.bundle */; };
 		824A9E411724ECC600C9BD79 /* SalesforceSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 824A9E401724ECC600C9BD79 /* SalesforceSDKResources.bundle */; };
@@ -95,10 +96,12 @@
 		EAFC13C3183B404000210407 /* DetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFC13C2183B404000210407 /* DetailViewCell.xib */; };
 		EAFC13C5183B495E00210407 /* SF_small_header.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFC13C4183B495E00210407 /* SF_small_header.png */; };
 		EAFC13C8183B53E200210407 /* IdeaCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC13C7183B53E200210407 /* IdeaCreationViewController.m */; };
-		EAFC13CB183B604800210407 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC13CA183B604800210407 /* DashboardViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
+		287BBB5D1DCB4B8F9FC8FA79 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+=======
 		02BA29DF183B428B005BDE95 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
 		02BA29E0183B428B005BDE95 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
 		02BA29E2183B4339005BDE95 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
@@ -113,7 +116,7 @@
 		02BA29EF183B45CB005BDE95 /* RestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestObject.m; sourceTree = "<group>"; };
 		02BA29F1183B489B005BDE95 /* Priority.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Priority.h; sourceTree = "<group>"; };
 		02BA29F2183B489B005BDE95 /* Priority.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Priority.m; sourceTree = "<group>"; };
-		287BBB5D1DCB4B8F9FC8FA79 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+>>>>>>> ad3f8b0... rest objects and parse from dictionaries
 		4F3F412517E7C9CA008B3283 /* MKNetworkEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKNetworkEngine.h; sourceTree = "<group>"; };
 		4F3F412617E7C9CA008B3283 /* MKNetworkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKNetworkKit.h; sourceTree = "<group>"; };
 		4F3F412717E7C9CA008B3283 /* MKNetworkOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKNetworkOperation.h; sourceTree = "<group>"; };
@@ -290,8 +293,6 @@
 		EAFC13C4183B495E00210407 /* SF_small_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SF_small_header.png; sourceTree = "<group>"; };
 		EAFC13C6183B53E200210407 /* IdeaCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdeaCreationViewController.h; sourceTree = "<group>"; };
 		EAFC13C7183B53E200210407 /* IdeaCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdeaCreationViewController.m; sourceTree = "<group>"; };
-		EAFC13C9183B604800210407 /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
-		EAFC13CA183B604800210407 /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -741,8 +742,6 @@
 				EA6F00B2183B121000336E21 /* ProjectViewController.m */,
 				EAFC13C6183B53E200210407 /* IdeaCreationViewController.h */,
 				EAFC13C7183B53E200210407 /* IdeaCreationViewController.m */,
-				EAFC13C9183B604800210407 /* DashboardViewController.h */,
-				EAFC13CA183B604800210407 /* DashboardViewController.m */,
 				EA6F0070183AAF3600336E21 /* Custom Tableview Cells */,
 			);
 			name = "View Controllers";
@@ -928,15 +927,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				EAFC13C8183B53E200210407 /* IdeaCreationViewController.m in Sources */,
 				EA6F005A1839C24700336E21 /* FeedTableViewController.m in Sources */,
-				EAFC13CB183B604800210407 /* DashboardViewController.m in Sources */,
 				EA6F0087183AC84B00336E21 /* FeedCell.m in Sources */,
 				EA6F0094183AEF3F00336E21 /* ProjectCreationViewController.m in Sources */,
 				EA6F0073183AAF8A00336E21 /* NavBarHeaderCell.m in Sources */,
+=======
 				02BA29ED183B45AD005BDE95 /* Collaborator.m in Sources */,
 				02BA29F3183B489B005BDE95 /* Priority.m in Sources */,
 				02BA29E1183B428B005BDE95 /* APIClient.m in Sources */,
+>>>>>>> ad3f8b0... rest objects and parse from dictionaries
 				824A9DE51724E16400C9BD79 /* main.m in Sources */,
 				EA6F00AC183B007400336E21 /* AddCollaboratorsCell.m in Sources */,
 				EA6F00B3183B121000336E21 /* ProjectViewController.m in Sources */,
@@ -947,12 +948,18 @@
 				EA6F00A2183AF55400336E21 /* AccountNameCell.m in Sources */,
 				EA6F00A7183AFB3B00336E21 /* ProjectDetailCell.m in Sources */,
 				824A9E331724E2A900C9BD79 /* AppDelegate.m in Sources */,
+<<<<<<< HEAD
 				EA6F00BF183B1D1600336E21 /* ProjectViewHeaderCell.m in Sources */,
+				824A9E361724E45100C9BD79 /* RootViewController.m in Sources */,
 				EA6F0097183AF00500336E21 /* ProjectCreationHeaderCell.m in Sources */,
+=======
 				02BA29F0183B45CB005BDE95 /* RestObject.m in Sources */,
 				02BA29E4183B4339005BDE95 /* Project.m in Sources */,
+				824A9E361724E45100C9BD79 /* RootViewController.m in Sources */,
+				824A9E3A1724E58200C9BD79 /* InitialViewController.m in Sources */,
 				02BA29E7183B4344005BDE95 /* Idea.m in Sources */,
 				02BA29EA183B4351005BDE95 /* Comment.m in Sources */,
+>>>>>>> ad3f8b0... rest objects and parse from dictionaries
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
