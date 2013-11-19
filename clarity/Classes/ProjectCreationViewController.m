@@ -22,12 +22,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Tableview Background Image
+    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SFBackground.png"]];
+    [self.tableView setBackgroundView:backgroundView];
 
     // Custom Tableview Cells
     [self.tableView registerNib:[UINib nibWithNibName:@"ProjectCreationHeaderCell" bundle:nil] forCellReuseIdentifier:@"projectCreationHeaderCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"AccountNameCell" bundle:nil] forCellReuseIdentifier:@"accountNameCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"ProjectDetailCell" bundle:nil] forCellReuseIdentifier:@"projectDetailCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"AddCollaboratorsCell" bundle:nil] forCellReuseIdentifier:@"addCollaboratorsCell"];
+    
+    [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
 }
 
 
@@ -40,7 +46,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -64,21 +70,33 @@
         return cell;
     }
     
-    AddCollaboratorsCell *cell = (AddCollaboratorsCell *)[tableView dequeueReusableCellWithIdentifier:@"addCollaboratorsCell"];
-    return cell;
+    NSIndexPath *collaboratorsRow = [NSIndexPath indexPathForRow:3 inSection:0];
+    if ([indexPath isEqual:collaboratorsRow]) {
+        AddCollaboratorsCell *cell = (AddCollaboratorsCell *)[tableView dequeueReusableCellWithIdentifier:@"addCollaboratorsCell"];
+        return cell;
+    }
     
-
+    UITableViewCell *saveCell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"saveCell"];
+    return saveCell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSIndexPath *headerRow = [NSIndexPath indexPathForRow:0 inSection:0];
+    NSIndexPath *projectDetailRow = [NSIndexPath indexPathForRow:2 inSection:0];
     
     if ([indexPath isEqual:headerRow]) {
         return 175;
+    } else if ([indexPath isEqual:projectDetailRow]) {
+        return 200;
     }
     
     return 70;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - Navigation
