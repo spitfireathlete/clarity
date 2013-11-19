@@ -11,7 +11,6 @@
 
 @interface Collaborator : RestObject
 
-@property (nonatomic, strong) NSString *objectId;
 
 + (NSMutableArray *)collaboratorsWithArray:(NSArray *)array;
 

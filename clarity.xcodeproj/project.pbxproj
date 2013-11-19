@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0209D722183B76FC00A6D16F /* CredentialStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209D721183B76FC00A6D16F /* CredentialStore.m */; };
 		02BA29E1183B428B005BDE95 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA29E0183B428B005BDE95 /* APIClient.m */; };
 		02BA29E4183B4339005BDE95 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA29E3183B4339005BDE95 /* Project.m */; };
 		02BA29E7183B4344005BDE95 /* Idea.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA29E6183B4344005BDE95 /* Idea.m */; };
@@ -103,6 +104,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0209D720183B76FC00A6D16F /* CredentialStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CredentialStore.h; sourceTree = "<group>"; };
+		0209D721183B76FC00A6D16F /* CredentialStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CredentialStore.m; sourceTree = "<group>"; };
 		02BA29DF183B428B005BDE95 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
 		02BA29E0183B428B005BDE95 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
 		02BA29E2183B4339005BDE95 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
@@ -490,6 +493,8 @@
 				EA6F00571839C22B00336E21 /* View Controllers */,
 				824A9E341724E45000C9BD79 /* RootViewController.h */,
 				824A9E351724E45100C9BD79 /* RootViewController.m */,
+				0209D720183B76FC00A6D16F /* CredentialStore.h */,
+				0209D721183B76FC00A6D16F /* CredentialStore.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -946,6 +951,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0209D722183B76FC00A6D16F /* CredentialStore.m in Sources */,
 				EAFC13C8183B53E200210407 /* IdeaCreationViewController.m in Sources */,
 				EA6F005A1839C24700336E21 /* FeedTableViewController.m in Sources */,
 				EAFC13CB183B604800210407 /* DashboardViewController.m in Sources */,
@@ -1055,6 +1061,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "clarity/clarity-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
 					"$(SRCROOT)/clarity/Dependencies/SalesforceOAuth/Headers",
 					"$(SRCROOT)/clarity/Dependencies/SalesforceNetworkSDK/Headers",
 					"$(SRCROOT)/clarity/Dependencies/SalesforceNativeSDK/Headers",
@@ -1090,6 +1097,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "clarity/clarity-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
 					"$(SRCROOT)/clarity/Dependencies/SalesforceOAuth/Headers",
 					"$(SRCROOT)/clarity/Dependencies/SalesforceNetworkSDK/Headers",
 					"$(SRCROOT)/clarity/Dependencies/SalesforceNativeSDK/Headers",
