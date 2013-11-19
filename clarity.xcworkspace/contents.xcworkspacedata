@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:DetailViewCell.h">
-   </FileRef>
-   <FileRef
-      location = "group:DetailViewCell.m">
-   </FileRef>
-   <FileRef
       location = "group:clarity.xcodeproj">
    </FileRef>
    <FileRef
