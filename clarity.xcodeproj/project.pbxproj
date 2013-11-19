@@ -88,6 +88,7 @@
 		EAFC13C1183B403200210407 /* DetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC13C0183B403200210407 /* DetailViewCell.m */; };
 		EAFC13C3183B404000210407 /* DetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFC13C2183B404000210407 /* DetailViewCell.xib */; };
 		EAFC13C5183B495E00210407 /* SF_small_header.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFC13C4183B495E00210407 /* SF_small_header.png */; };
+		EAFC13C8183B53E200210407 /* IdeaCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC13C7183B53E200210407 /* IdeaCreationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -266,6 +267,8 @@
 		EAFC13C0183B403200210407 /* DetailViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewCell.m; sourceTree = "<group>"; };
 		EAFC13C2183B404000210407 /* DetailViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewCell.xib; sourceTree = "<group>"; };
 		EAFC13C4183B495E00210407 /* SF_small_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SF_small_header.png; sourceTree = "<group>"; };
+		EAFC13C6183B53E200210407 /* IdeaCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdeaCreationViewController.h; sourceTree = "<group>"; };
+		EAFC13C7183B53E200210407 /* IdeaCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdeaCreationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -691,6 +694,8 @@
 				EA6F0093183AEF3F00336E21 /* ProjectCreationViewController.m */,
 				EA6F00B1183B121000336E21 /* ProjectViewController.h */,
 				EA6F00B2183B121000336E21 /* ProjectViewController.m */,
+				EAFC13C6183B53E200210407 /* IdeaCreationViewController.h */,
+				EAFC13C7183B53E200210407 /* IdeaCreationViewController.m */,
 				EA6F0070183AAF3600336E21 /* Custom Tableview Cells */,
 			);
 			name = "View Controllers";
@@ -876,6 +881,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAFC13C8183B53E200210407 /* IdeaCreationViewController.m in Sources */,
 				EA6F005A1839C24700336E21 /* FeedTableViewController.m in Sources */,
 				EA6F0087183AC84B00336E21 /* FeedCell.m in Sources */,
 				EA6F0094183AEF3F00336E21 /* ProjectCreationViewController.m in Sources */,
