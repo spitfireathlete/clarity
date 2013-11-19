@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02BA29E1183B428B005BDE95 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA29E0183B428B005BDE95 /* APIClient.m */; };
+		02BA29E4183B4339005BDE95 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA29E3183B4339005BDE95 /* Project.m */; };
+		02BA29E7183B4344005BDE95 /* Idea.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA29E6183B4344005BDE95 /* Idea.m */; };
+		02BA29EA183B4351005BDE95 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA29E9183B4351005BDE95 /* Comment.m */; };
+		02BA29ED183B45AD005BDE95 /* Collaborator.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA29EC183B45AD005BDE95 /* Collaborator.m */; };
+		02BA29F0183B45CB005BDE95 /* RestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA29EF183B45CB005BDE95 /* RestObject.m */; };
+		02BA29F3183B489B005BDE95 /* Priority.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA29F2183B489B005BDE95 /* Priority.m */; };
 		4F3F413517E7CA5C008B3283 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3F413417E7CA5C008B3283 /* ImageIO.framework */; };
 		4F3F413617E7CA71008B3283 /* libMKNetworkKit-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3F412B17E7C9CA008B3283 /* libMKNetworkKit-iOS.a */; };
 		4F3F413717E7CA84008B3283 /* libSalesforceNetworkSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3F413317E7C9CA008B3283 /* libSalesforceNetworkSDK.a */; };
@@ -92,7 +99,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+
 		287BBB5D1DCB4B8F9FC8FA79 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+
+		02BA29DF183B428B005BDE95 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
+		02BA29E0183B428B005BDE95 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
+		02BA29E2183B4339005BDE95 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
+		02BA29E3183B4339005BDE95 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
+		02BA29E5183B4344005BDE95 /* Idea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Idea.h; sourceTree = "<group>"; };
+		02BA29E6183B4344005BDE95 /* Idea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Idea.m; sourceTree = "<group>"; };
+		02BA29E8183B4351005BDE95 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		02BA29E9183B4351005BDE95 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		02BA29EB183B45AD005BDE95 /* Collaborator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collaborator.h; sourceTree = "<group>"; };
+		02BA29EC183B45AD005BDE95 /* Collaborator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Collaborator.m; sourceTree = "<group>"; };
+		02BA29EE183B45CB005BDE95 /* RestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestObject.h; sourceTree = "<group>"; };
+		02BA29EF183B45CB005BDE95 /* RestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestObject.m; sourceTree = "<group>"; };
+		02BA29F1183B489B005BDE95 /* Priority.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Priority.h; sourceTree = "<group>"; };
+		02BA29F2183B489B005BDE95 /* Priority.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Priority.m; sourceTree = "<group>"; };
+
 		4F3F412517E7C9CA008B3283 /* MKNetworkEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKNetworkEngine.h; sourceTree = "<group>"; };
 		4F3F412617E7C9CA008B3283 /* MKNetworkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKNetworkKit.h; sourceTree = "<group>"; };
 		4F3F412717E7C9CA008B3283 /* MKNetworkOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKNetworkOperation.h; sourceTree = "<group>"; };
@@ -305,6 +329,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02BA29DE183B4279005BDE95 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				02BA29DF183B428B005BDE95 /* APIClient.h */,
+				02BA29E0183B428B005BDE95 /* APIClient.m */,
+				02BA29E2183B4339005BDE95 /* Project.h */,
+				02BA29E3183B4339005BDE95 /* Project.m */,
+				02BA29E5183B4344005BDE95 /* Idea.h */,
+				02BA29E6183B4344005BDE95 /* Idea.m */,
+				02BA29E8183B4351005BDE95 /* Comment.h */,
+				02BA29E9183B4351005BDE95 /* Comment.m */,
+				02BA29EB183B45AD005BDE95 /* Collaborator.h */,
+				02BA29EC183B45AD005BDE95 /* Collaborator.m */,
+				02BA29EE183B45CB005BDE95 /* RestObject.h */,
+				02BA29EF183B45CB005BDE95 /* RestObject.m */,
+				02BA29F1183B489B005BDE95 /* Priority.h */,
+				02BA29F2183B489B005BDE95 /* Priority.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 		4F3F412217E7C9CA008B3283 /* MKNetworkKit-iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -429,6 +474,7 @@
 		824A9E301724E2A900C9BD79 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				02BA29DE183B4279005BDE95 /* API */,
 				824A9E311724E2A900C9BD79 /* AppDelegate.h */,
 				824A9E321724E2A900C9BD79 /* AppDelegate.m */,
 				EA6F00501839BBC700336E21 /* Main.storyboard */,
@@ -881,11 +927,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
 				EAFC13C8183B53E200210407 /* IdeaCreationViewController.m in Sources */,
 				EA6F005A1839C24700336E21 /* FeedTableViewController.m in Sources */,
 				EA6F0087183AC84B00336E21 /* FeedCell.m in Sources */,
 				EA6F0094183AEF3F00336E21 /* ProjectCreationViewController.m in Sources */,
 				EA6F0073183AAF8A00336E21 /* NavBarHeaderCell.m in Sources */,
+				02BA29ED183B45AD005BDE95 /* Collaborator.m in Sources */,
+				02BA29F3183B489B005BDE95 /* Priority.m in Sources */,
+				02BA29E1183B428B005BDE95 /* APIClient.m in Sources */,
 				824A9DE51724E16400C9BD79 /* main.m in Sources */,
 				EA6F00AC183B007400336E21 /* AddCollaboratorsCell.m in Sources */,
 				EA6F00B3183B121000336E21 /* ProjectViewController.m in Sources */,
@@ -899,6 +949,12 @@
 				EA6F00BF183B1D1600336E21 /* ProjectViewHeaderCell.m in Sources */,
 				824A9E361724E45100C9BD79 /* RootViewController.m in Sources */,
 				EA6F0097183AF00500336E21 /* ProjectCreationHeaderCell.m in Sources */,
+				02BA29F0183B45CB005BDE95 /* RestObject.m in Sources */,
+				02BA29E4183B4339005BDE95 /* Project.m in Sources */,
+				824A9E361724E45100C9BD79 /* RootViewController.m in Sources */,
+				824A9E3A1724E58200C9BD79 /* InitialViewController.m in Sources */,
+				02BA29E7183B4344005BDE95 /* Idea.m in Sources */,
+				02BA29EA183B4351005BDE95 /* Comment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

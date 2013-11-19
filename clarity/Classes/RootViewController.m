@@ -29,6 +29,7 @@
 #import "SFRestRequest.h"
 #import "SFAccountManager.h"
 #import "SFIdentityData.h"
+#import "SFOAuthCredentials.h"
 
 @implementation RootViewController
 
@@ -81,7 +82,11 @@
         [self.tableView reloadData];
     });
     SFIdentityData *idData =[ [SFAccountManager sharedInstance] idData];
+    SFOAuthCredentials *creds = [[SFAccountManager sharedInstance] credentials];
     NSLog(@"%@, %@ %@", idData.email, idData.firstName, idData.lastName);
+    NSLog(@"refresh %@", creds.refreshToken);
+    NSLog(@"%@", creds.accessToken);
+    NSLog(@"%@", creds.clientId);
     
 }
 

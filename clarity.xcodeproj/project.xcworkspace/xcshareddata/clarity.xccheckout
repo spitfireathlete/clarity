@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B08B7F9F-3A73-41E6-A8DF-544424BD574E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>clarity</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>627971B0-F366-4315-B34E-63D10B4CBC83</key>
+		<string>https://github.com/spitfireathlete/clarity.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>clarity.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>627971B0-F366-4315-B34E-63D10B4CBC83</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/spitfireathlete/clarity.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>627971B0-F366-4315-B34E-63D10B4CBC83</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>627971B0-F366-4315-B34E-63D10B4CBC83</string>
+			<key>IDESourceControlWCCName</key>
+			<string>clarity</string>
+		</dict>
+	</array>
+</dict>
+</plist>
