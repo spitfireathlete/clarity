@@ -87,7 +87,6 @@
     </objects>
     <resources>
         <image name="Nidhi_Circle.png" width="450" height="451"/>
-        <image name="Nidhi_Circle.png" width="450" height="451"/>
         <image name="tiny_bubble_icon.png" width="20" height="18"/>
         <image name="tiny_heart_icon.png" width="40" height="35"/>
     </resources>

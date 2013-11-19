@@ -65,6 +65,14 @@
 		EA6F008D183AEA3700336E21 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6F008C183AEA3700336E21 /* FeedCell.xib */; };
 		EA6F0090183AEE9700336E21 /* tiny_bubble_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F008E183AEE9700336E21 /* tiny_bubble_icon.png */; };
 		EA6F0091183AEE9700336E21 /* tiny_heart_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F008F183AEE9700336E21 /* tiny_heart_icon.png */; };
+		EA6F0094183AEF3F00336E21 /* ProjectCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F0093183AEF3F00336E21 /* ProjectCreationViewController.m */; };
+		EA6F0097183AF00500336E21 /* ProjectCreationHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F0096183AF00500336E21 /* ProjectCreationHeaderCell.m */; };
+		EA6F0099183AF01900336E21 /* ProjectCreationHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6F0098183AF01900336E21 /* ProjectCreationHeaderCell.xib */; };
+		EA6F009C183AF0CD00336E21 /* blue_checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F009A183AF0CD00336E21 /* blue_checkmark.png */; };
+		EA6F009D183AF0CD00336E21 /* gray_xmark.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F009B183AF0CD00336E21 /* gray_xmark.png */; };
+		EA6F009F183AF1F000336E21 /* write_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F009E183AF1F000336E21 /* write_icon.png */; };
+		EA6F00A2183AF55400336E21 /* AccountNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F00A1183AF55400336E21 /* AccountNameCell.m */; };
+		EA6F00A4183AF5BF00336E21 /* AccountNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6F00A3183AF5BF00336E21 /* AccountNameCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -211,6 +219,17 @@
 		EA6F008C183AEA3700336E21 /* FeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
 		EA6F008E183AEE9700336E21 /* tiny_bubble_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tiny_bubble_icon.png; sourceTree = "<group>"; };
 		EA6F008F183AEE9700336E21 /* tiny_heart_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tiny_heart_icon.png; sourceTree = "<group>"; };
+		EA6F0092183AEF3F00336E21 /* ProjectCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectCreationViewController.h; sourceTree = "<group>"; };
+		EA6F0093183AEF3F00336E21 /* ProjectCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectCreationViewController.m; sourceTree = "<group>"; };
+		EA6F0095183AF00500336E21 /* ProjectCreationHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectCreationHeaderCell.h; sourceTree = "<group>"; };
+		EA6F0096183AF00500336E21 /* ProjectCreationHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectCreationHeaderCell.m; sourceTree = "<group>"; };
+		EA6F0098183AF01900336E21 /* ProjectCreationHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectCreationHeaderCell.xib; sourceTree = "<group>"; };
+		EA6F009A183AF0CD00336E21 /* blue_checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_checkmark.png; sourceTree = "<group>"; };
+		EA6F009B183AF0CD00336E21 /* gray_xmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray_xmark.png; sourceTree = "<group>"; };
+		EA6F009E183AF1F000336E21 /* write_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = write_icon.png; sourceTree = "<group>"; };
+		EA6F00A0183AF55400336E21 /* AccountNameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountNameCell.h; sourceTree = "<group>"; };
+		EA6F00A1183AF55400336E21 /* AccountNameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountNameCell.m; sourceTree = "<group>"; };
+		EA6F00A3183AF5BF00336E21 /* AccountNameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountNameCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -600,6 +619,9 @@
 		EA6F00521839BDD700336E21 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EA6F009A183AF0CD00336E21 /* blue_checkmark.png */,
+				EA6F009E183AF1F000336E21 /* write_icon.png */,
+				EA6F009B183AF0CD00336E21 /* gray_xmark.png */,
 				EA6F008E183AEE9700336E21 /* tiny_bubble_icon.png */,
 				EA6F008F183AEE9700336E21 /* tiny_heart_icon.png */,
 				EA6F0083183AC81600336E21 /* light_blurry_sf.png */,
@@ -625,6 +647,8 @@
 				EA6F00591839C24700336E21 /* FeedTableViewController.m */,
 				EA6F006D183AAEC000336E21 /* NavBarViewController.h */,
 				EA6F006E183AAEC000336E21 /* NavBarViewController.m */,
+				EA6F0092183AEF3F00336E21 /* ProjectCreationViewController.h */,
+				EA6F0093183AEF3F00336E21 /* ProjectCreationViewController.m */,
 				EA6F0070183AAF3600336E21 /* Custom Tableview Cells */,
 			);
 			name = "View Controllers";
@@ -648,6 +672,12 @@
 				EA6F0085183AC84B00336E21 /* FeedCell.h */,
 				EA6F0086183AC84B00336E21 /* FeedCell.m */,
 				EA6F008C183AEA3700336E21 /* FeedCell.xib */,
+				EA6F0095183AF00500336E21 /* ProjectCreationHeaderCell.h */,
+				EA6F0096183AF00500336E21 /* ProjectCreationHeaderCell.m */,
+				EA6F0098183AF01900336E21 /* ProjectCreationHeaderCell.xib */,
+				EA6F00A0183AF55400336E21 /* AccountNameCell.h */,
+				EA6F00A1183AF55400336E21 /* AccountNameCell.m */,
+				EA6F00A3183AF5BF00336E21 /* AccountNameCell.xib */,
 			);
 			name = "Custom Tableview Cells";
 			sourceTree = "<group>";
@@ -707,23 +737,28 @@
 			files = (
 				EA6F0090183AEE9700336E21 /* tiny_bubble_icon.png in Resources */,
 				EA6F008D183AEA3700336E21 /* FeedCell.xib in Resources */,
+				EA6F009D183AF0CD00336E21 /* gray_xmark.png in Resources */,
 				824A9DE31724E16400C9BD79 /* InfoPlist.strings in Resources */,
 				824A9E3D1724E9F400C9BD79 /* readme.txt in Resources */,
 				824A9E3F1724EC6300C9BD79 /* Settings.bundle in Resources */,
 				EA6F00541839BDE500336E21 /* SFBackground.png in Resources */,
+				EA6F0099183AF01900336E21 /* ProjectCreationHeaderCell.xib in Resources */,
 				824A9E411724ECC600C9BD79 /* SalesforceSDKResources.bundle in Resources */,
 				EA6F0067183AAB9100336E21 /* menu_icon.png in Resources */,
 				EA6F005C1839C78E00336E21 /* Default-568h@2x.png in Resources */,
 				824A9E5F1724F02D00C9BD79 /* icon-72.png in Resources */,
+				EA6F009F183AF1F000336E21 /* write_icon.png in Resources */,
 				824A9E601724F02D00C9BD79 /* icon-72@2x.png in Resources */,
 				824A9E611724F02D00C9BD79 /* icon.png in Resources */,
 				824A9E621724F02D00C9BD79 /* icon@2x.png in Resources */,
 				824A9FDF1725079100C9BD79 /* openssl_license.txt in Resources */,
 				EA6F0077183AB03700336E21 /* Nidhi_Circle.png in Resources */,
+				EA6F00A4183AF5BF00336E21 /* AccountNameCell.xib in Resources */,
 				EA6F007F183AC27600336E21 /* sync_icon.png in Resources */,
 				EA6F007D183AC27600336E21 /* home_icon.png in Resources */,
 				EA6F0075183AAFB100336E21 /* NavBarHeaderCell.xib in Resources */,
 				EA6F0068183AAB9100336E21 /* plus_icon.png in Resources */,
+				EA6F009C183AF0CD00336E21 /* blue_checkmark.png in Resources */,
 				EA6F0091183AEE9700336E21 /* tiny_heart_icon.png in Resources */,
 				EA6F007E183AC27600336E21 /* logout_icon.png in Resources */,
 				EA6F00511839BBC700336E21 /* Main.storyboard in Resources */,
@@ -777,12 +812,15 @@
 			files = (
 				EA6F005A1839C24700336E21 /* FeedTableViewController.m in Sources */,
 				EA6F0087183AC84B00336E21 /* FeedCell.m in Sources */,
+				EA6F0094183AEF3F00336E21 /* ProjectCreationViewController.m in Sources */,
 				EA6F0073183AAF8A00336E21 /* NavBarHeaderCell.m in Sources */,
 				824A9DE51724E16400C9BD79 /* main.m in Sources */,
 				EA6F006F183AAEC000336E21 /* NavBarViewController.m in Sources */,
 				EA6F006C183AAE6D00336E21 /* SWRevealViewController.m in Sources */,
+				EA6F00A2183AF55400336E21 /* AccountNameCell.m in Sources */,
 				824A9E331724E2A900C9BD79 /* AppDelegate.m in Sources */,
 				824A9E361724E45100C9BD79 /* RootViewController.m in Sources */,
+				EA6F0097183AF00500336E21 /* ProjectCreationHeaderCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
