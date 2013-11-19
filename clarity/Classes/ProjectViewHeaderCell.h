@@ -1,5 +1,5 @@
 //
-//  ProjectViewController.h
+//  ProjectViewHeaderCell.h
 //  clarity
 //
 //  Created by Erin Parker on 11/18/13.
@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProjectViewController : UITableViewController
+@interface ProjectViewHeaderCell : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UILabel *projectQuestion;
-@property (strong, nonatomic) IBOutlet UILabel *projectDetails;
-@property (strong, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 @end

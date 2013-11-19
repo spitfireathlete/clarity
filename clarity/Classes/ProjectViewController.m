@@ -7,6 +7,7 @@
 //
 
 #import "ProjectViewController.h"
+#import "ProjectViewHeaderCell.h"
 
 @interface ProjectViewController ()
 
@@ -17,39 +18,52 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-}
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    // Custom Tableview Cells
+    [self.tableView registerNib:[UINib nibWithNibName:@"IdeaCell" bundle:nil] forCellReuseIdentifier:@"ideaCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"ProjectViewHeaderCell" bundle:nil] forCellReuseIdentifier:@"projectViewHeaderCell"];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSIndexPath *headerRow = [NSIndexPath indexPathForRow:0 inSection:0];
+    if ([indexPath isEqual:headerRow]) {
+        ProjectViewHeaderCell *headerCell = (ProjectViewHeaderCell *)[tableView dequeueReusableCellWithIdentifier:@"projectViewHeaderCell"];
+        headerCell.projectQuestion.text = @"How can we better promote women's weightlifting?";
+        headerCell.userInteractionEnabled = NO;
+        return headerCell;
+    }
+
+
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+        
     return cell;
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSIndexPath *headerRow = [NSIndexPath indexPathForRow:0 inSection:0];
+    
+    if ([indexPath isEqual:headerRow]) {
+        return 175;
+    }
+    
+    return 70;
+}
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -102,4 +116,6 @@
 
  */
 
+- (IBAction)segmentedControl:(id)sender {
+}
 @end

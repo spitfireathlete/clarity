@@ -79,6 +79,13 @@
 		EA6F00AE183B008900336E21 /* AddCollaboratorsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6F00AD183B008900336E21 /* AddCollaboratorsCell.xib */; };
 		EA6F00B0183B01BC00336E21 /* gray_plus_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F00AF183B01BC00336E21 /* gray_plus_icon.png */; };
 		EA6F00B3183B121000336E21 /* ProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F00B2183B121000336E21 /* ProjectViewController.m */; };
+		EA6F00B6183B168600336E21 /* IdeaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F00B5183B168600336E21 /* IdeaCell.m */; };
+		EA6F00B8183B169700336E21 /* IdeaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6F00B7183B169700336E21 /* IdeaCell.xib */; };
+		EA6F00BA183B185000336E21 /* up_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F00B9183B185000336E21 /* up_arrow.png */; };
+		EA6F00BC183B185400336E21 /* down_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F00BB183B185400336E21 /* down_arrow.png */; };
+		EA6F00BF183B1D1600336E21 /* ProjectViewHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F00BE183B1D1600336E21 /* ProjectViewHeaderCell.m */; };
+		EA6F00C1183B1D2A00336E21 /* ProjectViewHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6F00C0183B1D2A00336E21 /* ProjectViewHeaderCell.xib */; };
+		EAFC13BC183B3EAE00210407 /* ProjectDetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC13BB183B3EAE00210407 /* ProjectDetailsCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -245,6 +252,16 @@
 		EA6F00AF183B01BC00336E21 /* gray_plus_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray_plus_icon.png; sourceTree = "<group>"; };
 		EA6F00B1183B121000336E21 /* ProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectViewController.h; sourceTree = "<group>"; };
 		EA6F00B2183B121000336E21 /* ProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectViewController.m; sourceTree = "<group>"; };
+		EA6F00B4183B168600336E21 /* IdeaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdeaCell.h; sourceTree = "<group>"; };
+		EA6F00B5183B168600336E21 /* IdeaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdeaCell.m; sourceTree = "<group>"; };
+		EA6F00B7183B169700336E21 /* IdeaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IdeaCell.xib; sourceTree = "<group>"; };
+		EA6F00B9183B185000336E21 /* up_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up_arrow.png; sourceTree = "<group>"; };
+		EA6F00BB183B185400336E21 /* down_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_arrow.png; sourceTree = "<group>"; };
+		EA6F00BD183B1D1600336E21 /* ProjectViewHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectViewHeaderCell.h; sourceTree = "<group>"; };
+		EA6F00BE183B1D1600336E21 /* ProjectViewHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectViewHeaderCell.m; sourceTree = "<group>"; };
+		EA6F00C0183B1D2A00336E21 /* ProjectViewHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectViewHeaderCell.xib; sourceTree = "<group>"; };
+		EAFC13BA183B3EAE00210407 /* ProjectDetailsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectDetailsCell.h; sourceTree = "<group>"; };
+		EAFC13BB183B3EAE00210407 /* ProjectDetailsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectDetailsCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -634,6 +651,8 @@
 		EA6F00521839BDD700336E21 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EA6F00BB183B185400336E21 /* down_arrow.png */,
+				EA6F00B9183B185000336E21 /* up_arrow.png */,
 				EA6F00AF183B01BC00336E21 /* gray_plus_icon.png */,
 				EA6F009A183AF0CD00336E21 /* blue_checkmark.png */,
 				EA6F009E183AF1F000336E21 /* write_icon.png */,
@@ -702,6 +721,14 @@
 				EA6F00AA183B007400336E21 /* AddCollaboratorsCell.h */,
 				EA6F00AB183B007400336E21 /* AddCollaboratorsCell.m */,
 				EA6F00AD183B008900336E21 /* AddCollaboratorsCell.xib */,
+				EA6F00BD183B1D1600336E21 /* ProjectViewHeaderCell.h */,
+				EA6F00BE183B1D1600336E21 /* ProjectViewHeaderCell.m */,
+				EA6F00C0183B1D2A00336E21 /* ProjectViewHeaderCell.xib */,
+				EAFC13BA183B3EAE00210407 /* ProjectDetailsCell.h */,
+				EAFC13BB183B3EAE00210407 /* ProjectDetailsCell.m */,
+				EA6F00B4183B168600336E21 /* IdeaCell.h */,
+				EA6F00B5183B168600336E21 /* IdeaCell.m */,
+				EA6F00B7183B169700336E21 /* IdeaCell.xib */,
 			);
 			name = "Custom Tableview Cells";
 			sourceTree = "<group>";
@@ -759,13 +786,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6F00B8183B169700336E21 /* IdeaCell.xib in Resources */,
 				EA6F0090183AEE9700336E21 /* tiny_bubble_icon.png in Resources */,
 				EA6F008D183AEA3700336E21 /* FeedCell.xib in Resources */,
 				EA6F009D183AF0CD00336E21 /* gray_xmark.png in Resources */,
 				824A9DE31724E16400C9BD79 /* InfoPlist.strings in Resources */,
+				EA6F00BA183B185000336E21 /* up_arrow.png in Resources */,
 				824A9E3D1724E9F400C9BD79 /* readme.txt in Resources */,
 				824A9E3F1724EC6300C9BD79 /* Settings.bundle in Resources */,
 				EA6F00541839BDE500336E21 /* SFBackground.png in Resources */,
+				EA6F00BC183B185400336E21 /* down_arrow.png in Resources */,
 				EA6F0099183AF01900336E21 /* ProjectCreationHeaderCell.xib in Resources */,
 				EA6F00B0183B01BC00336E21 /* gray_plus_icon.png in Resources */,
 				824A9E411724ECC600C9BD79 /* SalesforceSDKResources.bundle in Resources */,
@@ -785,6 +815,7 @@
 				EA6F0075183AAFB100336E21 /* NavBarHeaderCell.xib in Resources */,
 				EA6F0068183AAB9100336E21 /* plus_icon.png in Resources */,
 				EA6F009C183AF0CD00336E21 /* blue_checkmark.png in Resources */,
+				EA6F00C1183B1D2A00336E21 /* ProjectViewHeaderCell.xib in Resources */,
 				EA6F0091183AEE9700336E21 /* tiny_heart_icon.png in Resources */,
 				EA6F007E183AC27600336E21 /* logout_icon.png in Resources */,
 				EA6F00511839BBC700336E21 /* Main.storyboard in Resources */,
@@ -844,11 +875,14 @@
 				824A9DE51724E16400C9BD79 /* main.m in Sources */,
 				EA6F00AC183B007400336E21 /* AddCollaboratorsCell.m in Sources */,
 				EA6F00B3183B121000336E21 /* ProjectViewController.m in Sources */,
+				EA6F00B6183B168600336E21 /* IdeaCell.m in Sources */,
 				EA6F006F183AAEC000336E21 /* NavBarViewController.m in Sources */,
 				EA6F006C183AAE6D00336E21 /* SWRevealViewController.m in Sources */,
 				EA6F00A2183AF55400336E21 /* AccountNameCell.m in Sources */,
 				EA6F00A7183AFB3B00336E21 /* ProjectDetailCell.m in Sources */,
 				824A9E331724E2A900C9BD79 /* AppDelegate.m in Sources */,
+				EAFC13BC183B3EAE00210407 /* ProjectDetailsCell.m in Sources */,
+				EA6F00BF183B1D1600336E21 /* ProjectViewHeaderCell.m in Sources */,
 				824A9E361724E45100C9BD79 /* RootViewController.m in Sources */,
 				EA6F0097183AF00500336E21 /* ProjectCreationHeaderCell.m in Sources */,
 			);
