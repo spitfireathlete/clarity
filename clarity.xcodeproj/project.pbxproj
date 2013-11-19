@@ -78,6 +78,7 @@
 		EA6F00AC183B007400336E21 /* AddCollaboratorsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F00AB183B007400336E21 /* AddCollaboratorsCell.m */; };
 		EA6F00AE183B008900336E21 /* AddCollaboratorsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6F00AD183B008900336E21 /* AddCollaboratorsCell.xib */; };
 		EA6F00B0183B01BC00336E21 /* gray_plus_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F00AF183B01BC00336E21 /* gray_plus_icon.png */; };
+		EA6F00B3183B121000336E21 /* ProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F00B2183B121000336E21 /* ProjectViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -242,6 +243,8 @@
 		EA6F00AB183B007400336E21 /* AddCollaboratorsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCollaboratorsCell.m; sourceTree = "<group>"; };
 		EA6F00AD183B008900336E21 /* AddCollaboratorsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCollaboratorsCell.xib; sourceTree = "<group>"; };
 		EA6F00AF183B01BC00336E21 /* gray_plus_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray_plus_icon.png; sourceTree = "<group>"; };
+		EA6F00B1183B121000336E21 /* ProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectViewController.h; sourceTree = "<group>"; };
+		EA6F00B2183B121000336E21 /* ProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -662,6 +665,8 @@
 				EA6F006E183AAEC000336E21 /* NavBarViewController.m */,
 				EA6F0092183AEF3F00336E21 /* ProjectCreationViewController.h */,
 				EA6F0093183AEF3F00336E21 /* ProjectCreationViewController.m */,
+				EA6F00B1183B121000336E21 /* ProjectViewController.h */,
+				EA6F00B2183B121000336E21 /* ProjectViewController.m */,
 				EA6F0070183AAF3600336E21 /* Custom Tableview Cells */,
 			);
 			name = "View Controllers";
@@ -838,6 +843,7 @@
 				EA6F0073183AAF8A00336E21 /* NavBarHeaderCell.m in Sources */,
 				824A9DE51724E16400C9BD79 /* main.m in Sources */,
 				EA6F00AC183B007400336E21 /* AddCollaboratorsCell.m in Sources */,
+				EA6F00B3183B121000336E21 /* ProjectViewController.m in Sources */,
 				EA6F006F183AAEC000336E21 /* NavBarViewController.m in Sources */,
 				EA6F006C183AAE6D00336E21 /* SWRevealViewController.m in Sources */,
 				EA6F00A2183AF55400336E21 /* AccountNameCell.m in Sources */,
