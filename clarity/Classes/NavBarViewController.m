@@ -19,17 +19,14 @@
 {
     [super viewDidLoad];
     
-    // Custom Tableview Cells
-    [self.tableView registerNib:[UINib nibWithNibName:@"NavBarHeaderCell" bundle:Nil] forCellReuseIdentifier:@"headercell"];
+    // Tableview Background Image
     UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"light_blurry_background.png"]];
     [self.tableView setBackgroundView:backgroundView];
     
+    // Custom Tableview Cells
+    [self.tableView registerNib:[UINib nibWithNibName:@"NavBarHeaderCell" bundle:Nil] forCellReuseIdentifier:@"headercell"];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
 
 #pragma mark - Table view data source
 
@@ -55,10 +52,10 @@
         return headerCell;
     }
     
+    
     NSArray *rowTitles = [[NSArray alloc] initWithObjects:@"Feed", @"Dashboard", @"Sync", @"Logout", nil];
     NSArray *iconNames = [[NSArray alloc] initWithObjects:@"globe_icon.png", @"home_icon.png", @"sync_icon.png", @"logout_icon.png", nil];
     
-
     UITableViewCell *navcell = [tableView dequeueReusableCellWithIdentifier:@"navcell" forIndexPath:indexPath];
     NSString *rowTitle = [rowTitles objectAtIndex:indexPath.row - 1];
     NSString *iconName = [iconNames objectAtIndex:indexPath.row - 1];

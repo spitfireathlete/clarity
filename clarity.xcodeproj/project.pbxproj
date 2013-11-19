@@ -60,6 +60,11 @@
 		EA6F007E183AC27600336E21 /* logout_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F007A183AC27600336E21 /* logout_icon.png */; };
 		EA6F007F183AC27600336E21 /* sync_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F007B183AC27600336E21 /* sync_icon.png */; };
 		EA6F0081183AC69D00336E21 /* light_blurry_background.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F0080183AC69D00336E21 /* light_blurry_background.png */; };
+		EA6F0084183AC81600336E21 /* light_blurry_sf.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F0083183AC81600336E21 /* light_blurry_sf.png */; };
+		EA6F0087183AC84B00336E21 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F0086183AC84B00336E21 /* FeedCell.m */; };
+		EA6F008A183ACB3100336E21 /* tiny_bubble_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F0088183ACB3100336E21 /* tiny_bubble_icon.png */; };
+		EA6F008B183ACB3100336E21 /* tiny_heart_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F0089183ACB3100336E21 /* tiny_heart_icon.png */; };
+		EA6F008D183AEA3700336E21 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6F008C183AEA3700336E21 /* FeedCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -200,6 +205,12 @@
 		EA6F007A183AC27600336E21 /* logout_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout_icon.png; sourceTree = "<group>"; };
 		EA6F007B183AC27600336E21 /* sync_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sync_icon.png; sourceTree = "<group>"; };
 		EA6F0080183AC69D00336E21 /* light_blurry_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light_blurry_background.png; sourceTree = "<group>"; };
+		EA6F0083183AC81600336E21 /* light_blurry_sf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light_blurry_sf.png; sourceTree = "<group>"; };
+		EA6F0085183AC84B00336E21 /* FeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
+		EA6F0086183AC84B00336E21 /* FeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
+		EA6F0088183ACB3100336E21 /* tiny_bubble_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tiny_bubble_icon.png; sourceTree = "<group>"; };
+		EA6F0089183ACB3100336E21 /* tiny_heart_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tiny_heart_icon.png; sourceTree = "<group>"; };
+		EA6F008C183AEA3700336E21 /* FeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -589,6 +600,9 @@
 		EA6F00521839BDD700336E21 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EA6F0088183ACB3100336E21 /* tiny_bubble_icon.png */,
+				EA6F0089183ACB3100336E21 /* tiny_heart_icon.png */,
+				EA6F0083183AC81600336E21 /* light_blurry_sf.png */,
 				EA6F0080183AC69D00336E21 /* light_blurry_background.png */,
 				EA6F0078183AC27600336E21 /* globe_icon.png */,
 				EA6F0079183AC27600336E21 /* home_icon.png */,
@@ -611,7 +625,7 @@
 				EA6F00591839C24700336E21 /* FeedTableViewController.m */,
 				EA6F006D183AAEC000336E21 /* NavBarViewController.h */,
 				EA6F006E183AAEC000336E21 /* NavBarViewController.m */,
-				EA6F0070183AAF3600336E21 /* Custom NavBar Cells */,
+				EA6F0070183AAF3600336E21 /* Custom Tableview Cells */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -625,14 +639,17 @@
 			name = SWRevealController;
 			sourceTree = "<group>";
 		};
-		EA6F0070183AAF3600336E21 /* Custom NavBar Cells */ = {
+		EA6F0070183AAF3600336E21 /* Custom Tableview Cells */ = {
 			isa = PBXGroup;
 			children = (
 				EA6F0071183AAF8A00336E21 /* NavBarHeaderCell.h */,
 				EA6F0072183AAF8A00336E21 /* NavBarHeaderCell.m */,
 				EA6F0074183AAFB100336E21 /* NavBarHeaderCell.xib */,
+				EA6F0085183AC84B00336E21 /* FeedCell.h */,
+				EA6F0086183AC84B00336E21 /* FeedCell.m */,
+				EA6F008C183AEA3700336E21 /* FeedCell.xib */,
 			);
-			name = "Custom NavBar Cells";
+			name = "Custom Tableview Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -688,6 +705,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6F008D183AEA3700336E21 /* FeedCell.xib in Resources */,
 				824A9DE31724E16400C9BD79 /* InfoPlist.strings in Resources */,
 				824A9E3D1724E9F400C9BD79 /* readme.txt in Resources */,
 				824A9E3F1724EC6300C9BD79 /* Settings.bundle in Resources */,
@@ -700,6 +718,8 @@
 				824A9E611724F02D00C9BD79 /* icon.png in Resources */,
 				824A9E621724F02D00C9BD79 /* icon@2x.png in Resources */,
 				824A9FDF1725079100C9BD79 /* openssl_license.txt in Resources */,
+				EA6F008A183ACB3100336E21 /* tiny_bubble_icon.png in Resources */,
+				EA6F008B183ACB3100336E21 /* tiny_heart_icon.png in Resources */,
 				EA6F0077183AB03700336E21 /* Nidhi_Circle.png in Resources */,
 				EA6F007F183AC27600336E21 /* sync_icon.png in Resources */,
 				EA6F007D183AC27600336E21 /* home_icon.png in Resources */,
@@ -709,6 +729,7 @@
 				EA6F00511839BBC700336E21 /* Main.storyboard in Resources */,
 				824A9FE61725079100C9BD79 /* LICENSE in Resources */,
 				EA6F0081183AC69D00336E21 /* light_blurry_background.png in Resources */,
+				EA6F0084183AC81600336E21 /* light_blurry_sf.png in Resources */,
 				EA6F00561839BF2000336E21 /* SFBackground_DarkGradient.png in Resources */,
 				EA6F007C183AC27600336E21 /* globe_icon.png in Resources */,
 			);
@@ -755,6 +776,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA6F005A1839C24700336E21 /* FeedTableViewController.m in Sources */,
+				EA6F0087183AC84B00336E21 /* FeedCell.m in Sources */,
 				EA6F0073183AAF8A00336E21 /* NavBarHeaderCell.m in Sources */,
 				824A9DE51724E16400C9BD79 /* main.m in Sources */,
 				EA6F006F183AAEC000336E21 /* NavBarViewController.m in Sources */,
