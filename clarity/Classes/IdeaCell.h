@@ -10,7 +10,6 @@
 
 @interface IdeaCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *name;
-@property (strong, nonatomic) IBOutlet UILabel *jobTitle;
 @property (strong, nonatomic) IBOutlet UILabel *ideaText;
 @property (strong, nonatomic) IBOutlet UILabel *voteNum;
 

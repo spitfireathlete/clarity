@@ -34,11 +34,14 @@
 }
 
 - (IBAction)comment:(id)sender {
+    NSLog(@"Comment touched");
 }
 
 - (IBAction)upVote:(id)sender {
+    NSLog(@"Upvote touched");
 }
 
 - (IBAction)downVote:(id)sender {
+    NSLog(@"Downvote touched");
 }
 @end
