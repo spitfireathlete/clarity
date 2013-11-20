@@ -16,6 +16,7 @@
 #import "Comment.h"
 #import "Idea.h"
 #import "Collaborator.h"
+#import "CommentCreationViewController.h"
 
 @interface ProjectViewController ()
 @property (nonatomic, strong) NSNumber *segmentedControlState;
@@ -136,7 +137,7 @@
             ideaCell.downVote.tag = indexPath.row - 2;
         
             [ideaCell.comment addTarget:self action:@selector(performComment:) forControlEvents:UIControlEventTouchUpInside];
-        
+            ideaCell.comment.tag = indexPath.row - 2 ;
             ideaCell.userInteractionEnabled = YES;
             return ideaCell;
         
@@ -176,8 +177,13 @@
     }];
 }
 
-- (void) performComment: (id)sender {
-    NSLog(@"Comment");
+- (void) performComment: (UIButton *)sender {
+    Idea *idea = [self.ideas objectAtIndex:sender.tag];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    CommentCreationViewController *cvc = [storyboard instantiateViewControllerWithIdentifier:@"CommentCreationViewController"];
+    [cvc setCurrentIdea:idea];
+    [self presentViewController:cvc animated:YES completion:nil];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
