@@ -35,7 +35,10 @@
     // Tableview Background Image
     UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SFBackground.png"]];
     [self.tableView setBackgroundView:backgroundView];
-
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
     // Custom Tableview Cells
     [self.tableView registerNib:[UINib nibWithNibName:@"IdeaCell" bundle:nil] forCellReuseIdentifier:@"ideaCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"ProjectViewHeaderCell" bundle:nil] forCellReuseIdentifier:@"projectViewHeaderCell"];
@@ -65,6 +68,12 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -262,6 +271,7 @@
     [self presentViewController:vc animated:YES completion:nil];
 
 }
+
 
 /*
 // Override to support conditional editing of the table view.

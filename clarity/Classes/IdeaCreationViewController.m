@@ -29,6 +29,7 @@
     
     self.textView.delegate = self;
     [self.textView becomeFirstResponder];
+    
 }
 
 
@@ -51,6 +52,8 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
