@@ -183,4 +183,9 @@
 //    [[SFAuthenticationManager sharedManager] loginWithCompletion:self.initialLoginSuccessBlock failure:self.initialLoginFailureBlock];
 }
 
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
 @end

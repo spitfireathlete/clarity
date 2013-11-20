@@ -331,6 +331,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="r0h-Nq-tl4"/>
                     <connections>
                         <outlet property="accountName" destination="oZo-gg-bzs" id="TrC-ZC-A6G"/>
                         <outlet property="projectQuestion" destination="pgP-ez-tpK" id="9YX-QT-j62"/>
@@ -576,9 +577,6 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.31764705879999999" green="0.76862745099999996" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <segue destination="Xhe-gS-vNf" kind="modal" id="imM-OK-O4W"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -593,7 +591,7 @@
                         <barButtonItem key="rightBarButtonItem" image="plus_icon.png" id="eV4-nj-xdA">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <action selector="addIdeaPressed:" destination="r5d-81-PVg" id="SOW-mA-vim"/>
+                                <segue destination="Xhe-gS-vNf" kind="modal" identifier="presentIdeaCreation" id="5Cu-kg-QwD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -684,16 +682,10 @@
     <resources>
         <image name="SFBackground_DarkGradient.png" width="640" height="1136"/>
         <image name="blue_checkmark.png" width="75" height="75"/>
-        <image name="blue_checkmark.png" width="75" height="75"/>
         <image name="globe_icon.png" width="20" height="22"/>
-        <image name="gray_xmark.png" width="70" height="71"/>
         <image name="gray_xmark.png" width="70" height="71"/>
         <image name="home_icon.png" width="20" height="21"/>
         <image name="menu_icon.png" width="20" height="20"/>
-        <image name="menu_icon.png" width="20" height="20"/>
-        <image name="menu_icon.png" width="20" height="20"/>
-        <image name="menu_icon.png" width="20" height="20"/>
-        <image name="plus_icon.png" width="20" height="20"/>
         <image name="plus_icon.png" width="20" height="20"/>
         <image name="sync_icon.png" width="20" height="21"/>
     </resources>

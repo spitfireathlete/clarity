@@ -7,14 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IdeaCreationViewController.h"
+
 @class Project;
 
-@interface ProjectViewController : UITableViewController
+@interface ProjectViewController : UITableViewController <IdeaCreationDelegate>
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menu;
 @property (nonatomic, strong) Project *selectedProject;
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *addIdea;
-- (IBAction)addIdeaPressed:(id)sender;
-
 
 @end

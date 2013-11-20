@@ -8,12 +8,15 @@
 
 #import "IdeaCreationViewController.h"
 #import "APIClient.h"
+#import "SWRevealViewController.h"
+#import "ProjectViewController.h"
 
 @interface IdeaCreationViewController ()
 
 @end
 
 @implementation IdeaCreationViewController
+@synthesize myDelegate;
 
 - (void)viewDidLoad
 {
@@ -29,7 +32,6 @@
     
     self.textView.delegate = self;
     [self.textView becomeFirstResponder];
-    
 }
 
 
@@ -49,11 +51,23 @@
     
     [[APIClient sharedClient] addIdea:idea inProject:self.currentProject success:^(AFHTTPRequestOperation *operation, id response) {
         NSLog(@"Response: %@", response);
+        
+        Idea *newIdea = [[Idea alloc] initWithDictionary:response];
+        NSLog(@"Author: %@", [newIdea.author valueOrNilForKeyPath:@"name"]);
+        
+        if([self.myDelegate respondsToSelector:@selector(ideaCreationViewControllerDismissed:)])
+            {
+                [self.myDelegate ideaCreationViewControllerDismissed:newIdea];
+            }
+        [self dismissViewControllerAnimated:YES completion:nil];
+
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    
 }
 
 - (BOOL)prefersStatusBarHidden

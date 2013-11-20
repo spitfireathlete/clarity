@@ -23,7 +23,7 @@
 @interface ProjectViewController ()
 @property (nonatomic, strong) NSNumber *segmentedControlState;
 @property (nonatomic, strong) NSArray *collaborators;
-@property (nonatomic, strong) NSArray *ideas;
+@property (nonatomic, strong) NSMutableArray *ideas;
 @end
 
 @implementation ProjectViewController
@@ -51,12 +51,13 @@
     
     // Show idea cells first
     self.segmentedControlState = [NSNumber numberWithInteger:0];
-    
-    // Add Idea
-    [self.addIdea setAction:@selector(addIdeaPressed:)];
 
     // Retrieve ideas
     self.ideas = [self.selectedProject ideas];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    IdeaCreationViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"IdeaCreationViewController"];
+    vc.myDelegate = self;
     
     // Retrieve collaborators
     [[APIClient sharedClient] getCollaboratorsForProject:self.selectedProject success:^(AFHTTPRequestOperation *operation, id response) {
@@ -71,10 +72,6 @@
     
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [self.tableView reloadData];
-}
 
 #pragma mark - Table view data source
 
@@ -138,7 +135,7 @@
             IdeaCell *ideaCell = (IdeaCell *)[tableView dequeueReusableCellWithIdentifier:@"ideaCell"];
             Idea *idea = [self.ideas objectAtIndex:indexPath.row - 2];
             ideaCell.ideaText.text = [NSString stringWithFormat:@"%@", idea.text];
-            ideaCell.voteNum.text = [NSString stringWithFormat:@"%d", (idea.upVotes.intValue - idea.downVotes.intValue)];
+//            ideaCell.voteNum.text = [NSString stringWithFormat:@"%d", (idea.upVotes.intValue - idea.downVotes.intValue)];
             ideaCell.name.text = [NSString stringWithFormat:@"%@ %@", [idea.author valueOrNilForKeyPath:@"first_name"], [idea.author valueOrNilForKeyPath:@"last_name"]];
         
             [ideaCell.upVote addTarget:self action:@selector(performUpVote:) forControlEvents:UIControlEventTouchUpInside];
@@ -261,15 +258,21 @@
     }
 }
 
-- (IBAction)addIdeaPressed:(id)sender {
-    NSLog(@"Add idea pressed");
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"presentIdeaCreation"]) {
+        IdeaCreationViewController *vc = [segue destinationViewController];
+        vc.myDelegate = self;
+        vc.currentProject = self.selectedProject;
+    }
+}
+
+- (void)ideaCreationViewControllerDismissed:(Idea *)idea
+{
+    [self.ideas addObject:idea];
     
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    IdeaCreationViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"IdeaCreationViewController"];
-
-    [vc setCurrentProject:self.selectedProject];
-    [self presentViewController:vc animated:YES completion:nil];
-
+    [self.tableView reloadData];
 }
 
 - (BOOL)prefersStatusBarHidden
@@ -317,17 +320,6 @@
 }
 */
 
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
- */
 
 
 
