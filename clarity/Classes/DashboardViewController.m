@@ -40,7 +40,7 @@
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
     // GET Data from API
-    [[APIClient sharedClient] getProjectsOnSuccess:^(AFHTTPRequestOperation *operation, id response) {
+    [[APIClient sharedClient] getProjectsContributedToOnSuccess:^(AFHTTPRequestOperation *operation, id response) {
         
         self.projects = [Project projectsWithArray:response];
         
