@@ -16,6 +16,7 @@
 
 @interface DashboardViewController ()
 @property (nonatomic, strong) NSArray *projects;
+@property (nonatomic, strong) Project *selectedProject;
 @end
 
 @implementation DashboardViewController
@@ -101,19 +102,26 @@
     return 140;
 }
 
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self showProjectDetail: indexPath];
+}
+
+
+- (void) showProjectDetail:(NSIndexPath *)indexPath {
+    self.selectedProject = [self.projects objectAtIndex:indexPath.row - 1];
     [self performSegueWithIdentifier:@"showProjectView" sender:nil];
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showProjectView"]) {
-        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-        
         ProjectViewController *vc = [segue destinationViewController];
-        vc.selectedProject = [self.projects objectAtIndex:path.row];
+        vc.selectedProject = self.selectedProject;
     }
     
 }
