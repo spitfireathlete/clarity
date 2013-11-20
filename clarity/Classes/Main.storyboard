@@ -253,13 +253,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dashboardProjectCell" id="bgm-BI-wHE" customClass="DashboardProjectCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dashboardProjectCell" id="bgm-BI-wHE" customClass="DashboardProjectCell">
                                 <rect key="frame" x="0.0" y="190" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bgm-BI-wHE" id="jBK-36-cyN">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="r5d-81-PVg" kind="push" identifier="showProjectView" id="v3e-i7-Cqe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -346,7 +349,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Fd-Bk-fdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3412" y="-1153"/>
+            <point key="canvasLocation" x="3210" y="975"/>
         </scene>
         <!--Project Creation View Controller-->
         <scene sceneID="tdp-C7-3YO">
@@ -522,7 +525,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="We9-Iq-q9j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3060" y="-1153"/>
+            <point key="canvasLocation" x="2858" y="975"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fIw-Bz-oth">
@@ -596,7 +599,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pJr-YU-CBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2646" y="-1153"/>
+            <point key="canvasLocation" x="2444" y="975"/>
         </scene>
     </scenes>
     <resources>
@@ -613,8 +616,8 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="85F-yF-GUj"/>
-        <segue reference="wm0-Gf-Qby"/>
         <segue reference="Uh6-T4-fhK"/>
+        <segue reference="v3e-i7-Cqe"/>
         <segue reference="2CA-dc-9Ob"/>
     </inferredMetricsTieBreakers>
 </document>
