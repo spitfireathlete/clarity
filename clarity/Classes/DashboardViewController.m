@@ -16,6 +16,7 @@
 
 @interface DashboardViewController ()
 @property (nonatomic, strong) NSArray *projects;
+@property (nonatomic, strong) NSArray *ideas;
 @property (nonatomic, strong) Project *selectedProject;
 @end
 
@@ -43,7 +44,15 @@
     [[APIClient sharedClient] getProjectsContributedToOnSuccess:^(AFHTTPRequestOperation *operation, id response) {
         
         self.projects = [Project projectsWithArray:response];
+        [self.tableView reloadData];
         
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    
+    [[APIClient sharedClient] getMyIdeasOnSuccess:^(AFHTTPRequestOperation *operation, id response) {
+        
+        self.ideas = [Idea ideasWithArray:response];
         [self.tableView reloadData];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -76,8 +85,8 @@
         headerCell.name.text = @"Nidhi Kulkarni's Dashboard";
         headerCell.jobTitle.text = @"Founder of Spitfire Athlete";
         
-        headerCell.numProjects.text = @"13";
-        headerCell.numIdeas.text = @"23";
+        headerCell.numProjects.text = [NSString stringWithFormat:@"%d", self.projects.count];
+        headerCell.numIdeas.text = [NSString stringWithFormat:@"%d", self.ideas.count];
         
         return headerCell;
     }
