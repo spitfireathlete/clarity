@@ -40,6 +40,17 @@
     [_menu setAction: @selector(revealToggle:)];
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
+    // Nav Bar Formatting
+    self.title = @"my dashboard";
+    
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.318 green:0.769 blue:0.831 alpha:1.0]]; /*#51c4d4*/
+    
+    [self.navigationController.navigationBar setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                                      [UIColor whiteColor], NSForegroundColorAttributeName,
+                                                                      [UIFont fontWithName:@"AvenirNext-Bold" size:20.0f], NSFontAttributeName, nil]];
+    
+    [self.navigationController.navigationBar setTranslucent:YES];
+    
     // GET Data from API
     [[APIClient sharedClient] getProjectsContributedToOnSuccess:^(AFHTTPRequestOperation *operation, id response) {
         

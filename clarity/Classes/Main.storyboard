@@ -215,12 +215,6 @@
                         <barButtonItem key="leftBarButtonItem" image="menu_icon.png" style="done" id="VFm-xP-e2q">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="plus_icon.png" id="i5m-xP-Dzq">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <segue destination="SqY-42-zZq" kind="custom" customClass="SWRevealViewControllerSegue" id="Uh6-T4-fhK"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
@@ -241,7 +235,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dashboardHeaderCell" rowHeight="104" id="pyo-hc-Yo0" customClass="DashboardHeaderCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="104"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="104"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pyo-hc-Yo0" id="ggE-rt-IYe">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
@@ -249,7 +243,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dashboardProjectCell" id="bgm-BI-wHE" customClass="DashboardProjectCell">
-                                <rect key="frame" x="0.0" y="126" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="190" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bgm-BI-wHE" id="jBK-36-cyN">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="44"/>
@@ -266,7 +260,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="BW4-Ys-t8d">
-                        <barButtonItem key="leftBarButtonItem" image="menu_icon.png" style="done" id="3sg-q7-wMW"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu_icon.png" style="done" id="3sg-q7-wMW">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="menu" destination="3sg-q7-wMW" id="pSw-FO-OJQ"/>
@@ -424,7 +420,7 @@
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="projectCreationHeaderCell" rowHeight="175" id="2S4-QN-oUt" customClass="ProjectCreationHeaderCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="175"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="175"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2S4-QN-oUt" id="jaA-bk-X4o">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="174"/>
@@ -432,7 +428,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="accountNameCell" id="wD3-ID-PtS" customClass="AccountNameCell">
-                                <rect key="frame" x="0.0" y="197" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="261" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wD3-ID-PtS" id="T5A-KH-AgD">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -440,7 +436,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="projectDetailCell" id="qdq-oi-x2M" customClass="ProjectDetailCell">
-                                <rect key="frame" x="0.0" y="241" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="305" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qdq-oi-x2M" id="R41-a0-fd1">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -448,7 +444,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addCollaboratorsCell" id="IqE-YF-fIc" customClass="AddCollaboratorsCell">
-                                <rect key="frame" x="0.0" y="285" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="349" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IqE-YF-fIc" id="4bx-QN-xEj">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -456,7 +452,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="saveCell" rowHeight="70" id="ODJ-iU-YGa">
-                                <rect key="frame" x="0.0" y="329" width="320" height="70"/>
+                                <rect key="frame" x="0.0" y="393" width="320" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ODJ-iU-YGa" id="r6r-u8-CMV">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="69"/>
@@ -480,7 +476,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="YWT-mC-vPI">
-                        <barButtonItem key="leftBarButtonItem" image="menu_icon.png" id="FDe-Bh-jmr"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu_icon.png" id="FDe-Bh-jmr">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="menu" destination="FDe-Bh-jmr" id="KSv-H3-BYr"/>
@@ -589,8 +587,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="RGf-DJ-jNM">
-                        <barButtonItem key="leftBarButtonItem" image="menu_icon.png" id="X9K-VE-K5c"/>
-                        <barButtonItem key="rightBarButtonItem" title="Create" id="eV4-nj-xdA">
+                        <barButtonItem key="leftBarButtonItem" image="menu_icon.png" id="X9K-VE-K5c">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="plus_icon.png" id="eV4-nj-xdA">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="addIdeaPressed:" destination="r5d-81-PVg" id="SOW-mA-vim"/>
                             </connections>
@@ -683,10 +684,16 @@
     <resources>
         <image name="SFBackground_DarkGradient.png" width="640" height="1136"/>
         <image name="blue_checkmark.png" width="75" height="75"/>
+        <image name="blue_checkmark.png" width="75" height="75"/>
         <image name="globe_icon.png" width="20" height="22"/>
+        <image name="gray_xmark.png" width="70" height="71"/>
         <image name="gray_xmark.png" width="70" height="71"/>
         <image name="home_icon.png" width="20" height="21"/>
         <image name="menu_icon.png" width="20" height="20"/>
+        <image name="menu_icon.png" width="20" height="20"/>
+        <image name="menu_icon.png" width="20" height="20"/>
+        <image name="menu_icon.png" width="20" height="20"/>
+        <image name="plus_icon.png" width="20" height="20"/>
         <image name="plus_icon.png" width="20" height="20"/>
         <image name="sync_icon.png" width="20" height="21"/>
     </resources>
@@ -696,9 +703,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="t95-wg-gZn"/>
-        <segue reference="85F-yF-GUj"/>
-        <segue reference="Zd6-gr-ond"/>
-        <segue reference="S29-7c-v6h"/>
+        <segue reference="wm0-Gf-Qby"/>
+        <segue reference="nbR-KF-TRe"/>
+        <segue reference="QB8-Ih-fCf"/>
+        <segue reference="2CA-dc-9Ob"/>
     </inferredMetricsTieBreakers>
 </document>
