@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0209D722183B76FC00A6D16F /* CredentialStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209D721183B76FC00A6D16F /* CredentialStore.m */; };
+		0209D728183C2FE100A6D16F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209D727183C2FE100A6D16F /* LoginViewController.m */; };
 		02BA29E1183B428B005BDE95 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA29E0183B428B005BDE95 /* APIClient.m */; };
 		02BA29E4183B4339005BDE95 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA29E3183B4339005BDE95 /* Project.m */; };
 		02BA29E7183B4344005BDE95 /* Idea.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA29E6183B4344005BDE95 /* Idea.m */; };
@@ -106,6 +107,8 @@
 /* Begin PBXFileReference section */
 		0209D720183B76FC00A6D16F /* CredentialStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CredentialStore.h; sourceTree = "<group>"; };
 		0209D721183B76FC00A6D16F /* CredentialStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CredentialStore.m; sourceTree = "<group>"; };
+		0209D726183C2FE000A6D16F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		0209D727183C2FE100A6D16F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		02BA29DF183B428B005BDE95 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
 		02BA29E0183B428B005BDE95 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
 		02BA29E2183B4339005BDE95 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
@@ -746,6 +749,8 @@
 		EA6F00571839C22B00336E21 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0209D726183C2FE000A6D16F /* LoginViewController.h */,
+				0209D727183C2FE100A6D16F /* LoginViewController.m */,
 				EA6F00581839C24700336E21 /* FeedTableViewController.h */,
 				EA6F00591839C24700336E21 /* FeedTableViewController.m */,
 				EA6F006D183AAEC000336E21 /* NavBarViewController.h */,
@@ -951,6 +956,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0209D728183C2FE100A6D16F /* LoginViewController.m in Sources */,
 				0209D722183B76FC00A6D16F /* CredentialStore.m in Sources */,
 				EAFC13C8183B53E200210407 /* IdeaCreationViewController.m in Sources */,
 				EA6F005A1839C24700336E21 /* FeedTableViewController.m in Sources */,

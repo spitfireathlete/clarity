@@ -11,6 +11,8 @@
 
 @interface Collaborator : RestObject
 
++ (Collaborator *)currentUser;
++ (void)setCurrentUser:(Collaborator *) currentUser;
 
 + (NSMutableArray *)collaboratorsWithArray:(NSArray *)array;
 

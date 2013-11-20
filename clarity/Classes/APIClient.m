@@ -91,14 +91,14 @@ static NSString * const BASE_URL = @"http://localhost:3000/";
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager setResponseSerializer:[AFJSONResponseSerializer serializer]];
     SFOAuthCredentials *creds = [[SFAccountManager sharedInstance] credentials];
-    [manager POST:[NSString stringWithFormat:@"%@api/tokens", BASE_URL] parameters:[self setAuthToken:@{@"sf_oauth_token": [creds accessToken] , @"identity_url": [creds identityUrl]}] success:success failure:failure];
+    [manager POST:[NSString stringWithFormat:@"%@/tokens", BASE_URL] parameters:@{@"sf_oauth_token": [creds accessToken] , @"identity_url": [creds identityUrl]} success:success failure:failure];
 
 }
 
 -(void) getAuthTokenByFBToken:(NSString*) facebookToken success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager setResponseSerializer:[AFJSONResponseSerializer serializer]];
-    [manager POST:[NSString stringWithFormat:@"%@api/tokens", BASE_URL] parameters:[self setAuthToken:@{@"mobile_facebook_token": facebookToken }] success:success failure:failure];
+    [manager POST:[NSString stringWithFormat:@"%@api/tokens", BASE_URL] parameters:@{@"mobile_facebook_token": facebookToken } success:success failure:failure];
     
 }
 
