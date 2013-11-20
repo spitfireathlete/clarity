@@ -13,6 +13,7 @@
 #import "AddCollaboratorsCell.h"
 #import "SWRevealViewController.h"  
 #import "APIClient.h"
+#import "FeedTableViewController.h"
 
 @interface ProjectCreationViewController ()
 
@@ -21,6 +22,8 @@
 @property (nonatomic, strong) Priority *selectedPriority;
 @property (nonatomic, strong) NSString* topic;
 @property (nonatomic, strong) NSString* detail;
+
+@property (nonatomic, strong) Project *createdProject;
 @end
 
 @implementation ProjectCreationViewController
@@ -179,9 +182,10 @@
     
     if ([indexPath isEqual:saveRow]) {
         
-        Project *project = [[Project alloc] initWithDictionary:@{@"topic": self.topic, @"details": self.detail}];
-        [[APIClient sharedClient] createProject:self.selectedPriority project: project success:^(AFHTTPRequestOperation *operation, id response) {
+        self.createdProject = [[Project alloc] initWithDictionary:@{@"topic": self.topic, @"details": self.detail}];
+        [[APIClient sharedClient] createProject:self.selectedPriority project:self.createdProject success:^(AFHTTPRequestOperation *operation, id response) {
             NSLog(@"response from clarity: %@", response);
+            [self showProjectDetail];
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"error");
         }];
@@ -207,8 +211,14 @@
 
 #pragma mark - Navigation
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
+- (void) showProjectDetail {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    SWRevealViewController *revealController = [storyboard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
+    
+    FeedTableViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"FeedTableViewController"];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
+    [revealController setFrontViewController:navigationController animated:YES];
+    [self presentViewController:revealController animated:NO completion:nil];
 }
 
 #pragma mark - MLPAutoCompleteTextField DataSource
@@ -266,6 +276,8 @@
         NSLog(@"selected string '%@' from autocomplete menu", selectedString);
     }
 }
+
+
 
 
 
