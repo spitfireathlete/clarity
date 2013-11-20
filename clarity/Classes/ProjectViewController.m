@@ -70,14 +70,14 @@
 {
     if ([self.segmentedControlState isEqualToNumber:[NSNumber numberWithInteger:1]]) {
         // Collaborator Cells
-        [self.collaborators count];
+        return [self.collaborators count] + 2;
 
     } else if ([self.segmentedControlState isEqualToNumber:[NSNumber numberWithInteger:0]]) {
         // Idea Cells
-        
+        return 4;
     }
     
-    return 5;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -85,7 +85,7 @@
     NSIndexPath *headerRow = [NSIndexPath indexPathForRow:0 inSection:0];
     if ([indexPath isEqual:headerRow]) {
         ProjectViewHeaderCell *headerCell = (ProjectViewHeaderCell *)[tableView dequeueReusableCellWithIdentifier:@"projectViewHeaderCell"];
-        headerCell.projectQuestion.text = @"How can we better promote the Nike Powerlift to female weightlifters?";
+        headerCell.projectQuestion.text = [self.selectedProject topic];
         headerCell.userInteractionEnabled = NO;
         return headerCell;
     }
@@ -93,7 +93,7 @@
     NSIndexPath *detailsRow = [NSIndexPath indexPathForRow:1 inSection:0];
     if ([indexPath isEqual:detailsRow]) {
         DetailViewCell *detailCell = (DetailViewCell *)[tableView dequeueReusableCellWithIdentifier:@"detailViewCell"];
-        detailCell.detailText.text = @"We're trying to get our Powerlifting shoe to really take off, but so far Adidas has been killing the market. What other marketing stunts can we pull off to dominate?";
+        detailCell.detailText.text = [self.selectedProject details];
         
         // UI Segmented Control
         [detailCell.segmentedControl addTarget:self action:@selector(indexDidChangeForSegmentedControl:) forControlEvents:UIControlEventValueChanged];

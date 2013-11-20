@@ -18,6 +18,7 @@
 @property (nonatomic, strong) Collaborator *owner;
 @property (nonatomic, strong) NSArray *ideas;
 @property (nonatomic, strong) NSString *topic;
+@property (nonatomic, strong) NSString *details;
 
 + (NSMutableArray *)projectsWithArray:(NSArray *)array;
 

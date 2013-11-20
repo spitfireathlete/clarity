@@ -19,6 +19,7 @@
         self.priority = [[Priority alloc] initWithDictionary:[self valueOrNilForKeyPath:@"priority"]];
         self.objectId = [self valueOrNilForKeyPath:@"id"];
         self.topic = [self valueOrNilForKeyPath:@"topic"];
+        self.details = [self valueOrNilForKeyPath:@"details"];
     }
     
     return self;
