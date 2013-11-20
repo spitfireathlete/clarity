@@ -15,6 +15,8 @@
 #import "APIClient.h"
 #import "Collaborator.h"
 #import "CredentialStore.h";
+#import "SWRevealViewController.h"
+#import "FeedTableViewController.h"
 
 static NSString * const RemoteAccessConsumerKey = @"3MVG9Iu66FKeHhINkB1l7xt7kR8czFcCTUhgoA8Ol2Ltf1eYHOU4SqQRSEitYFDUpqRWcoQ2.dBv_a1Dyu5xa";
 static NSString * const OAuthRedirectURI        = @"testsfdc:///mobilesdk/detect/oauth/done";
@@ -95,7 +97,14 @@ static NSString * const OAuthRedirectURI        = @"testsfdc:///mobilesdk/detect
                 [creds setAuthToken:response[@"token"]];
                 
                 NSLog(@"%@", @"Logged in successfully to Clarity");
-                // [weakSelf setupRootViewController]; // can show feed view controller here, successful login to salesforce and the clarity API
+                UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                SWRevealViewController *revealController = [storyboard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
+                
+                FeedTableViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"FeedTableViewController"];
+                UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
+                [revealController setFrontViewController:navigationController animated:YES];
+                [weakSelf presentViewController:revealController animated:NO completion:nil];
+                
                 
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                 [weakSelf onError];
