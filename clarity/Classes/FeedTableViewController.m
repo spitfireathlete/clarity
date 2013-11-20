@@ -73,6 +73,8 @@
         NSLog(@"Error: %@", error);
     }];
     
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:NO];
+    
 }
 
 
@@ -131,6 +133,11 @@
         vc.selectedProject = self.selectedProject;
     }
 
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 @end
