@@ -135,7 +135,7 @@
             IdeaCell *ideaCell = (IdeaCell *)[tableView dequeueReusableCellWithIdentifier:@"ideaCell"];
             Idea *idea = [self.ideas objectAtIndex:indexPath.row - 2];
             ideaCell.ideaText.text = [NSString stringWithFormat:@"%@", idea.text];
-//            ideaCell.voteNum.text = [NSString stringWithFormat:@"%d", (idea.upVotes.intValue - idea.downVotes.intValue)];
+            ideaCell.voteNum.text = [NSString stringWithFormat:@"%d", (idea.upVotes.intValue - idea.downVotes.intValue)];
             ideaCell.name.text = [NSString stringWithFormat:@"%@ %@", [idea.author valueOrNilForKeyPath:@"first_name"], [idea.author valueOrNilForKeyPath:@"last_name"]];
         
             [ideaCell.upVote addTarget:self action:@selector(performUpVote:) forControlEvents:UIControlEventTouchUpInside];

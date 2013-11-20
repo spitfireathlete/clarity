@@ -30,15 +30,6 @@
                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ij-5R-luf">
-                        <rect key="frame" x="229" y="138" width="68" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="15"/>
-                        <state key="normal" title="Comment">
-                            <color key="titleColor" red="0.31764705879999999" green="0.76862745099999996" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                    </button>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="23" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9j-9W-WzA">
                         <rect key="frame" x="12" y="42" width="20" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -65,7 +56,6 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="comment" destination="2ij-5R-luf" id="Ti7-4b-TCc"/>
                 <outlet property="downVote" destination="61V-Z7-9fD" id="6Vx-1a-0kG"/>
                 <outlet property="ideaText" destination="shG-7c-3OY" id="zjt-Jy-xDH"/>
                 <outlet property="name" destination="KEA-vx-1uj" id="9TY-fn-v4c"/>
