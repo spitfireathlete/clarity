@@ -86,7 +86,7 @@
             UITableViewCell *collaboratorCell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"collaboratorCell"];
             collaboratorCell.textLabel.text = @"Michael Ellison";
             collaboratorCell.detailTextLabel.text = @"EIR at Riviera Partners";
-            collaboratorCell.imageView.image = [UIImage imageNamed:@"Nidhi_Circle.png"];
+            collaboratorCell.imageView.image = [UIImage imageNamed:@"tiny_heart_icon.png"];
             
             return collaboratorCell;
         }
