@@ -40,6 +40,7 @@
     [_menu setTarget: self.revealViewController];
     [_menu setAction: @selector(revealToggle:)];
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
 }
 
 
@@ -61,6 +62,9 @@
     if ([indexPath isEqual:headerRow]) {
         ProjectCreationHeaderCell *cell = (ProjectCreationHeaderCell *)[tableView dequeueReusableCellWithIdentifier:@"projectCreationHeaderCell"];
         cell.backgroundColor = [UIColor clearColor];
+        
+        [cell addGestureRecognizer:[[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(createAccountQuestion:)]];
+        
         return cell;
     }
     
@@ -103,6 +107,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (void)createAccountQuestion: (UILongPressGestureRecognizer*)gesture {
+    NSLog(@"Long gesture recognizer!");
 }
 
 #pragma mark - Navigation

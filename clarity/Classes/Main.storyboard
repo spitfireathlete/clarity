@@ -609,10 +609,6 @@
         <image name="blue_checkmark.png" width="75" height="75"/>
         <image name="gray_xmark.png" width="70" height="71"/>
         <image name="menu_icon.png" width="20" height="20"/>
-        <image name="menu_icon.png" width="20" height="20"/>
-        <image name="menu_icon.png" width="20" height="20"/>
-        <image name="menu_icon.png" width="20" height="20"/>
-        <image name="plus_icon.png" width="20" height="20"/>
         <image name="plus_icon.png" width="20" height="20"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

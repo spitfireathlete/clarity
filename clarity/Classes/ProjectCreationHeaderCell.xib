@@ -37,8 +37,21 @@
                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VJS-OI-JxF">
+                        <rect key="frame" x="40" y="31" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="instructionText1" destination="bfr-pw-VWJ" id="Jc2-CV-XpF"/>
+                <outlet property="instructionText2" destination="UAq-4c-HAT" id="fhR-cF-hWV"/>
+                <outlet property="textView" destination="VJS-OI-JxF" id="paB-9T-HZ5"/>
+                <outlet property="writeIcon" destination="ANh-03-EuZ" id="RBQ-5C-UGg"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>
