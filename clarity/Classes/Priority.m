@@ -18,4 +18,11 @@
     return priorities;
 }
 
+#pragma mark - MLPAutoCompletionObject Protocol
+
+- (NSString *)autocompleteString
+{
+    return [self valueOrNilForKeyPath:@"name"];
+}
+
 @end

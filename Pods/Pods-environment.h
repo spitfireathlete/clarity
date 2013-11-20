@@ -48,6 +48,12 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 0
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 3
 
+// MLPAutoCompleteTextField
+#define COCOAPODS_POD_AVAILABLE_MLPAutoCompleteTextField
+#define COCOAPODS_VERSION_MAJOR_MLPAutoCompleteTextField 1
+#define COCOAPODS_VERSION_MINOR_MLPAutoCompleteTextField 5
+#define COCOAPODS_VERSION_PATCH_MLPAutoCompleteTextField 0
+
 // SSKeychain
 #define COCOAPODS_POD_AVAILABLE_SSKeychain
 #define COCOAPODS_VERSION_MAJOR_SSKeychain 1

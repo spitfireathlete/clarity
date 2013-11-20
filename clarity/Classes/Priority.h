@@ -7,8 +7,9 @@
 //
 
 #import "RestObject.h"
+#import "MLPAutoCompletionObject.h"
 
-@interface Priority : RestObject
+@interface Priority : RestObject <MLPAutoCompletionObject>
 
 @property (nonatomic, strong) NSString *objectId;
 

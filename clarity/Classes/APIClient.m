@@ -39,16 +39,22 @@ static NSString * const BASE_URL = @"http://localhost:3000/";
     [manager GET:[NSString stringWithFormat:@"%@api/projects.json", BASE_URL] parameters:[self setAuthToken:nil] success:success failure:failure];
 }
 
+- (void) getPrioritiesOnSuccess:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager setResponseSerializer:[AFJSONResponseSerializer serializer]];
+    [manager GET:[NSString stringWithFormat:@"%@api/priorities.json", BASE_URL] parameters:[self setAuthToken:nil] success:success failure:failure];
+}
+
 - (void)getCollaboratorsForProject:(Project *)project success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager setResponseSerializer:[AFJSONResponseSerializer serializer]];
     [manager GET:[NSString stringWithFormat:@"%@api/projects/%@/collaborations.json", BASE_URL, project.objectId] parameters:[self setAuthToken:nil] success:success failure:failure];
 }
 
--(void) createProject:(Project *)project success:(void (^)(AFHTTPRequestOperation *operation, id response)) success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+-(void) createProject:(Priority *)priority project:(Project *)project success:(void (^)(AFHTTPRequestOperation *operation, id response)) success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager setResponseSerializer:[AFJSONResponseSerializer serializer]];
-    [manager POST:[NSString stringWithFormat:@"%@api/projects/%@/collaborations.json", BASE_URL, project.objectId] parameters:project.data success:success failure:failure];
+    [manager POST:[NSString stringWithFormat:@"%@api/projects", BASE_URL] parameters:@{@"priority": priority.data, @"project" : project.data} success:success failure:failure];
 }
 
 -(void) addComment:(NSString *)comment forIdea:(Idea *)idea inProject:(Project *)project success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {

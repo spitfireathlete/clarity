@@ -14,7 +14,7 @@
 #import "SFLogger.h"
 #import "APIClient.h"
 #import "Collaborator.h"
-#import "CredentialStore.h";
+#import "CredentialStore.h"
 #import "SWRevealViewController.h"
 #import "FeedTableViewController.h"
 
