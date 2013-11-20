@@ -34,16 +34,10 @@
                         </segments>
                         <color key="tintColor" red="0.31764705879999999" green="0.76862745099999996" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                     </segmentedControl>
-                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KSs-l6-dMO">
-                        <rect key="frame" x="259" y="7" width="51" height="31"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="onTintColor" red="0.31764705879999999" green="0.76862745099999996" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
-                    </switch>
                 </subviews>
             </tableViewCellContentView>
             <connections>
                 <outlet property="detailText" destination="bod-UC-7XJ" id="5aF-Z4-EY0"/>
-                <outlet property="publicSwitch" destination="KSs-l6-dMO" id="8jZ-fl-wIW"/>
                 <outlet property="segmentedControl" destination="Leg-sd-qMK" id="iL1-HX-GWf"/>
             </connections>
         </tableViewCell>

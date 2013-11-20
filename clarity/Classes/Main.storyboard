@@ -451,11 +451,11 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="saveCell" rowHeight="70" id="ODJ-iU-YGa">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="saveCell" rowHeight="70" id="ODJ-iU-YGa">
                                 <rect key="frame" x="0.0" y="393" width="320" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ODJ-iU-YGa" id="r6r-u8-CMV">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="69"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="save" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvX-88-xve">
@@ -684,10 +684,16 @@
     <resources>
         <image name="SFBackground_DarkGradient.png" width="640" height="1136"/>
         <image name="blue_checkmark.png" width="75" height="75"/>
+        <image name="blue_checkmark.png" width="75" height="75"/>
         <image name="globe_icon.png" width="20" height="22"/>
+        <image name="gray_xmark.png" width="70" height="71"/>
         <image name="gray_xmark.png" width="70" height="71"/>
         <image name="home_icon.png" width="20" height="21"/>
         <image name="menu_icon.png" width="20" height="20"/>
+        <image name="menu_icon.png" width="20" height="20"/>
+        <image name="menu_icon.png" width="20" height="20"/>
+        <image name="menu_icon.png" width="20" height="20"/>
+        <image name="plus_icon.png" width="20" height="20"/>
         <image name="plus_icon.png" width="20" height="20"/>
         <image name="sync_icon.png" width="20" height="21"/>
     </resources>
