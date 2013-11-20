@@ -9,9 +9,17 @@
 #import "FeedTableViewController.h"
 #import "FeedCell.h"
 #import "SWRevealViewController.h"
+#import "APIClient.h"
+#import "Project.h"
+#import "Collaborator.h"
+#import "RestObject.h"
+#import "SFIdentityData.h"
+#import "SFAccountManager.h"  
+#import "UIImageView+AFNetworking.h"
+
 
 @interface FeedTableViewController ()
-
+@property (nonatomic, strong) NSMutableArray *projects;
 @end
 
 @implementation FeedTableViewController
@@ -19,6 +27,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.projects = [[NSMutableArray alloc] init];
 
     // Tableview Background Image
     UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"light_blurry_sf.png"]];
@@ -43,6 +53,24 @@
     [_menuButton setAction: @selector(revealToggle:)];
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
+    // GET Data from API
+    [[APIClient sharedClient] getProjectsOnSuccess:^(AFHTTPRequestOperation *operation, id response) {
+        
+        SFIdentityData *idData =[[SFAccountManager sharedInstance] idData];
+        NSLog(@"%@", idData.pictureUrl);
+        
+        NSLog(@"Project Response: %@", response);
+        
+        self.projects = [Project projectsWithArray:response];
+
+        NSLog(@"Projects Array: %@", self.projects);
+        
+        [self.tableView reloadData];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    
 }
 
 
@@ -55,19 +83,23 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return [self.projects count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    
+    Project *project = [self.projects objectAtIndex:indexPath.row];
+    SFIdentityData *idData =[[SFAccountManager sharedInstance] idData];
+    NSLog(@"%@", idData.pictureUrl);
+    
     FeedCell *feedcell = (FeedCell *)[tableView dequeueReusableCellWithIdentifier:@"feedcell"];
-    feedcell.profilePic.image = [UIImage imageNamed:@"Nidhi_Circle.png"];
-    feedcell.name.text = @"Nidhi Kulkarni";
-    feedcell.accountName.text = @"Lululemon SF";
-    feedcell.projectQuestion.text = @"How can we promote our new shoe, Nike Powerlift, to female weightlifters and female powerlifters?";
-    feedcell.numFaves.text = @"234";
-    feedcell.numFaves.text = @"123";
+    [feedcell.profilePic setImageWithURL:idData.pictureUrl placeholderImage:[UIImage imageNamed:@"Nidhi_Circle.png"]];
+    
+    feedcell.name.text = [NSString stringWithFormat:@"%@ %@", [project.owner valueOrNilForKeyPath:@"first_name"], [project.owner valueOrNilForKeyPath:@"last_name"]];
+    feedcell.accountName.text = [NSString stringWithFormat:@"%@", [project.priority valueOrNilForKeyPath:@"name"]];
+    feedcell.projectQuestion.text = [NSString stringWithFormat:@"%@", project.topic];
+    feedcell.numIdeas.text = [NSString stringWithFormat:@"%d", [project.ideas count]];
 
     feedcell.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
     return feedcell;

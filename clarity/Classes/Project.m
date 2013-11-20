@@ -18,6 +18,7 @@
         self.owner = [[Collaborator alloc] initWithDictionary:[self valueOrNilForKeyPath:@"user"]];
         self.priority = [[Priority alloc] initWithDictionary:[self valueOrNilForKeyPath:@"priority"]];
         self.objectId = [self valueOrNilForKeyPath:@"id"];
+        self.topic = [self valueOrNilForKeyPath:@"topic"];
     }
     
     return self;

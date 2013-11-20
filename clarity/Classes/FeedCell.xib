@@ -49,24 +49,14 @@
                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="15"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="157" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AU-R4-A3M">
-                        <rect key="frame" x="214" y="164" width="29" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="12"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="94" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhl-JW-n1a">
                         <rect key="frame" x="274" y="164" width="20" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="12"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Nidhi_Circle.png" translatesAutoresizingMaskIntoConstraints="NO" id="m9F-B9-3dG">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="m9F-B9-3dG">
                         <rect key="frame" x="13" y="20" width="68" height="68"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tiny_heart_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="o29-SI-YGl">
-                        <rect key="frame" x="192" y="166" width="15" height="15"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tiny_bubble_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="eTr-RE-RaC">
@@ -78,7 +68,6 @@
             <connections>
                 <outlet property="accountName" destination="ai5-7o-crE" id="E5q-hY-3TM"/>
                 <outlet property="name" destination="Ljd-vz-Mel" id="u9h-tp-fre"/>
-                <outlet property="numFaves" destination="3AU-R4-A3M" id="dNU-lP-faC"/>
                 <outlet property="numIdeas" destination="Qhl-JW-n1a" id="6m3-IG-sjF"/>
                 <outlet property="profilePic" destination="m9F-B9-3dG" id="Y9v-Dp-PTw"/>
                 <outlet property="projectQuestion" destination="Qe5-K9-Pim" id="W2L-yW-9IO"/>
@@ -86,8 +75,8 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Default.png" width="450" height="451"/>
         <image name="Nidhi_Circle.png" width="450" height="451"/>
         <image name="tiny_bubble_icon.png" width="20" height="18"/>
-        <image name="tiny_heart_icon.png" width="40" height="35"/>
     </resources>
 </document>
