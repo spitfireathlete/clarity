@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MLPAutoCompleteTextField.h"
 
 @interface AccountNameCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UITextField *accountName;
+@property (strong, nonatomic) IBOutlet MLPAutoCompleteTextField *accountName;
 @end
