@@ -85,7 +85,6 @@
 }
 
 
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -126,6 +125,7 @@
     NSIndexPath *projectDetailRow = [NSIndexPath indexPathForRow:2 inSection:0];
     if ([indexPath isEqual:projectDetailRow]) {
         ProjectDetailCell *cell = (ProjectDetailCell *)[tableView dequeueReusableCellWithIdentifier:@"projectDetailCell"];
+        cell.textField.delegate = self;
         return cell;
     }
     
