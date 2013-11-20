@@ -43,7 +43,27 @@
     [_menu setAction: @selector(revealToggle:)];
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShowWithNotification:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHideWithNotification:) name:UIKeyboardDidHideNotification object:nil];
+    
 }
+
+- (void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidHideNotification object:nil];
+}
+
+- (void)keyboardDidShowWithNotification:(NSNotification *)aNotification
+{
+    self.tableView.scrollEnabled = NO;
+}
+
+
+- (void)keyboardDidHideWithNotification:(NSNotification *)aNotification
+{
+    self.tableView.scrollEnabled = YES;
+}
+
 
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -85,6 +105,9 @@
         cell.accountName.autoCompleteDataSource = self;
         cell.accountName.autoCompleteDelegate = self;
         [cell.accountName setAutoCompleteTableAppearsAsKeyboardAccessory:YES];
+        cell.accountName.autoCompleteTableCellBackgroundColor = [[UIColor alloc] initWithRed:(81/255.0) green:(196/255.0) blue:(212/255.0) alpha:1];
+        cell.accountName.autoCompleteTableCellTextColor = [UIColor blackColor];
+        cell.accountName.applyBoldEffectToAutoCompleteSuggestions = YES;
         return cell;
     }
     
