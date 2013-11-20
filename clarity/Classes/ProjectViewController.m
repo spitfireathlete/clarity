@@ -13,7 +13,7 @@
 #import "SWRevealViewController.h"
 
 @interface ProjectViewController ()
-
+@property (nonatomic, strong) NSNumber *segmentedControlState;
 @end
 
 @implementation ProjectViewController
@@ -36,6 +36,9 @@
     [_menu setTarget: self.revealViewController];
     [_menu setAction: @selector(revealToggle:)];
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    // Show idea cells first
+    self.segmentedControlState = [NSNumber numberWithInteger:0];
     
 }
 
@@ -75,12 +78,29 @@
         return detailCell;
     }
     
-    
-    NSIndexPath *ideaRow = [NSIndexPath indexPathForRow:2 inSection:0];
-    if ([indexPath isEqual:ideaRow]) {
-        IdeaCell *ideaCell = (IdeaCell *)[tableView dequeueReusableCellWithIdentifier:@"ideaCell"];
-        return ideaCell;
+    if ([self.segmentedControlState isEqualToNumber:[NSNumber numberWithInteger:1]]) {
+        // Show Collaborator Cells
+        
+        NSIndexPath *thirdRow = [NSIndexPath indexPathForRow:2 inSection:0];
+        if ([indexPath isEqual:thirdRow]) {
+            UITableViewCell *collaboratorCell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"collaboratorCell"];
+            collaboratorCell.textLabel.text = @"Michael Ellison";
+            collaboratorCell.detailTextLabel.text = @"EIR at Riviera Partners";
+            collaboratorCell.imageView.image = [UIImage imageNamed:@"Nidhi_Circle.png"];
+            
+            return collaboratorCell;
+        }
+        
+    } else if ([self.segmentedControlState isEqualToNumber:[NSNumber numberWithInteger:0]]) {
+        // Show Idea Cells
+        NSIndexPath *thirdRow = [NSIndexPath indexPathForRow:2 inSection:0];
+        if ([indexPath isEqual:thirdRow]) {
+            IdeaCell *ideaCell = (IdeaCell *)[tableView dequeueReusableCellWithIdentifier:@"ideaCell"];
+            ideaCell.userInteractionEnabled = YES;
+            return ideaCell;
+        }
     }
+
     
     UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"Cell"];
     return cell;
@@ -114,9 +134,16 @@
     UISegmentedControl *segmentedControl = (UISegmentedControl *)sender;
     
     if (segmentedControl.selectedSegmentIndex == 0) {
+        // Only show idea cells
         NSLog(@"Ideas");
+        self.segmentedControlState = [NSNumber numberWithInteger:0];
+        [self.tableView reloadData];
+        
     } else {
+        // Only show collaborator cells
         NSLog(@"Collaborators");
+        self.segmentedControlState = [NSNumber numberWithInteger:1];
+        [self.tableView reloadData];
     }
     
 }
@@ -180,6 +207,4 @@
 
  */
 
-- (IBAction)segmentedControl:(id)sender {
-}
 @end

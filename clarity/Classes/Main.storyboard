@@ -460,8 +460,32 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell multipleTouchEnabled="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="collaboratorCell" textLabel="eEL-8f-39M" detailTextLabel="HCO-U7-6Ba" rowHeight="98" style="IBUITableViewCellStyleSubtitle" id="diR-u8-5Yw">
+                                <rect key="frame" x="0.0" y="329" width="320" height="98"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="diR-u8-5Yw" id="jpF-ak-xKR">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eEL-8f-39M">
+                                            <rect key="frame" x="15" y="30" width="34" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HCO-U7-6Ba">
+                                            <rect key="frame" x="15" y="52" width="43" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="57" id="bnv-uF-q2X">
-                                <rect key="frame" x="0.0" y="329" width="320" height="57"/>
+                                <rect key="frame" x="0.0" y="427" width="320" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bnv-uF-q2X" id="JIO-n3-riS">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
@@ -582,6 +606,10 @@
         <image name="blue_checkmark.png" width="75" height="75"/>
         <image name="gray_xmark.png" width="70" height="71"/>
         <image name="menu_icon.png" width="20" height="20"/>
+        <image name="menu_icon.png" width="20" height="20"/>
+        <image name="menu_icon.png" width="20" height="20"/>
+        <image name="menu_icon.png" width="20" height="20"/>
+        <image name="plus_icon.png" width="20" height="20"/>
         <image name="plus_icon.png" width="20" height="20"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
