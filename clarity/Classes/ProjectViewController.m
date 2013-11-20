@@ -53,7 +53,7 @@
     self.segmentedControlState = [NSNumber numberWithInteger:0];
 
     // Retrieve ideas
-    self.ideas = [self.selectedProject ideas];
+    self.ideas = [[NSMutableArray alloc] initWithArray:[self.selectedProject ideas]];
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     IdeaCreationViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"IdeaCreationViewController"];
