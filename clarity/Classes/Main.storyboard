@@ -422,8 +422,10 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="YWT-mC-vPI">
                         <barButtonItem key="leftBarButtonItem" image="menu_icon.png" id="FDe-Bh-jmr"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="rJc-dP-l5O"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="doneButton" destination="rJc-dP-l5O" id="sm1-RT-YFK"/>
                         <outlet property="menu" destination="FDe-Bh-jmr" id="KSv-H3-BYr"/>
                     </connections>
                 </tableViewController>

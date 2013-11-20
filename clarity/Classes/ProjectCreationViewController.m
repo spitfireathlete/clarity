@@ -16,8 +16,11 @@
 
 @interface ProjectCreationViewController ()
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (nonatomic, strong) NSArray *priorities;
-
+@property (nonatomic, strong) Priority *selectedPriority;
+@property (nonatomic, strong) NSString* topic;
+@property (nonatomic, strong) NSString* detail;
 @end
 
 @implementation ProjectCreationViewController
@@ -30,12 +33,12 @@
     // Tableview Background Image
     UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SFBackground.png"]];
     [self.tableView setBackgroundView:backgroundView];
-
+    
+    self.doneButton.enabled = NO;
     // Custom Tableview Cells
     [self.tableView registerNib:[UINib nibWithNibName:@"ProjectCreationHeaderCell" bundle:nil] forCellReuseIdentifier:@"projectCreationHeaderCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"AccountNameCell" bundle:nil] forCellReuseIdentifier:@"accountNameCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"ProjectDetailCell" bundle:nil] forCellReuseIdentifier:@"projectDetailCell"];
-    [self.tableView registerNib:[UINib nibWithNibName:@"AddCollaboratorsCell" bundle:nil] forCellReuseIdentifier:@"addCollaboratorsCell"];
     
     [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
     
@@ -80,9 +83,30 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+    NSIndexPath *projectDetailRow = [NSIndexPath indexPathForRow:2 inSection:0];
+    
+    if (textField.tag == projectDetailRow.row) {
+        self.detail = textField.text;
+    }
+    
     [textField resignFirstResponder];
     return YES;
 }
+
+- (void) dismissKeyboard {
+    NSIndexPath *headerRow = [NSIndexPath indexPathForRow:0 inSection:0];
+        ProjectCreationHeaderCell *cell = (ProjectCreationHeaderCell *) [self.tableView cellForRowAtIndexPath:headerRow];
+
+    if (cell.textView.tag == headerRow.row) {
+        self.topic = cell.textView.text;
+    }
+    
+    self.doneButton.enabled = NO;
+    
+    [cell.textView resignFirstResponder];
+  
+}
+
 
 
 #pragma mark - Table view data source
@@ -94,7 +118,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -103,7 +127,7 @@
     if ([indexPath isEqual:headerRow]) {
         ProjectCreationHeaderCell *cell = (ProjectCreationHeaderCell *)[tableView dequeueReusableCellWithIdentifier:@"projectCreationHeaderCell"];
         cell.backgroundColor = [UIColor clearColor];
-        
+        cell.textView.tag = headerRow.row;
         [cell addGestureRecognizer:[[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(createAccountQuestion:)]];
         
         return cell;
@@ -126,12 +150,7 @@
     if ([indexPath isEqual:projectDetailRow]) {
         ProjectDetailCell *cell = (ProjectDetailCell *)[tableView dequeueReusableCellWithIdentifier:@"projectDetailCell"];
         cell.textField.delegate = self;
-        return cell;
-    }
-    
-    NSIndexPath *collaboratorsRow = [NSIndexPath indexPathForRow:3 inSection:0];
-    if ([indexPath isEqual:collaboratorsRow]) {
-        AddCollaboratorsCell *cell = (AddCollaboratorsCell *)[tableView dequeueReusableCellWithIdentifier:@"addCollaboratorsCell"];
+        cell.textField.tag = projectDetailRow.row;
         return cell;
     }
     
@@ -156,10 +175,34 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSIndexPath *saveRow = [NSIndexPath indexPathForRow:3 inSection:0];
+    
+    if ([indexPath isEqual:saveRow]) {
+        
+        Project *project = [[Project alloc] initWithDictionary:@{@"topic": self.topic, @"details": self.detail}];
+        [[APIClient sharedClient] createProject:self.selectedPriority project: project success:^(AFHTTPRequestOperation *operation, id response) {
+            NSLog(@"response from clarity: %@", response);
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"error");
+        }];
+        
+    }
 }
 
 - (void)createAccountQuestion: (UILongPressGestureRecognizer*)gesture {
     NSLog(@"Long gesture recognizer!");
+    self.doneButton.enabled = YES;
+    self.doneButton.target = self;
+    self.doneButton.action = @selector(dismissKeyboard);
+    
+    NSIndexPath *headerRow = [NSIndexPath indexPathForRow:0 inSection:0];
+    ProjectCreationHeaderCell *cell = (ProjectCreationHeaderCell *) [self.tableView cellForRowAtIndexPath:headerRow];
+    cell.writeIcon.hidden = YES;
+    cell.instructionText1.hidden = YES;
+    cell.instructionText2.hidden = YES;
+    cell.textView.hidden = NO;
+    [cell.textView becomeFirstResponder];
+    
 }
 
 #pragma mark - Navigation
@@ -218,6 +261,7 @@
 {
     if(selectedObject){
         NSLog(@"selected object from autocomplete menu %@ with string %@", selectedObject, [selectedObject autocompleteString]);
+        self.selectedPriority = (Priority *) selectedObject;
     } else {
         NSLog(@"selected string '%@' from autocomplete menu", selectedString);
     }
