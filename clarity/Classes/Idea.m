@@ -11,7 +11,7 @@
 
 @implementation Idea
 
-- (id)initWithDictionary:(NSDictionary *)data {
+- (id)initWithDictionary:(NSMutableDictionary *)data {
     if (self = [super initWithDictionary: data]) {
         NSArray *comments = [self valueOrNilForKeyPath:@"comments"];
         self.comments = [Comment commentsWithArray:comments];
@@ -36,7 +36,7 @@
 
 + (NSMutableArray *)ideasWithArray:(NSArray *)array {
     NSMutableArray *ideas = [[NSMutableArray alloc] initWithCapacity:array.count];
-    for (NSDictionary *params in array) {
+    for (NSMutableDictionary *params in array) {
         [ideas addObject:[[Idea alloc] initWithDictionary:params]];
     }
     return ideas;

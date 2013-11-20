@@ -130,7 +130,11 @@
             ideaCell.name.text = [NSString stringWithFormat:@"%@ %@", [idea.author valueOrNilForKeyPath:@"first_name"], [idea.author valueOrNilForKeyPath:@"last_name"]];
         
             [ideaCell.upVote addTarget:self action:@selector(performUpVote:) forControlEvents:UIControlEventTouchUpInside];
+            ideaCell.upVote.tag = indexPath.row - 2;
+        
             [ideaCell.downVote addTarget:self action:@selector(performDownVote:) forControlEvents:UIControlEventTouchUpInside];
+            ideaCell.downVote.tag = indexPath.row - 2;
+        
             [ideaCell.comment addTarget:self action:@selector(performComment:) forControlEvents:UIControlEventTouchUpInside];
         
             ideaCell.userInteractionEnabled = YES;
@@ -143,13 +147,15 @@
 
 }
 
-- (void) performUpVote: (id)sender {
-    IdeaCell *clickedCell = (IdeaCell *)[[sender superview] superview];
-    NSIndexPath *clickedButtonPath = [self.tableView indexPathForCell:clickedCell];
-    Idea *idea = [self.ideas objectAtIndex:clickedButtonPath.row];
+- (void) performUpVote: (UIButton*)sender {
+    
+    Idea *idea = [self.ideas objectAtIndex:sender.tag];
     
     [[APIClient sharedClient] upvoteIdea:idea success:^(AFHTTPRequestOperation *operation, id response) {
         NSLog(@"Response object: %@", response);
+        idea.upVotes = [response valueForKey:@"upvotes"];
+        idea.downVotes = [response valueForKey:@"downvotes"];
+        [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
@@ -164,6 +170,9 @@
     
     [[APIClient sharedClient] downvoteIdea:idea success:^(AFHTTPRequestOperation *operation, id response) {
         NSLog(@"Response object: %@", response);
+        
+        [self.tableView reloadData];
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
