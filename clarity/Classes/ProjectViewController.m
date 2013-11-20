@@ -11,9 +11,16 @@
 #import "DetailViewCell.h"
 #import "IdeaCell.h"
 #import "SWRevealViewController.h"
+#import "APIClient.h"
+#import "Project.h"
+#import "Comment.h"
+#import "Idea.h"
+#import "Collaborator.h"
 
 @interface ProjectViewController ()
 @property (nonatomic, strong) NSNumber *segmentedControlState;
+@property (nonatomic, strong) NSArray *collaborators;
+@property (nonatomic, strong) NSArray *ideas;
 @end
 
 @implementation ProjectViewController
@@ -40,6 +47,16 @@
     // Show idea cells first
     self.segmentedControlState = [NSNumber numberWithInteger:0];
     
+    // Get Data from API
+    
+    // Retrieve collaborators
+    [[APIClient sharedClient] getCollaboratorsForProject:self.selectedProject success:^(AFHTTPRequestOperation *operation, id response) {
+        
+        self.collaborators = [Collaborator collaboratorsWithArray:response];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 }
 
 #pragma mark - Table view data source
@@ -51,7 +68,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    if ([self.segmentedControlState isEqualToNumber:[NSNumber numberWithInteger:1]]) {
+        // Collaborator Cells
+        [self.collaborators count];
+
+    } else if ([self.segmentedControlState isEqualToNumber:[NSNumber numberWithInteger:0]]) {
+        // Idea Cells
+        
+    }
+    
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -80,25 +106,23 @@
     
     if ([self.segmentedControlState isEqualToNumber:[NSNumber numberWithInteger:1]]) {
         // Show Collaborator Cells
-        
-        NSIndexPath *thirdRow = [NSIndexPath indexPathForRow:2 inSection:0];
-        if ([indexPath isEqual:thirdRow]) {
             UITableViewCell *collaboratorCell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"collaboratorCell"];
-            collaboratorCell.textLabel.text = @"Michael Ellison";
-            collaboratorCell.detailTextLabel.text = @"EIR at Riviera Partners";
+            
+            Collaborator *collaborator = [self.collaborators objectAtIndex:indexPath.row];
+            
+            collaboratorCell.textLabel.text = [collaborator valueOrNilForKeyPath:@"name"];
+            collaboratorCell.detailTextLabel.text = [collaborator valueOrNilForKeyPath:@"title"];
             collaboratorCell.imageView.image = [UIImage imageNamed:@"tiny_heart_icon.png"];
             
             return collaboratorCell;
-        }
+
         
     } else if ([self.segmentedControlState isEqualToNumber:[NSNumber numberWithInteger:0]]) {
         // Show Idea Cells
-        NSIndexPath *thirdRow = [NSIndexPath indexPathForRow:2 inSection:0];
-        if ([indexPath isEqual:thirdRow]) {
+
             IdeaCell *ideaCell = (IdeaCell *)[tableView dequeueReusableCellWithIdentifier:@"ideaCell"];
             ideaCell.userInteractionEnabled = YES;
             return ideaCell;
-        }
     }
 
     

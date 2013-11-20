@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Project;
 
 @interface ProjectViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menu;
-
+@property (nonatomic, strong) Project *selectedProject;
 @end

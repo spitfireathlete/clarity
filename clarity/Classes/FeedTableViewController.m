@@ -16,7 +16,7 @@
 #import "SFIdentityData.h"
 #import "SFAccountManager.h"  
 #import "UIImageView+AFNetworking.h"
-
+#import "ProjectViewController.h"
 
 @interface FeedTableViewController ()
 @property (nonatomic, strong) NSMutableArray *projects;
@@ -91,7 +91,6 @@
     
     Project *project = [self.projects objectAtIndex:indexPath.row];
     SFIdentityData *idData =[[SFAccountManager sharedInstance] idData];
-    NSLog(@"%@", idData.pictureUrl);
     
     FeedCell *feedcell = (FeedCell *)[tableView dequeueReusableCellWithIdentifier:@"feedcell"];
     [feedcell.profilePic setImageWithURL:idData.pictureUrl placeholderImage:[UIImage imageNamed:@"Nidhi_Circle.png"]];
@@ -113,22 +112,18 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self performSegueWithIdentifier:@"presentProjectView" sender:nil];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue isKindOfClass: [SWRevealViewControllerSegue class]]) {
+    if ([[segue identifier] isEqualToString:@"presentProjectView"]) {
+        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
         
-        SWRevealViewControllerSegue* rvcs = (SWRevealViewControllerSegue*) segue;
-        
-        SWRevealViewController* rvc = self.revealViewController;
-        
-        rvcs.performBlock = ^(SWRevealViewControllerSegue* rvc_segue, UIViewController* svc, UIViewController* dvc) {
-            
-            UINavigationController* nc = [[UINavigationController alloc] initWithRootViewController:dvc];
-            [rvc setFrontViewController:nc animated:YES];
-        };
+        ProjectViewController *vc = [segue destinationViewController];
+        vc.selectedProject = [self.projects objectAtIndex:path.row];
     }
+
 }
 
 @end
