@@ -20,6 +20,8 @@
 
 @interface FeedTableViewController ()
 @property (nonatomic, strong) NSMutableArray *projects;
+
+@property (nonatomic, strong) Project *selectedProject;
 @end
 
 @implementation FeedTableViewController
@@ -112,16 +114,21 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self showProjectDetail: indexPath];
+    
+}
+
+- (void) showProjectDetail:(NSIndexPath *)indexPath {
+    self.selectedProject = [self.projects objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"presentProjectView" sender:nil];
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"presentProjectView"]) {
-        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-        
         ProjectViewController *vc = [segue destinationViewController];
-        vc.selectedProject = [self.projects objectAtIndex:path.row];
+        vc.selectedProject = self.selectedProject;
     }
 
 }
