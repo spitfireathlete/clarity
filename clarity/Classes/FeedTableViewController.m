@@ -17,11 +17,14 @@
 #import "SFAccountManager.h"  
 #import "UIImageView+AFNetworking.h"
 #import "ProjectViewController.h"
+#import "SalesforceImport.h"
+
 
 @interface FeedTableViewController ()
 @property (nonatomic, strong) NSMutableArray *projects;
 
 @property (nonatomic, strong) Project *selectedProject;
+
 @end
 
 @implementation FeedTableViewController
@@ -29,6 +32,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[SalesforceImport sharedClient] syncWithSalesforceAndAutogenerateProjects];
+    
     
     self.projects = [[NSMutableArray alloc] init];
 
@@ -55,17 +61,18 @@
     [_menuButton setAction: @selector(revealToggle:)];
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
+    
     // GET Data from API
     [[APIClient sharedClient] getProjectsOnSuccess:^(AFHTTPRequestOperation *operation, id response) {
         
         SFIdentityData *idData =[[SFAccountManager sharedInstance] idData];
         NSLog(@"%@", idData.pictureUrl);
         
-        NSLog(@"Project Response: %@", response);
+       // NSLog(@"Project Response: %@", response);
         
         self.projects = [Project projectsWithArray:response];
 
-        NSLog(@"Projects Array: %@", self.projects);
+       // NSLog(@"Projects Array: %@", self.projects);
         
         [self.tableView reloadData];
         
@@ -139,5 +146,6 @@
 {
     return YES;
 }
+
 
 @end
