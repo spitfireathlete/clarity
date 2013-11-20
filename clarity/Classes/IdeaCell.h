@@ -12,9 +12,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *name;
 @property (strong, nonatomic) IBOutlet UILabel *ideaText;
 @property (strong, nonatomic) IBOutlet UILabel *voteNum;
-
-- (IBAction)comment:(id)sender;
-- (IBAction)upVote:(id)sender;
-- (IBAction)downVote:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *upVote;
+@property (strong, nonatomic) IBOutlet UIButton *downVote;
+@property (strong, nonatomic) IBOutlet UIButton *comment;
 
 @end

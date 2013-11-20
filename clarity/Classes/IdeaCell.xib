@@ -56,9 +56,6 @@
                         <state key="normal" image="up_arrow.png">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
-                        <connections>
-                            <action selector="upVote:" destination="tkr-bl-DFk" eventType="touchUpInside" id="Kju-o2-Q5C"/>
-                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61V-Z7-9fD">
                         <rect key="frame" x="6" y="66" width="30" height="30"/>
@@ -67,15 +64,15 @@
                         <state key="normal" title="Button" image="down_arrow.png">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
-                        <connections>
-                            <action selector="downVote:" destination="tkr-bl-DFk" eventType="touchUpInside" id="jzm-vk-fkB"/>
-                        </connections>
                     </button>
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="comment" destination="2ij-5R-luf" id="Ti7-4b-TCc"/>
+                <outlet property="downVote" destination="61V-Z7-9fD" id="6Vx-1a-0kG"/>
                 <outlet property="ideaText" destination="shG-7c-3OY" id="zjt-Jy-xDH"/>
                 <outlet property="name" destination="KEA-vx-1uj" id="9TY-fn-v4c"/>
+                <outlet property="upVote" destination="Uys-AA-IR3" id="2fF-pp-X7I"/>
                 <outlet property="voteNum" destination="b9j-9W-WzA" id="VYw-S2-kqI"/>
             </connections>
         </tableViewCell>

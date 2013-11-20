@@ -128,6 +128,11 @@
             ideaCell.ideaText.text = [NSString stringWithFormat:@"%@", idea.text];
             ideaCell.voteNum.text = [NSString stringWithFormat:@"%d", (idea.upVotes.intValue - idea.downVotes.intValue)];
             ideaCell.name.text = [NSString stringWithFormat:@"%@ %@", [idea.author valueOrNilForKeyPath:@"first_name"], [idea.author valueOrNilForKeyPath:@"last_name"]];
+        
+            [ideaCell.upVote addTarget:self action:@selector(performUpVote:) forControlEvents:UIControlEventTouchUpInside];
+            [ideaCell.downVote addTarget:self action:@selector(performDownVote:) forControlEvents:UIControlEventTouchUpInside];
+            [ideaCell.comment addTarget:self action:@selector(performComment:) forControlEvents:UIControlEventTouchUpInside];
+        
             ideaCell.userInteractionEnabled = YES;
             return ideaCell;
         
@@ -136,6 +141,36 @@
     UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"Cell"];
     return cell;
 
+}
+
+- (void) performUpVote: (id)sender {
+    IdeaCell *clickedCell = (IdeaCell *)[[sender superview] superview];
+    NSIndexPath *clickedButtonPath = [self.tableView indexPathForCell:clickedCell];
+    Idea *idea = [self.ideas objectAtIndex:clickedButtonPath.row];
+    
+    [[APIClient sharedClient] upvoteIdea:idea success:^(AFHTTPRequestOperation *operation, id response) {
+        NSLog(@"Response object: %@", response);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    
+}
+
+- (void) performDownVote: (id)sender {
+    IdeaCell *clickedCell = (IdeaCell *)[[sender superview] superview];
+    NSIndexPath *clickedButtonPath = [self.tableView indexPathForCell:clickedCell];
+    Idea *idea = [self.ideas objectAtIndex:clickedButtonPath.row];
+    
+    
+    [[APIClient sharedClient] downvoteIdea:idea success:^(AFHTTPRequestOperation *operation, id response) {
+        NSLog(@"Response object: %@", response);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+}
+
+- (void) performComment: (id)sender {
+    NSLog(@"Comment");
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

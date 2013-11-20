@@ -78,13 +78,13 @@ static NSString * const BASE_URL = @"http://localhost:3000/";
 -(void) upvoteIdea:(Idea *) idea success:(void (^)(AFHTTPRequestOperation *operation, id response)) success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager setResponseSerializer:[AFJSONResponseSerializer serializer]];
-    [manager PUT:[NSString stringWithFormat:@"%@api/api/comments/%@/upvote", BASE_URL, idea.objectId] parameters:[self setAuthToken:nil] success:success failure:failure];
+    [manager PUT:[NSString stringWithFormat:@"%@api/ideas/%@/upvote", BASE_URL, idea.objectId] parameters:[self setAuthToken:nil] success:success failure:failure];
 }
 
 -(void) downvoteIdea:(Idea *) idea success:(void (^)(AFHTTPRequestOperation *operation, id response)) success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager setResponseSerializer:[AFJSONResponseSerializer serializer]];
-    [manager PUT:[NSString stringWithFormat:@"%@api/api/comments/%@/upvote", BASE_URL, idea.objectId] parameters:[self setAuthToken:nil] success:success failure:failure];
+    [manager PUT:[NSString stringWithFormat:@"%@api/ideas/%@/downvote", BASE_URL, idea.objectId] parameters:[self setAuthToken:nil] success:success failure:failure];
 }
 
 -(void) getAuthTokenBySFTokenOnSuccess:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
