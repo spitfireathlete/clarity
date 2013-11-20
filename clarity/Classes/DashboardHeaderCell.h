@@ -12,5 +12,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *name;
 @property (strong, nonatomic) IBOutlet UILabel *jobTitle;
 @property (strong, nonatomic) IBOutlet UIImageView *profilePic;
+@property (strong, nonatomic) IBOutlet UILabel *numProjects;
+@property (strong, nonatomic) IBOutlet UILabel *numIdeas;
 
 @end

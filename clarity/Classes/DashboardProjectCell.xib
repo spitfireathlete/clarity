@@ -26,13 +26,6 @@
                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcw-nv-A45">
-                        <rect key="frame" x="218" y="97" width="24" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
-                        <color key="textColor" red="0.41960784313725491" green="0.41960784313725491" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="34" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UX8-yW-HwY">
                         <rect key="frame" x="278" y="97" width="20" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -40,10 +33,6 @@
                         <color key="textColor" red="0.41960784313725491" green="0.41960784313725491" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tiny_heart_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="ary-Z5-Whs">
-                        <rect key="frame" x="201" y="97" width="20" height="20"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tiny_bubble_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="2mz-7C-AMv">
                         <rect key="frame" x="256" y="97" width="20" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -52,12 +41,12 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="accountName" destination="P3B-Yw-7OL" id="GwB-yb-9sw"/>
+                <outlet property="numIdeas" destination="UX8-yW-HwY" id="GOX-Fc-n7G"/>
                 <outlet property="question" destination="UaU-Vf-vN1" id="QW0-az-vGC"/>
             </connections>
         </tableViewCell>
     </objects>
     <resources>
         <image name="tiny_bubble_icon.png" width="20" height="18"/>
-        <image name="tiny_heart_icon.png" width="40" height="35"/>
     </resources>
 </document>

@@ -10,9 +10,11 @@
 #import "DashboardHeaderCell.h"
 #import "DashboardProjectCell.h"
 #import "SWRevealViewController.h"
+#import "Project.h"
+#import "APIClient.h"
 
 @interface DashboardViewController ()
-
+@property (nonatomic, strong) NSArray *projects;
 @end
 
 @implementation DashboardViewController
@@ -30,11 +32,22 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"DashboardHeaderCell" bundle:nil] forCellReuseIdentifier:@"dashboardHeaderCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"DashboardProjectCell" bundle:nil] forCellReuseIdentifier:@"dashboardProjectCell"];
     
-    // SWReveal Menu
     // SWRevealViewController
     [_menu setTarget: self.revealViewController];
     [_menu setAction: @selector(revealToggle:)];
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    // GET Data from API
+    [[APIClient sharedClient] getProjectsOnSuccess:^(AFHTTPRequestOperation *operation, id response) {
+        
+        self.projects = [Project projectsWithArray:response];
+        
+        [self.tableView reloadData];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+
 }
 
 
@@ -47,11 +60,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return [self.projects count] +1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+ 
     NSIndexPath *headerRow = [NSIndexPath indexPathForRow:0 inSection:0];
     if ([indexPath isEqual:headerRow]) {
         DashboardHeaderCell *headerCell = (DashboardHeaderCell *)[tableView dequeueReusableCellWithIdentifier:@"dashboardHeaderCell"];
@@ -59,14 +73,20 @@
         
         headerCell.name.text = @"Nidhi Kulkarni's Dashboard";
         headerCell.jobTitle.text = @"Founder of Spitfire Athlete";
+        
+        headerCell.numProjects.text = @"13";
+        headerCell.numIdeas.text = @"23";
+        
         return headerCell;
     }
     
-    DashboardProjectCell *projectCell = (DashboardProjectCell *)[tableView dequeueReusableCellWithIdentifier:@"dashboardProjectCell"];
-    projectCell.accountName.text = @"Nike SF";
-    projectCell.question.text = @"How can we promote the Nike Powerlifter to the women's weightlifting market?";
-    return projectCell;
+    Project *project = [self.projects objectAtIndex:indexPath.row -1];
     
+    DashboardProjectCell *projectCell = (DashboardProjectCell *)[tableView dequeueReusableCellWithIdentifier:@"dashboardProjectCell"];
+    projectCell.accountName.text = [NSString stringWithFormat:@"%@", [project.priority valueOrNilForKeyPath:@"name"]];
+    projectCell.question.text = [NSString stringWithFormat:@"%@", project.topic];
+    projectCell.numIdeas.text = [NSString stringWithFormat:@"%d", [project.ideas count]];
+    return projectCell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

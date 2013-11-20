@@ -11,5 +11,6 @@
 @interface DashboardProjectCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *accountName;
 @property (strong, nonatomic) IBOutlet UILabel *question;
+@property (strong, nonatomic) IBOutlet UILabel *numIdeas;
 
 @end

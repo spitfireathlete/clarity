@@ -64,6 +64,8 @@
             <connections>
                 <outlet property="jobTitle" destination="0YL-1e-A0k" id="u7m-Ll-SaK"/>
                 <outlet property="name" destination="yzl-Qx-RJu" id="6Gf-8K-iPz"/>
+                <outlet property="numIdeas" destination="2fU-2a-h5g" id="eYw-jo-b6o"/>
+                <outlet property="numProjects" destination="2T1-OO-yKq" id="wvv-6e-sZ1"/>
                 <outlet property="profilePic" destination="N7n-mH-lyb" id="yRy-PA-BhP"/>
             </connections>
         </tableViewCell>
