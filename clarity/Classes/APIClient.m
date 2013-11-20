@@ -39,6 +39,19 @@ static NSString * const BASE_URL = @"http://localhost:3000/";
     [manager GET:[NSString stringWithFormat:@"%@api/projects.json", BASE_URL] parameters:[self setAuthToken:nil] success:success failure:failure];
 }
 
+- (void) getMyIdeasOnSuccess:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager setResponseSerializer:[AFJSONResponseSerializer serializer]];
+    [manager GET:[NSString stringWithFormat:@"%@api/me/ideas.json", BASE_URL] parameters:[self setAuthToken:nil] success:success failure:failure];
+}
+
+- (void) getProjectsContributedToOnSuccess:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager setResponseSerializer:[AFJSONResponseSerializer serializer]];
+    [manager GET:[NSString stringWithFormat:@"%@api/me/projects.json", BASE_URL] parameters:[self setAuthToken:nil] success:success failure:failure];
+
+}
+
 - (void) getPrioritiesOnSuccess:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager setResponseSerializer:[AFJSONResponseSerializer serializer]];

@@ -17,7 +17,6 @@
 
 @interface ProjectCreationViewController ()
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (nonatomic, strong) NSArray *priorities;
 @property (nonatomic, strong) Priority *selectedPriority;
 @property (nonatomic, strong) NSString* topic;
@@ -36,8 +35,7 @@
     // Tableview Background Image
     UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SFBackground.png"]];
     [self.tableView setBackgroundView:backgroundView];
-    
-    self.doneButton.enabled = NO;
+    self.detail = @"";
     // Custom Tableview Cells
     [self.tableView registerNib:[UINib nibWithNibName:@"ProjectCreationHeaderCell" bundle:nil] forCellReuseIdentifier:@"projectCreationHeaderCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"AccountNameCell" bundle:nil] forCellReuseIdentifier:@"accountNameCell"];
@@ -97,18 +95,19 @@
 }
 
 - (void) dismissKeyboard {
-    NSIndexPath *headerRow = [NSIndexPath indexPathForRow:0 inSection:0];
-        ProjectCreationHeaderCell *cell = (ProjectCreationHeaderCell *) [self.tableView cellForRowAtIndexPath:headerRow];
-
-    if (cell.textView.tag == headerRow.row) {
-        self.topic = cell.textView.text;
-    }
     
-    self.doneButton.enabled = NO;
     
-    [cell.textView resignFirstResponder];
+//    self.doneButton.enabled = NO;
+//    
+//    [cell.textView resignFirstResponder];
   
 }
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+        self.topic = textView.text;
+}
+
 
 
 
@@ -182,6 +181,9 @@
     
     if ([indexPath isEqual:saveRow]) {
         
+        NSIndexPath *headerRow = [NSIndexPath indexPathForRow:0 inSection:0];
+        ProjectCreationHeaderCell *cell = (ProjectCreationHeaderCell *) [self.tableView cellForRowAtIndexPath:headerRow];
+        [self textViewDidEndEditing:cell.textView];
         self.createdProject = [[Project alloc] initWithDictionary:@{@"topic": self.topic, @"details": self.detail}];
         [[APIClient sharedClient] createProject:self.selectedPriority project:self.createdProject success:^(AFHTTPRequestOperation *operation, id response) {
             NSLog(@"response from clarity: %@", response);
@@ -195,9 +197,6 @@
 
 - (void)createAccountQuestion: (UILongPressGestureRecognizer*)gesture {
     NSLog(@"Long gesture recognizer!");
-    self.doneButton.enabled = YES;
-    self.doneButton.target = self;
-    self.doneButton.action = @selector(dismissKeyboard);
     
     NSIndexPath *headerRow = [NSIndexPath indexPathForRow:0 inSection:0];
     ProjectCreationHeaderCell *cell = (ProjectCreationHeaderCell *) [self.tableView cellForRowAtIndexPath:headerRow];
@@ -205,6 +204,7 @@
     cell.instructionText1.hidden = YES;
     cell.instructionText2.hidden = YES;
     cell.textView.hidden = NO;
+    cell.textView.delegate = self;
     [cell.textView becomeFirstResponder];
     
 }
