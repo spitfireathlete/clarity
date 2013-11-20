@@ -284,7 +284,7 @@
         <!--Idea Creation View Controller-->
         <scene sceneID="cwY-bg-ASi">
             <objects>
-                <viewController id="Xhe-gS-vNf" customClass="IdeaCreationViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IdeaCreationViewController" id="Xhe-gS-vNf" customClass="IdeaCreationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V9A-lU-uwt"/>
                         <viewControllerLayoutGuide type="bottom" id="Q0x-Az-lGZ"/>
@@ -507,7 +507,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="projectViewHeaderCell" rowHeight="72" id="gN9-OR-C5k">
-                                <rect key="frame" x="0.0" y="22" width="320" height="72"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gN9-OR-C5k" id="CuV-ne-A53">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
@@ -515,7 +515,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="detailViewCell" rowHeight="73" id="97z-0W-o8m" customClass="DetailViewCell">
-                                <rect key="frame" x="0.0" y="94" width="320" height="73"/>
+                                <rect key="frame" x="0.0" y="158" width="320" height="73"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="97z-0W-o8m" id="3Lr-lr-Gzn">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
@@ -523,7 +523,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ideaCell" rowHeight="98" id="hQp-EF-sbY" customClass="IdeaCell">
-                                <rect key="frame" x="0.0" y="167" width="320" height="98"/>
+                                <rect key="frame" x="0.0" y="231" width="320" height="98"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hQp-EF-sbY" id="2UF-B4-GkX">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
@@ -531,7 +531,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell multipleTouchEnabled="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="collaboratorCell" textLabel="eEL-8f-39M" rowHeight="98" style="IBUITableViewCellStyleDefault" id="diR-u8-5Yw">
-                                <rect key="frame" x="0.0" y="265" width="320" height="98"/>
+                                <rect key="frame" x="0.0" y="329" width="320" height="98"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="diR-u8-5Yw" id="jpF-ak-xKR">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
@@ -565,8 +565,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="57" id="bnv-uF-q2X">
-                                <rect key="frame" x="0.0" y="363" width="320" height="57"/>
-
+                                <rect key="frame" x="0.0" y="525" width="320" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bnv-uF-q2X" id="JIO-n3-riS">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
@@ -598,8 +597,14 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="RGf-DJ-jNM">
                         <barButtonItem key="leftBarButtonItem" image="menu_icon.png" id="X9K-VE-K5c"/>
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="eV4-nj-xdA">
+                            <connections>
+                                <action selector="addIdeaPressed:" destination="r5d-81-PVg" id="SOW-mA-vim"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addIdea" destination="eV4-nj-xdA" id="AB9-9z-xGV"/>
                         <outlet property="menu" destination="X9K-VE-K5c" id="PVT-iW-16U"/>
                     </connections>
                 </tableViewController>
@@ -685,14 +690,8 @@
     <resources>
         <image name="SFBackground_DarkGradient.png" width="640" height="1136"/>
         <image name="blue_checkmark.png" width="75" height="75"/>
-        <image name="blue_checkmark.png" width="75" height="75"/>
-        <image name="gray_xmark.png" width="70" height="71"/>
         <image name="gray_xmark.png" width="70" height="71"/>
         <image name="menu_icon.png" width="20" height="20"/>
-        <image name="menu_icon.png" width="20" height="20"/>
-        <image name="menu_icon.png" width="20" height="20"/>
-        <image name="menu_icon.png" width="20" height="20"/>
-        <image name="plus_icon.png" width="20" height="20"/>
         <image name="plus_icon.png" width="20" height="20"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -701,11 +700,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-
-        <segue reference="gdl-22-4dN"/>
+        <segue reference="2CA-dc-9Ob"/>
         <segue reference="85F-yF-GUj"/>
         <segue reference="Uh6-T4-fhK"/>
-        <segue reference="2CA-dc-9Ob"/>
-
+        <segue reference="t95-wg-gZn"/>
     </inferredMetricsTieBreakers>
 </document>

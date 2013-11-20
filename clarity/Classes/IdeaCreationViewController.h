@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IdeaCreationViewController : UIViewController
+@class Project;
+
+@interface IdeaCreationViewController : UIViewController <UITextViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextView *textView;
 @property (strong, nonatomic) IBOutlet UILabel *accountName;
 @property (strong, nonatomic) IBOutlet UILabel *projectQuestion;
+
+@property (strong, nonatomic) Project *currentProject;
 
 - (IBAction)cancelIdea:(id)sender;
 - (IBAction)saveIdea:(id)sender;

@@ -18,6 +18,7 @@
 #import "Collaborator.h"
 #import "CommentCreationViewController.h"
 #import "CommentCell.h"
+#import "IdeaCreationViewController.h"
 
 @interface ProjectViewController ()
 @property (nonatomic, strong) NSNumber *segmentedControlState;
@@ -40,7 +41,6 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"ProjectViewHeaderCell" bundle:nil] forCellReuseIdentifier:@"projectViewHeaderCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"DetailViewCell" bundle:nil] forCellReuseIdentifier:@"detailViewCell"];
     
-    
     // SWRevealViewController
     [_menu setTarget: self.revealViewController];
     [_menu setAction: @selector(revealToggle:)];
@@ -49,8 +49,9 @@
     // Show idea cells first
     self.segmentedControlState = [NSNumber numberWithInteger:0];
     
-    // Get Data from API
-    
+    // Add Idea
+    [self.addIdea setAction:@selector(addIdeaPressed:)];
+
     // Retrieve ideas
     self.ideas = [self.selectedProject ideas];
     
@@ -251,6 +252,17 @@
     }
 }
 
+- (IBAction)addIdeaPressed:(id)sender {
+    NSLog(@"Add idea pressed");
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    IdeaCreationViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"IdeaCreationViewController"];
+
+    [vc setCurrentProject:self.selectedProject];
+    [self presentViewController:vc animated:YES completion:nil];
+
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -301,5 +313,7 @@
 }
 
  */
+
+
 
 @end

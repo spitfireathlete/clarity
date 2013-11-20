@@ -7,6 +7,7 @@
 //
 
 #import "IdeaCreationViewController.h"
+#import "APIClient.h"
 
 @interface IdeaCreationViewController ()
 
@@ -18,13 +19,22 @@
 {
     [super viewDidLoad];
     
-    self.accountName.text = @"Nike";
-    self.projectQuestion.text = @"How can we better promote the Nike Powerlift to female weightlifters?";
+    self.accountName.text = [NSString stringWithFormat:@"%@", [self.currentProject.priority valueOrNilForKeyPath:@"name"]];
+    self.projectQuestion.text = [NSString stringWithFormat:@"%@", self.currentProject.topic];
     
     // Tableview Background Image
     UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"light_blurry_background.png"]];
     [self.view addSubview:backgroundView];
     [self.view sendSubviewToBack:backgroundView];
+    
+    self.textView.delegate = self;
+    [self.textView becomeFirstResponder];
+}
+
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    
 }
 
 - (IBAction)cancelIdea:(id)sender {
@@ -32,5 +42,15 @@
 }
 
 - (IBAction)saveIdea:(id)sender {
+    [self textViewDidEndEditing:self.textView];
+    NSString *idea = [NSString stringWithFormat:@"%@", self.textView.text];
+    NSLog(@"Idea: %@", idea);
+    
+    [[APIClient sharedClient] addIdea:idea inProject:self.currentProject success:^(AFHTTPRequestOperation *operation, id response) {
+        NSLog(@"Response: %@", response);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 }
+
 @end

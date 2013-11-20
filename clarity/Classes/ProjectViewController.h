@@ -12,4 +12,9 @@
 @interface ProjectViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menu;
 @property (nonatomic, strong) Project *selectedProject;
+
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *addIdea;
+- (IBAction)addIdeaPressed:(id)sender;
+
+
 @end
