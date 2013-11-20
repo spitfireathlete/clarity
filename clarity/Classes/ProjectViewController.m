@@ -149,11 +149,6 @@
             ideaCell.userInteractionEnabled = YES;
             return ideaCell;
         
-        CommentCell *commentCell = (CommentCell *)[tableView dequeueReusableCellWithIdentifier:@"commentCell"];
-        commentCell.name.text = [NSString stringWithFormat:@"%@ %@", [idea.author valueOrNilForKeyPath:@"first_name"], [idea.author valueOrNilForKeyPath:@"last_name"]];
-        commentCell.commentText.text = @"For now";
-        return commentCell;
-        
     }
     
     UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"Cell"];
@@ -173,7 +168,6 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
-    
 }
 
 - (void) performDownVote: (UIButton *)sender {
@@ -188,6 +182,8 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
+    
+    [sender setSelected:YES];
 }
 
 - (void) performComment: (UIButton *)sender {
