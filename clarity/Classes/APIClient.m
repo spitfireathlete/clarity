@@ -60,7 +60,7 @@ static NSString * const BASE_URL = @"http://localhost:3000/";
 -(void) addComment:(NSString *)comment forIdea:(Idea *)idea inProject:(Project *)project success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager setResponseSerializer:[AFJSONResponseSerializer serializer]];
-    [manager POST:[NSString stringWithFormat:@"%@api/projects/%@/ideas/%@/comments", BASE_URL, project.objectId, idea.objectId] parameters:[self setAuthToken:@{@"text": comment}] success:success failure:failure];
+    [manager POST:[NSString stringWithFormat:@"%@api/projects/%@/ideas/%@/comments", BASE_URL, project.objectId, idea.objectId] parameters:[self setAuthToken:@{@"comment": @{@"text": comment}}] success:success failure:failure];
 }
 
 -(void) addIdea:(NSString *)idea inProject:(Project *)project success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {

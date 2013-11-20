@@ -17,6 +17,7 @@
 #import "Idea.h"
 #import "Collaborator.h"
 #import "CommentCreationViewController.h"
+#import "CommentCell.h"
 
 @interface ProjectViewController ()
 @property (nonatomic, strong) NSNumber *segmentedControlState;
@@ -141,6 +142,11 @@
             ideaCell.userInteractionEnabled = YES;
             return ideaCell;
         
+        CommentCell *commentCell = (CommentCell *)[tableView dequeueReusableCellWithIdentifier:@"commentCell"];
+        commentCell.name.text = [NSString stringWithFormat:@"%@ %@", [idea.author valueOrNilForKeyPath:@"first_name"], [idea.author valueOrNilForKeyPath:@"last_name"]];
+        commentCell.commentText.text = @"For now";
+        return commentCell;
+        
     }
     
     UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"Cell"];
@@ -183,6 +189,7 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     CommentCreationViewController *cvc = [storyboard instantiateViewControllerWithIdentifier:@"CommentCreationViewController"];
     [cvc setCurrentIdea:idea];
+    [cvc setCurrentProject:self.selectedProject];
     [self presentViewController:cvc animated:YES completion:nil];
 }
 

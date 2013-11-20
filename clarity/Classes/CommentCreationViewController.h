@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class Idea;
+@class Project;
 
-@interface CommentCreationViewController : UIViewController
+@interface CommentCreationViewController : UIViewController <UITextViewDelegate>
 
 @property (strong, nonatomic) Idea *currentIdea;
+@property (strong, nonatomic) Project *currentProject;
 
 @property (strong, nonatomic) IBOutlet UITextView *textView;
 @property (strong, nonatomic) IBOutlet UILabel *ideaLabel;

@@ -103,6 +103,8 @@
 		EAFC13D3183B66A900210407 /* DashboardProjectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC13D2183B66A900210407 /* DashboardProjectCell.m */; };
 		EAFC13D5183B66BF00210407 /* DashboardProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFC13D4183B66BF00210407 /* DashboardProjectCell.xib */; };
 		EAFC13D8183CB75A00210407 /* CommentCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC13D7183CB75A00210407 /* CommentCreationViewController.m */; };
+		EAFC13DB183CCA5000210407 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC13DA183CCA5000210407 /* CommentCell.m */; };
+		EAFC13DD183CCA5D00210407 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFC13DC183CCA5D00210407 /* CommentCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -311,6 +313,9 @@
 		EAFC13D4183B66BF00210407 /* DashboardProjectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardProjectCell.xib; sourceTree = "<group>"; };
 		EAFC13D6183CB75A00210407 /* CommentCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCreationViewController.h; sourceTree = "<group>"; };
 		EAFC13D7183CB75A00210407 /* CommentCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCreationViewController.m; sourceTree = "<group>"; };
+		EAFC13D9183CCA5000210407 /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
+		EAFC13DA183CCA5000210407 /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
+		EAFC13DC183CCA5D00210407 /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -812,6 +817,9 @@
 				EA6F00B4183B168600336E21 /* IdeaCell.h */,
 				EA6F00B5183B168600336E21 /* IdeaCell.m */,
 				EA6F00B7183B169700336E21 /* IdeaCell.xib */,
+				EAFC13D9183CCA5000210407 /* CommentCell.h */,
+				EAFC13DA183CCA5000210407 /* CommentCell.m */,
+				EAFC13DC183CCA5D00210407 /* CommentCell.xib */,
 				EAFC13CC183B624200210407 /* DashboardHeaderCell.h */,
 				EAFC13CD183B624200210407 /* DashboardHeaderCell.m */,
 				EAFC13CF183B624C00210407 /* DashboardHeaderCell.xib */,
@@ -894,6 +902,7 @@
 				EA6F009F183AF1F000336E21 /* write_icon.png in Resources */,
 				824A9E601724F02D00C9BD79 /* icon-72@2x.png in Resources */,
 				824A9E611724F02D00C9BD79 /* icon.png in Resources */,
+				EAFC13DD183CCA5D00210407 /* CommentCell.xib in Resources */,
 				EAFC13D0183B624C00210407 /* DashboardHeaderCell.xib in Resources */,
 				824A9E621724F02D00C9BD79 /* icon@2x.png in Resources */,
 				824A9FDF1725079100C9BD79 /* openssl_license.txt in Resources */,
@@ -978,6 +987,7 @@
 				EA6F00B3183B121000336E21 /* ProjectViewController.m in Sources */,
 				EA6F00B6183B168600336E21 /* IdeaCell.m in Sources */,
 				EA6F006F183AAEC000336E21 /* NavBarViewController.m in Sources */,
+				EAFC13DB183CCA5000210407 /* CommentCell.m in Sources */,
 				EA6F006C183AAE6D00336E21 /* SWRevealViewController.m in Sources */,
 				EAFC13C1183B403200210407 /* DetailViewCell.m in Sources */,
 				EAFC13D8183CB75A00210407 /* CommentCreationViewController.m in Sources */,
