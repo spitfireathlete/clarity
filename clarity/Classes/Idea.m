@@ -26,6 +26,9 @@
         self.author = [[Collaborator alloc] initWithDictionary:author_params];
 
         self.objectId = [self valueOrNilForKeyPath:@"id"];
+        self.text = [self valueOrNilForKeyPath:@"text"];
+        self.upVotes = [self valueOrNilForKeyPath:@"upvotes"];
+        self.downVotes = [self valueOrNilForKeyPath:@"downvotes"];
     }
     
     return self;

@@ -15,6 +15,10 @@
 @property (nonatomic, strong) NSString *objectId;
 @property (nonatomic, strong) Collaborator *author;
 @property (nonatomic, strong) NSArray *comments;
+@property (nonatomic, strong) NSString *text;
+
+@property (nonatomic, strong) NSNumber *upVotes;
+@property (nonatomic, strong) NSNumber *downVotes;
 
 + (NSMutableArray *)ideasWithArray:(NSArray *)array;
 

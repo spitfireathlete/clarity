@@ -49,10 +49,15 @@
     
     // Get Data from API
     
+    // Retrieve ideas
+    self.ideas = [self.selectedProject ideas];
+    
     // Retrieve collaborators
     [[APIClient sharedClient] getCollaboratorsForProject:self.selectedProject success:^(AFHTTPRequestOperation *operation, id response) {
         
         self.collaborators = [Collaborator collaboratorsWithArray:response];
+        NSLog(@"Selected Project: %@", self.selectedProject);
+        NSLog(@"%@", response);
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -74,10 +79,10 @@
 
     } else if ([self.segmentedControlState isEqualToNumber:[NSNumber numberWithInteger:0]]) {
         // Idea Cells
-        return 4;
+        return [self.ideas count] + 2;
     }
     
-    return 4;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -103,28 +108,30 @@
 
         return detailCell;
     }
+
     
     if ([self.segmentedControlState isEqualToNumber:[NSNumber numberWithInteger:1]]) {
         // Show Collaborator Cells
             UITableViewCell *collaboratorCell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"collaboratorCell"];
-            
-            Collaborator *collaborator = [self.collaborators objectAtIndex:indexPath.row];
-            
-            collaboratorCell.textLabel.text = [collaborator valueOrNilForKeyPath:@"name"];
-            collaboratorCell.detailTextLabel.text = [collaborator valueOrNilForKeyPath:@"title"];
-            collaboratorCell.imageView.image = [UIImage imageNamed:@"tiny_heart_icon.png"];
-            
+
+            Collaborator *collaborator = [self.collaborators objectAtIndex:indexPath.row - 2];
+        
+            collaboratorCell.textLabel.text = [NSString stringWithFormat:@"%@ %@",[collaborator valueOrNilForKeyPath:@"first_name"], [collaborator valueOrNilForKeyPath:@"last_name"]];
             return collaboratorCell;
 
         
     } else if ([self.segmentedControlState isEqualToNumber:[NSNumber numberWithInteger:0]]) {
         // Show Idea Cells
-
+        
             IdeaCell *ideaCell = (IdeaCell *)[tableView dequeueReusableCellWithIdentifier:@"ideaCell"];
+            Idea *idea = [self.ideas objectAtIndex:indexPath.row - 2];
+            ideaCell.ideaText.text = [NSString stringWithFormat:@"%@", idea.text];
+            ideaCell.voteNum.text = [NSString stringWithFormat:@"%d", (idea.upVotes.intValue - idea.downVotes.intValue)];
+            ideaCell.name.text = [NSString stringWithFormat:@"%@ %@", [idea.author valueOrNilForKeyPath:@"first_name"], [idea.author valueOrNilForKeyPath:@"last_name"]];
             ideaCell.userInteractionEnabled = YES;
             return ideaCell;
+        
     }
-
     
     UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"Cell"];
     return cell;
@@ -135,13 +142,22 @@
 {
     NSIndexPath *headerRow = [NSIndexPath indexPathForRow:0 inSection:0];
     NSIndexPath *detailsRow = [NSIndexPath indexPathForRow:1 inSection:0];
-    NSIndexPath *ideaRow = [NSIndexPath indexPathForRow:2 inSection:0];
     
     if ([indexPath isEqual:headerRow]) {
         return 175;
     } else if ([indexPath isEqual:detailsRow]) {
         return 225;
-    } else if ([indexPath isEqual:ideaRow]) {
+    }
+    
+
+    if ([self.segmentedControlState isEqualToNumber:[NSNumber numberWithInteger:1]]) {
+        // Collaborator Cells
+        
+        return 70;
+        
+    } else if ([self.segmentedControlState isEqualToNumber:[NSNumber numberWithInteger:0]]) {
+        // Idea Cells
+        
         return 175;
     }
     
