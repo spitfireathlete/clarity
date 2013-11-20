@@ -22,7 +22,7 @@
 
 - (NSString *)autocompleteString
 {
-    return [self valueForKey:@"name"];
+    return [self valueOrNilForKeyPath:@"name"];
 }
 
 @end

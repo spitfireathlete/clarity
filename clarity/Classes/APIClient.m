@@ -39,6 +39,12 @@ static NSString * const BASE_URL = @"http://localhost:3000/";
     [manager GET:[NSString stringWithFormat:@"%@api/projects.json", BASE_URL] parameters:[self setAuthToken:nil] success:success failure:failure];
 }
 
+- (void) getPrioritiesOnSuccess:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager setResponseSerializer:[AFJSONResponseSerializer serializer]];
+    [manager GET:[NSString stringWithFormat:@"%@api/priorities.json", BASE_URL] parameters:[self setAuthToken:nil] success:success failure:failure];
+}
+
 - (void)getCollaboratorsForProject:(Project *)project success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager setResponseSerializer:[AFJSONResponseSerializer serializer]];
