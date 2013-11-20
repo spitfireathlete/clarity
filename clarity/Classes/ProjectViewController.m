@@ -68,14 +68,7 @@
         
         // UI Segmented Control
         [detailCell.segmentedControl addTarget:self action:@selector(indexDidChangeForSegmentedControl:) forControlEvents:UIControlEventValueChanged];
-        
-        switch (detailCell.segmentedControl.selectedSegmentIndex) {
-            case 0:
-                NSLog(@"Ideas");
-            case 1:
-                NSLog(@"Collaborators");
-        }
-        
+    
         // Switch
         [detailCell.publicSwitch addTarget:self action:@selector(switchDidChange:) forControlEvents:UIControlEventValueChanged];
 
@@ -116,9 +109,16 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
--(void)indexDidChangeForSegmentedControl: (UISegmentedControl *)selectedSegmentIndex {
+-(void)indexDidChangeForSegmentedControl: (id)sender {
     
-    [self.tableView reloadData];
+    UISegmentedControl *segmentedControl = (UISegmentedControl *)sender;
+    
+    if (segmentedControl.selectedSegmentIndex == 0) {
+        NSLog(@"Ideas");
+    } else {
+        NSLog(@"Collaborators");
+    }
+    
 }
 
 - (void)switchDidChange: (UISwitch *)mySwitch {
