@@ -162,15 +162,13 @@
     
 }
 
-- (void) performDownVote: (id)sender {
-    IdeaCell *clickedCell = (IdeaCell *)[[sender superview] superview];
-    NSIndexPath *clickedButtonPath = [self.tableView indexPathForCell:clickedCell];
-    Idea *idea = [self.ideas objectAtIndex:clickedButtonPath.row];
+- (void) performDownVote: (UIButton *)sender {
     
-    
+    Idea *idea = [self.ideas objectAtIndex:sender.tag];
+
     [[APIClient sharedClient] downvoteIdea:idea success:^(AFHTTPRequestOperation *operation, id response) {
-        NSLog(@"Response object: %@", response);
-        
+        idea.upVotes = [response valueForKey:@"upvotes"];
+        idea.downVotes = [response valueForKey:@"downvotes"];
         [self.tableView reloadData];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
