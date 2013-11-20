@@ -10,7 +10,7 @@
 #import "MLPAutoCompleteTextFieldDataSource.h"
 #import "MLPAutoCompleteTextFieldDelegate.h"
 
-@interface ProjectCreationViewController : UITableViewController <UITextFieldDelegate, MLPAutoCompleteTextFieldDataSource, MLPAutoCompleteTextFieldDelegate>
+@interface ProjectCreationViewController : UITableViewController <UITextFieldDelegate, MLPAutoCompleteTextFieldDataSource, MLPAutoCompleteTextFieldDelegate, UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menu;
 
 @end

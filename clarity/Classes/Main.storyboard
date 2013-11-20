@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="eB4-Sr-SWH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="eB4-Sr-SWH">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -486,10 +486,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="YWT-mC-vPI">
                         <barButtonItem key="leftBarButtonItem" image="menu_icon.png" id="FDe-Bh-jmr"/>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="rJc-dP-l5O"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="doneButton" destination="rJc-dP-l5O" id="sm1-RT-YFK"/>
                         <outlet property="menu" destination="FDe-Bh-jmr" id="KSv-H3-BYr"/>
                     </connections>
                 </tableViewController>
@@ -548,7 +546,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell multipleTouchEnabled="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="commentCell" textLabel="YYb-u3-lNA" rowHeight="98" style="IBUITableViewCellStyleDefault" id="bWa-hH-Gp6" customClass="CommentCell">
-                                <rect key="frame" x="0.0" y="427" width="320" height="98"/>
+                                <rect key="frame" x="0.0" y="363" width="320" height="98"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bWa-hH-Gp6" id="KhI-Kw-hPP">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
@@ -565,8 +563,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="57" id="bnv-uF-q2X">
-                                <rect key="frame" x="0.0" y="363" width="320" height="57"/>
-
+                                <rect key="frame" x="0.0" y="461" width="320" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bnv-uF-q2X" id="JIO-n3-riS">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
@@ -685,14 +682,8 @@
     <resources>
         <image name="SFBackground_DarkGradient.png" width="640" height="1136"/>
         <image name="blue_checkmark.png" width="75" height="75"/>
-        <image name="blue_checkmark.png" width="75" height="75"/>
-        <image name="gray_xmark.png" width="70" height="71"/>
         <image name="gray_xmark.png" width="70" height="71"/>
         <image name="menu_icon.png" width="20" height="20"/>
-        <image name="menu_icon.png" width="20" height="20"/>
-        <image name="menu_icon.png" width="20" height="20"/>
-        <image name="menu_icon.png" width="20" height="20"/>
-        <image name="plus_icon.png" width="20" height="20"/>
         <image name="plus_icon.png" width="20" height="20"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -701,11 +692,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-
         <segue reference="gdl-22-4dN"/>
         <segue reference="85F-yF-GUj"/>
         <segue reference="Uh6-T4-fhK"/>
         <segue reference="2CA-dc-9Ob"/>
-
     </inferredMetricsTieBreakers>
 </document>
