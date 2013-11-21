@@ -144,7 +144,7 @@
             [ideaCell.downVote addTarget:self action:@selector(performDownVote:) forControlEvents:UIControlEventTouchUpInside];
             ideaCell.downVote.tag = indexPath.row - 2;
         
-            ideaCell.profilePicture.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",  [[Collaborator currentUser] imageString] ]];
+            ideaCell.profilePicture.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",  [idea.author imageString] ]];
             ideaCell.userInteractionEnabled = YES;
             return ideaCell;
         
