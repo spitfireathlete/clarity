@@ -48,7 +48,7 @@
     } else if ([name isEqualToString:@"Amazon"]) {
         return @"Amazon.jpg";
     } else {
-        return @"Default.png";
+        return @"DefaultImage.jpg";
     }
 }
 
