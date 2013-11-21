@@ -21,5 +21,6 @@
 @property (nonatomic, strong) NSString *details;
 
 + (NSMutableArray *)projectsWithArray:(NSArray *)array;
+- (NSString *)getImageName;
 
 @end

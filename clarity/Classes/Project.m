@@ -25,6 +25,33 @@
     return self;
 }
 
+- (NSString *)getImageName
+{
+    NSString *name = [self.priority valueOrNilForKeyPath:@"name"];
+    
+    if ([name isEqualToString:@"Nike"]) {
+        return @"Nike.jpg";
+    } else if ([name isEqualToString:@"Starbucks"]) {
+        return @"Starbucks.jpg";
+    } else if ([name isEqualToString:@"Ford"]) {
+        return @"Ford.jpg";
+    } else if ([name isEqualToString:@"Lululemon"]) {
+        return @"Lululemon.jpg";
+    } else if ([name isEqualToString:@"Airbnb"]) {
+        return @"Airbnb.jpg";
+    } else if ([name isEqualToString:@"Yahoo"]) {
+        return @"Yahoo.jpg";
+    } else if ([name isEqualToString:@"Cako"]) {
+        return @"Cako.jpeg";
+    } else if ([name isEqualToString:@"Banana Republic"]) {
+        return @"BananaRepublic.jpg";
+    } else if ([name isEqualToString:@"Amazon"]) {
+        return @"Amazon.jpg";
+    } else {
+        return @"Default.png";
+    }
+}
+
 + (NSMutableArray *)projectsWithArray:(NSArray *)array {
     NSMutableArray *projects = [[NSMutableArray alloc] initWithCapacity:array.count];
     for (NSDictionary *params in array) {

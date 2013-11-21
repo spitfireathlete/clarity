@@ -101,10 +101,9 @@
 {
     
     Project *project = [self.projects objectAtIndex:indexPath.row];
-    SFIdentityData *idData =[[SFAccountManager sharedInstance] idData];
     
     FeedCell *feedcell = (FeedCell *)[tableView dequeueReusableCellWithIdentifier:@"feedcell"];
-    [feedcell.profilePic setImageWithURL:idData.pictureUrl placeholderImage:[UIImage imageNamed:@"Nidhi_Circle.png"]];
+    feedcell.profilePic.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@", project.getImageName]];
     
     feedcell.name.text = [NSString stringWithFormat:@"%@ %@", [project.owner valueOrNilForKeyPath:@"first_name"], [project.owner valueOrNilForKeyPath:@"last_name"]];
     feedcell.accountName.text = [NSString stringWithFormat:@"%@", [project.priority valueOrNilForKeyPath:@"name"]];

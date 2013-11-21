@@ -94,6 +94,15 @@
 		EA6F00BC183B185400336E21 /* down_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F00BB183B185400336E21 /* down_arrow.png */; };
 		EA6F00BF183B1D1600336E21 /* ProjectViewHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F00BE183B1D1600336E21 /* ProjectViewHeaderCell.m */; };
 		EA6F00C1183B1D2A00336E21 /* ProjectViewHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6F00C0183B1D2A00336E21 /* ProjectViewHeaderCell.xib */; };
+		EA9A1A1C183D7F8F00EF81D4 /* Starbucks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA9A1A1B183D7F8F00EF81D4 /* Starbucks.jpg */; };
+		EA9A1A1E183D82FE00EF81D4 /* Ford.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA9A1A1D183D82FE00EF81D4 /* Ford.jpg */; };
+		EA9A1A20183D838800EF81D4 /* Lululemon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA9A1A1F183D838800EF81D4 /* Lululemon.jpg */; };
+		EA9A1A22183D83BF00EF81D4 /* Nike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA9A1A21183D83BF00EF81D4 /* Nike.jpg */; };
+		EA9A1A24183D841800EF81D4 /* Airbnb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA9A1A23183D841800EF81D4 /* Airbnb.jpg */; };
+		EA9A1A26183D842D00EF81D4 /* Yahoo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA9A1A25183D842D00EF81D4 /* Yahoo.jpg */; };
+		EA9A1A28183D846900EF81D4 /* Cako.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EA9A1A27183D846900EF81D4 /* Cako.jpeg */; };
+		EA9A1A2A183D84A400EF81D4 /* BananaRepublic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA9A1A29183D84A400EF81D4 /* BananaRepublic.jpg */; };
+		EA9A1A2C183D851100EF81D4 /* Amazon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA9A1A2B183D851100EF81D4 /* Amazon.jpg */; };
 		EAFC13C1183B403200210407 /* DetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC13C0183B403200210407 /* DetailViewCell.m */; };
 		EAFC13C3183B404000210407 /* DetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFC13C2183B404000210407 /* DetailViewCell.xib */; };
 		EAFC13C5183B495E00210407 /* SF_small_header.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFC13C4183B495E00210407 /* SF_small_header.png */; };
@@ -300,6 +309,15 @@
 		EA6F00BD183B1D1600336E21 /* ProjectViewHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectViewHeaderCell.h; sourceTree = "<group>"; };
 		EA6F00BE183B1D1600336E21 /* ProjectViewHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectViewHeaderCell.m; sourceTree = "<group>"; };
 		EA6F00C0183B1D2A00336E21 /* ProjectViewHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectViewHeaderCell.xib; sourceTree = "<group>"; };
+		EA9A1A1B183D7F8F00EF81D4 /* Starbucks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Starbucks.jpg; sourceTree = "<group>"; };
+		EA9A1A1D183D82FE00EF81D4 /* Ford.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ford.jpg; sourceTree = "<group>"; };
+		EA9A1A1F183D838800EF81D4 /* Lululemon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lululemon.jpg; sourceTree = "<group>"; };
+		EA9A1A21183D83BF00EF81D4 /* Nike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Nike.jpg; sourceTree = "<group>"; };
+		EA9A1A23183D841800EF81D4 /* Airbnb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Airbnb.jpg; sourceTree = "<group>"; };
+		EA9A1A25183D842D00EF81D4 /* Yahoo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Yahoo.jpg; sourceTree = "<group>"; };
+		EA9A1A27183D846900EF81D4 /* Cako.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cako.jpeg; sourceTree = "<group>"; };
+		EA9A1A29183D84A400EF81D4 /* BananaRepublic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BananaRepublic.jpg; sourceTree = "<group>"; };
+		EA9A1A2B183D851100EF81D4 /* Amazon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Amazon.jpg; sourceTree = "<group>"; };
 		EAFC13BF183B403200210407 /* DetailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewCell.h; sourceTree = "<group>"; };
 		EAFC13C0183B403200210407 /* DetailViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewCell.m; sourceTree = "<group>"; };
 		EAFC13C2183B404000210407 /* DetailViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewCell.xib; sourceTree = "<group>"; };
@@ -734,6 +752,15 @@
 		EA6F00521839BDD700336E21 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EA9A1A2B183D851100EF81D4 /* Amazon.jpg */,
+				EA9A1A29183D84A400EF81D4 /* BananaRepublic.jpg */,
+				EA9A1A21183D83BF00EF81D4 /* Nike.jpg */,
+				EA9A1A27183D846900EF81D4 /* Cako.jpeg */,
+				EA9A1A25183D842D00EF81D4 /* Yahoo.jpg */,
+				EA9A1A23183D841800EF81D4 /* Airbnb.jpg */,
+				EA9A1A1B183D7F8F00EF81D4 /* Starbucks.jpg */,
+				EA9A1A1F183D838800EF81D4 /* Lululemon.jpg */,
+				EA9A1A1D183D82FE00EF81D4 /* Ford.jpg */,
 				EA6F00BB183B185400336E21 /* down_arrow.png */,
 				EAFC13C4183B495E00210407 /* SF_small_header.png */,
 				EA6F00B9183B185000336E21 /* up_arrow.png */,
@@ -898,22 +925,30 @@
 				824A9E3F1724EC6300C9BD79 /* Settings.bundle in Resources */,
 				EA6F00541839BDE500336E21 /* SFBackground.png in Resources */,
 				EA6F00BC183B185400336E21 /* down_arrow.png in Resources */,
+				EA9A1A1C183D7F8F00EF81D4 /* Starbucks.jpg in Resources */,
 				EA6F0099183AF01900336E21 /* ProjectCreationHeaderCell.xib in Resources */,
 				EA6F00B0183B01BC00336E21 /* gray_plus_icon.png in Resources */,
 				824A9E411724ECC600C9BD79 /* SalesforceSDKResources.bundle in Resources */,
+				EA9A1A2C183D851100EF81D4 /* Amazon.jpg in Resources */,
+				EA9A1A28183D846900EF81D4 /* Cako.jpeg in Resources */,
+				EA9A1A22183D83BF00EF81D4 /* Nike.jpg in Resources */,
 				EA6F0067183AAB9100336E21 /* menu_icon.png in Resources */,
 				EA6F005C1839C78E00336E21 /* Default-568h@2x.png in Resources */,
+				EA9A1A20183D838800EF81D4 /* Lululemon.jpg in Resources */,
 				824A9E5F1724F02D00C9BD79 /* icon-72.png in Resources */,
 				EA6F009F183AF1F000336E21 /* write_icon.png in Resources */,
 				824A9E601724F02D00C9BD79 /* icon-72@2x.png in Resources */,
 				824A9E611724F02D00C9BD79 /* icon.png in Resources */,
 				EAFC13DD183CCA5D00210407 /* CommentCell.xib in Resources */,
 				EAFC13D0183B624C00210407 /* DashboardHeaderCell.xib in Resources */,
+				EA9A1A1E183D82FE00EF81D4 /* Ford.jpg in Resources */,
 				824A9E621724F02D00C9BD79 /* icon@2x.png in Resources */,
 				824A9FDF1725079100C9BD79 /* openssl_license.txt in Resources */,
+				EA9A1A2A183D84A400EF81D4 /* BananaRepublic.jpg in Resources */,
 				EA6F0077183AB03700336E21 /* Nidhi_Circle.png in Resources */,
 				EA6F00A4183AF5BF00336E21 /* AccountNameCell.xib in Resources */,
 				EA6F00A9183AFB4E00336E21 /* ProjectDetailCell.xib in Resources */,
+				EA9A1A26183D842D00EF81D4 /* Yahoo.jpg in Resources */,
 				EAFC13D5183B66BF00210407 /* DashboardProjectCell.xib in Resources */,
 				EA6F007F183AC27600336E21 /* sync_icon.png in Resources */,
 				EA6F007D183AC27600336E21 /* home_icon.png in Resources */,
@@ -923,6 +958,7 @@
 				EA6F00C1183B1D2A00336E21 /* ProjectViewHeaderCell.xib in Resources */,
 				EA6F0091183AEE9700336E21 /* tiny_heart_icon.png in Resources */,
 				EA6F007E183AC27600336E21 /* logout_icon.png in Resources */,
+				EA9A1A24183D841800EF81D4 /* Airbnb.jpg in Resources */,
 				EAFC13C5183B495E00210407 /* SF_small_header.png in Resources */,
 				EA6F00511839BBC700336E21 /* Main.storyboard in Resources */,
 				EAFC13C3183B404000210407 /* DetailViewCell.xib in Resources */,
