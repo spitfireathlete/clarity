@@ -71,7 +71,7 @@
     NSString *type = record [@"Type"];
     
     if ([type isEqualToString:@"Customer - Direct"] || [type isEqualToString:@"Prospect"]) {
-        Project *proj = [[Project alloc] initWithDictionary: @{@"topic": [NSString stringWithFormat:@"What new product would you like to see %@ make next?", record[@"Name"]], @"details": @"You are the future. You decide. What should we make next? We’re a company with innovation in our DNA. We care more about our customers than anything. And we want to hear what you have to say. Let us over deliver."}];
+        Project *proj = [[Project alloc] initWithDictionary: @{@"topic": [NSString stringWithFormat:@"What new product would you like to see %@ make next?", record[@"Name"]], @"details": @"You are the future. You decide. What should we make next? We’re a company with innovation in our DNA. We care more about our customers than anything."}];
         return proj;
     }
     
