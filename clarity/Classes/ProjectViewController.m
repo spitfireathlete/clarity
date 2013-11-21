@@ -268,6 +268,17 @@
 {
     [self.ideas addObject:idea];
     
+    // Retrieve collaborators
+    [[APIClient sharedClient] getCollaboratorsForProject:self.selectedProject success:^(AFHTTPRequestOperation *operation, id response) {
+        
+        self.collaborators = [Collaborator collaboratorsWithArray:response];
+        NSLog(@"Selected Project: %@", self.selectedProject);
+        NSLog(@"%@", response);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    
     [self.tableView reloadData];
 }
 
