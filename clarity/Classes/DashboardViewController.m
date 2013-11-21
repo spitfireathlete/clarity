@@ -98,6 +98,7 @@
         SFIdentityData *idData =[ [SFAccountManager sharedInstance] idData];
         headerCell.name.text = [NSString stringWithFormat:@"%@'s Dashboard", idData.displayName];
         
+        headerCell.profilePic.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",  [[Collaborator currentUser] imageString]]];
         headerCell.numProjects.text = [NSString stringWithFormat:@"%d", self.projects.count];
         headerCell.numIdeas.text = [NSString stringWithFormat:@"%d", self.ideas.count];
         

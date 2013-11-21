@@ -59,7 +59,7 @@ static Collaborator *_currentUser;
     return collaborators;
 }
 
-- (NSString *)returnImage
+- (NSString *)imageString
 {
     NSString *email = [self valueOrNilForKeyPath:@"email"];
     

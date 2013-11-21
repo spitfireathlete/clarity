@@ -16,6 +16,6 @@
 
 + (NSMutableArray *)collaboratorsWithArray:(NSArray *)array;
 
-- (NSString *)returnImage;
+- (NSString *)imageString;
 
 @end

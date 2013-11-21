@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *voteNum;
 @property (strong, nonatomic) IBOutlet UIButton *upVote;
 @property (strong, nonatomic) IBOutlet UIButton *downVote;
-@property (strong, nonatomic) IBOutlet UIButton *comment;
+
+@property (strong, nonatomic) IBOutlet UIImageView *profilePicture;
 
 @end
