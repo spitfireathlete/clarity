@@ -15,8 +15,8 @@
 
 @implementation APIClient
 
-//static NSString * const BASE_URL = @"https://clarityapi.herokuapp.com/";
-static NSString * const BASE_URL = @"http://localhost:3000/";
+static NSString * const BASE_URL = @"https://clarityapi.herokuapp.com/";
+//static NSString * const BASE_URL = @"http://localhost:3000/";
 
 + (APIClient *)sharedClient {
     static APIClient *_sharedClient = nil;

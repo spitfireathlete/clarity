@@ -104,6 +104,10 @@
 		EA9A1A2A183D84A400EF81D4 /* BananaRepublic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA9A1A29183D84A400EF81D4 /* BananaRepublic.jpg */; };
 		EA9A1A2C183D851100EF81D4 /* Amazon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA9A1A2B183D851100EF81D4 /* Amazon.jpg */; };
 		EA9A1A2E183D881900EF81D4 /* DefaultImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA9A1A2D183D881900EF81D4 /* DefaultImage.jpg */; };
+		EA9A1A30183D8B9800EF81D4 /* ErinCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9A1A2F183D8B9800EF81D4 /* ErinCircle.png */; };
+		EA9A1A32183D8C4E00EF81D4 /* Michael_Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9A1A31183D8C4E00EF81D4 /* Michael_Circle.png */; };
+		EA9A1A34183D8CC300EF81D4 /* John.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9A1A33183D8CC300EF81D4 /* John.png */; };
+		EA9A1A36183D8D4D00EF81D4 /* Elise.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9A1A35183D8D4D00EF81D4 /* Elise.png */; };
 		EAFC13C1183B403200210407 /* DetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC13C0183B403200210407 /* DetailViewCell.m */; };
 		EAFC13C3183B404000210407 /* DetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFC13C2183B404000210407 /* DetailViewCell.xib */; };
 		EAFC13C5183B495E00210407 /* SF_small_header.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFC13C4183B495E00210407 /* SF_small_header.png */; };
@@ -320,6 +324,10 @@
 		EA9A1A29183D84A400EF81D4 /* BananaRepublic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BananaRepublic.jpg; sourceTree = "<group>"; };
 		EA9A1A2B183D851100EF81D4 /* Amazon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Amazon.jpg; sourceTree = "<group>"; };
 		EA9A1A2D183D881900EF81D4 /* DefaultImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DefaultImage.jpg; sourceTree = "<group>"; };
+		EA9A1A2F183D8B9800EF81D4 /* ErinCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ErinCircle.png; sourceTree = "<group>"; };
+		EA9A1A31183D8C4E00EF81D4 /* Michael_Circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Michael_Circle.png; sourceTree = "<group>"; };
+		EA9A1A33183D8CC300EF81D4 /* John.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = John.png; sourceTree = "<group>"; };
+		EA9A1A35183D8D4D00EF81D4 /* Elise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Elise.png; sourceTree = "<group>"; };
 		EAFC13BF183B403200210407 /* DetailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewCell.h; sourceTree = "<group>"; };
 		EAFC13C0183B403200210407 /* DetailViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewCell.m; sourceTree = "<group>"; };
 		EAFC13C2183B404000210407 /* DetailViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewCell.xib; sourceTree = "<group>"; };
@@ -754,7 +762,11 @@
 		EA6F00521839BDD700336E21 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EA9A1A35183D8D4D00EF81D4 /* Elise.png */,
+				EA9A1A33183D8CC300EF81D4 /* John.png */,
 				EA9A1A2D183D881900EF81D4 /* DefaultImage.jpg */,
+				EA9A1A31183D8C4E00EF81D4 /* Michael_Circle.png */,
+				EA9A1A2F183D8B9800EF81D4 /* ErinCircle.png */,
 				EA9A1A2B183D851100EF81D4 /* Amazon.jpg */,
 				EA9A1A29183D84A400EF81D4 /* BananaRepublic.jpg */,
 				EA9A1A21183D83BF00EF81D4 /* Nike.jpg */,
@@ -919,6 +931,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA6F00B8183B169700336E21 /* IdeaCell.xib in Resources */,
+				EA9A1A32183D8C4E00EF81D4 /* Michael_Circle.png in Resources */,
 				EA6F0090183AEE9700336E21 /* tiny_bubble_icon.png in Resources */,
 				EA6F008D183AEA3700336E21 /* FeedCell.xib in Resources */,
 				EA6F009D183AF0CD00336E21 /* gray_xmark.png in Resources */,
@@ -965,6 +978,9 @@
 				EAFC13C5183B495E00210407 /* SF_small_header.png in Resources */,
 				EA6F00511839BBC700336E21 /* Main.storyboard in Resources */,
 				EAFC13C3183B404000210407 /* DetailViewCell.xib in Resources */,
+				EA9A1A34183D8CC300EF81D4 /* John.png in Resources */,
+				EA9A1A30183D8B9800EF81D4 /* ErinCircle.png in Resources */,
+				EA9A1A36183D8D4D00EF81D4 /* Elise.png in Resources */,
 				824A9FE61725079100C9BD79 /* LICENSE in Resources */,
 				EA6F0081183AC69D00336E21 /* light_blurry_background.png in Resources */,
 				EA6F0084183AC81600336E21 /* light_blurry_sf.png in Resources */,

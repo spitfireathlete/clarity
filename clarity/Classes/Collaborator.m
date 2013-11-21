@@ -59,4 +59,23 @@ static Collaborator *_currentUser;
     return collaborators;
 }
 
+- (NSString *)returnImage
+{
+    NSString *email = [self valueOrNilForKeyPath:@"email"];
+    
+    if ([email isEqualToString:@"nidhikulkarni82@gmail.com"]) {
+        return @"Nidhi_Circle.png";
+    } else if ([email isEqualToString:@"nidhikulkarni82+erin@gmail.com"]) {
+        return @"ErinCircle.png";
+    } else if ([email isEqualToString:@"nidhikulkarni82+mellison@gmail.com"]) {
+        return @"Michael_Circle.png";
+    } else if ([email isEqualToString:@"nidhikulkarni82+jboggs@gmail.com"]) {
+        return @"John.png";
+    } else if ([email isEqualToString:@"nidhikulkarni82+cxue@gmail.com"]) {
+        return @"Elise.png";
+    }
+    
+    return @"Nidhi_Circle.png";
+}
+
 @end
