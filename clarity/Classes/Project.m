@@ -47,9 +47,9 @@
         return @"BananaRepublic.jpg";
     } else if ([name isEqualToString:@"Amazon"]) {
         return @"Amazon.jpg";
-    } else {
-        return @"DefaultImage.jpg";
     }
+        return @"DefaultImage.jpg";
+    
 }
 
 + (NSMutableArray *)projectsWithArray:(NSArray *)array {

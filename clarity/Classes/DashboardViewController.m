@@ -13,6 +13,8 @@
 #import "Project.h"
 #import "APIClient.h"
 #import "ProjectViewController.h"
+#import "SFIdentityData.h"
+#import "SFAccountManager.h"
 
 @interface DashboardViewController ()
 @property (nonatomic, strong) NSArray *projects;
@@ -93,8 +95,8 @@
         DashboardHeaderCell *headerCell = (DashboardHeaderCell *)[tableView dequeueReusableCellWithIdentifier:@"dashboardHeaderCell"];
         headerCell.userInteractionEnabled = NO;
         
-        headerCell.name.text = @"Nidhi Kulkarni's Dashboard";
-        headerCell.jobTitle.text = @"Founder of Spitfire Athlete";
+        SFIdentityData *idData =[ [SFAccountManager sharedInstance] idData];
+        headerCell.name.text = [NSString stringWithFormat:@"%@'s Dashboard", idData.displayName];
         
         headerCell.numProjects.text = [NSString stringWithFormat:@"%d", self.projects.count];
         headerCell.numIdeas.text = [NSString stringWithFormat:@"%d", self.ideas.count];
